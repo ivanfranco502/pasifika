@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="testpasifika" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Documentos\\ProyectosNET\\Pasifika\\trunk\\src\\Pasificav2\\Pasifika\.WebUI\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Documentos\\ProyectosNET\\Pasifika\\trunk\\src\\Pasificav2\\Pasifika\.WebUI\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="dbCRM-Web.config Connection String" description="" value="Data Source=ybc8c5obaj.database.windows.net,1433;Initial Catalog=dbPasifika;User ID=pasifikaDB@ybc8c5obaj;Password=p4s1f1k4DB2014" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\Documentos\\ProyectosNET\\Pasifika\\trunk\\src\\Pasificav2\\Pasifika\.WebUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='dbCRM']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=ybc8c5obaj.database.windows.net,1433;Initial Catalog=pasifikaV2;User ID=pasifikaDB@ybc8c5obaj;Password=p4s1f1k4DB2014" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\Documentos\\ProyectosNET\\Pasifika\\trunk\\src\\Pasificav2\\Pasifika\.WebUI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

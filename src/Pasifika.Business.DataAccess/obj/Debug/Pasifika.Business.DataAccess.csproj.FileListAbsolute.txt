@@ -1,0 +1,158 @@
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Business.DataAccess.dll.config
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Business.DataAccess.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Business.DataAccess.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.csprojResolveAssemblyReference.cache
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Model.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Model.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Init.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.csproj.GenerateResource.Cache
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo1.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo2.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo3.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.tags.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo4.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.paginas.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo5.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo6.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo7.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo8.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo9.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.partners.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.region.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo10.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arregloViajes.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arregloViajes1.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo11.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo12.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.paginaTexto.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.identity.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.identityArreglo1.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.sugerencias.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.promociones.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.prensa.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.sesiones.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.destinoTitulo.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo13.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.notas.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo14.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo15.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo16.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo17.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo18.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.lengthColumnas.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo19.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo20.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo21.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo22.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo23.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo24.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo25.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo26.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo27.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo28.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo29.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo30.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo31.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo32.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo33.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.BannerInferior.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.BannerHome.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Contacto.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo34.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo35.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo36.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo37.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo38.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.AgregarSPBusqueda.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.AddTableBannerContextual.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo39.resources
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Wellness.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Business.DataAccess.dll.config
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Business.DataAccess.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Business.DataAccess.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Model.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Pasifika.Model.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.csprojResolveAssemblyReference.cache
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Init.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo1.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo2.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo3.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.tags.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo4.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.paginas.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo5.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo6.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo7.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo8.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo9.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.partners.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.region.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo10.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arregloViajes.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arregloViajes1.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo11.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo12.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.paginaTexto.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.identity.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.identityArreglo1.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.sugerencias.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.promociones.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.prensa.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.sesiones.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.destinoTitulo.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo13.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.notas.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo14.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo15.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo16.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo17.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo18.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.lengthColumnas.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo19.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo20.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.arreglo21.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo22.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo23.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo24.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo25.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo26.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo27.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo28.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo29.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo30.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo31.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo32.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo33.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.BannerInferior.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.BannerHome.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Contacto.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo34.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo35.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo36.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo37.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo38.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.AgregarSPBusqueda.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.AddTableBannerContextual.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Arreglo39.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.Migrations.Wellness.resources
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.csproj.GenerateResource.Cache
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business.DataAccess\obj\Debug\Pasifika.Business.DataAccess.pdb

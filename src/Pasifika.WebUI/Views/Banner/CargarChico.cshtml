@@ -1,0 +1,17 @@
+﻿@model List<Pasifika.Model.Banner>
+<div class="row modulo">
+    <div class="col-xs-12">
+
+        <div class="flexslider">
+            <ul class="slides">
+                @foreach(var b in Model)
+                { 
+                    <li class="item">
+                        <img src="~/Content/images/banner/@b.PaginaId/@b.Foto" class="" alt="@b.Alt">
+                    </li>
+                }
+            </ul>
+        </div>
+
+    </div>
+</div>

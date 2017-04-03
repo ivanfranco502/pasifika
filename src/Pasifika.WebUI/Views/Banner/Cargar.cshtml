@@ -1,0 +1,39 @@
+﻿@model List<Pasifika.Model.Banner>
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="flexslider">
+
+            <ul class="slides">
+
+                @foreach(var b in Model)
+                { 
+                    <li class="item">
+                        @if (b.Link != "")
+                        { 
+                            @:<a href="@b.Link">
+                        }
+                        
+                        <img src="~/Content/images/banner/@b.PaginaId/@b.Foto" class="" alt="@b.Alt">
+                        <div class="carousel-caption">
+                            <span class="texto-1">@b.Title</span>
+                            <br>
+                            <span class="texto-2">@b.Texto</span>
+                            <p class="texto-3">@b.Texto2</p>
+                            <br>
+                            @if (b.Link != "")
+                            { 
+                                <span class="btn btn-negro-2">VER MÁS</span>
+                            }
+                        </div>
+
+                        @if (b.Link != "")
+                        { 
+                            @:</a>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

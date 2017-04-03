@@ -1,0 +1,120 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.FormularioSesionEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "FormularioSesion", FormMethod.Post, new { id = "formEdit" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Sesiones </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <input type="text" class="txtSesion form-control">
+                                    <span class="input-group-btn">
+                                        <button class="btnAgregar btn btn-default" type="button">Agregar</button>
+                                    </span>
+                                </div><!-- /input-group -->
+                            </div><!-- /.col-lg-6 -->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                @Html.Hidden("txtSesionesJson")
+                                <select class="lstSesiones form-control" size="10">
+                                    @foreach (var f in Model.FormularioSesiones.OrderBy(x => x.Orden))
+                                    {
+                                        <option value="@f.Id">@f.Nombre</option>
+                                    }
+                                </select>
+                                <button class="btnSubir btn btn-primary btn-xs">Subir</button>
+                                <button class="btnBajar btn btn-primary btn-xs">Bajar</button>
+                                <button class="btnEliminar btn btn-primary btn-xs">Eliminar</button>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.btnSubir').click(function (e) {
+            e.preventDefault();
+            var prev = $('.lstSesiones option:selected').prev();
+            $('.lstSesiones option:selected').insertBefore(prev);
+        });
+
+        $('.btnBajar').click(function (e) {
+            e.preventDefault();
+            var next = $('.lstSesiones option:selected').next();
+            $('.lstSesiones option:selected').insertAfter(next);
+        });
+
+        $('.btnEliminar').click(function (e) {
+            e.preventDefault();
+            $('.lstSesiones option:selected').hide();
+            $('.lstSesiones option:selected').attr('data-operacion', 'B');
+        });
+
+        $('.btnAgregar').click(function (e) {
+            e.preventDefault();
+            $('.lstSesiones').append(new Option($('.txtSesion').val(), '-1'));
+            $('.txtSesion').val('');
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            var sessiones = [];
+            $('.lstSesiones option').each(function (i, row) {
+                var session = {};
+                session.id = $(row).val();
+                session.text = $(row).text();
+
+                if ($(row).attr('data-operacion') != 'B')
+                    session.operacion = "";
+                else
+                    session.operacion = "B";
+
+                sessiones.push(session);
+            });
+
+            $('#txtSesionesJson').val(JSON.stringify(sessiones));
+
+            $("#formEdit").submit();
+        });
+    });
+    </script>
+}

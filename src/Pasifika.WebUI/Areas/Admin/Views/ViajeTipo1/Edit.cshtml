@@ -1,0 +1,532 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.ViajeTipo1EditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<script id="template-imagen" type="x-tmpl-mustache">
+    <tr data-idimagen="{{idImagen}}">
+        <td><input type="file" name="fileImagenes" class="col-lg-12" /></td>
+        <td><input type="text" class="txtAlt col-lg-12" /></td>
+        <td>
+            <a href="javascript:void(0)" class="btnEliminarImagen" tabindex="-1"><i class="icon glyphicon glyphicon-remove"></i></a>
+        </td>
+    </tr>
+</script>
+
+
+@using (Html.BeginForm("Edit", "ViajeTipo1", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Viajes </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+                        
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Nombre</label>
+                                    <div class="col-md-9">
+                                        @Html.TextBox("Nombre", ((Pasifika.Model.Viaje)Model.Viaje).Nombre, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Url</label>
+                                    <div class="col-md-9">
+                                        @Html.TextBox("Url", ((Pasifika.Model.Viaje)Model.Viaje).Url, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Precio</label>
+                                    <div class="col-md-9">
+                                        @Html.TextBox("Precio", ((Pasifika.Model.Viaje)Model.Viaje).Precio, new { @class = "form-control" })
+                                    </div>
+                                </div>
+
+                                @if (Model.TipoViaje == 1)
+                                {
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Paises</label>
+                                        <div class="col-md-9">
+                                            @Html.TextBox("Paises", ((Pasifika.Model.ViajeTipo1)Model.Viaje).Paises, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Ciudades</label>
+                                        <div class="col-md-9">
+                                            @Html.TextBox("Ciudades", ((Pasifika.Model.ViajeTipo1)Model.Viaje).Ciudades, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Duración</label>
+                                        <div class="col-md-9">
+                                            @Html.TextBox("Duracion", ((Pasifika.Model.ViajeTipo1)Model.Viaje).Duracion, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Destino</label>
+                                        <div class="col-md-9">
+                                            <select id="DestinoId" name="DestinoId" class="form-control">
+                                                @foreach (var d in Model.Destinos)
+                                                {
+                                                    <option value="@d.Id"
+                                                        @if(d.Id == ((Pasifika.Model.ViajeTipo1)Model.Viaje).DestinoId)
+                                                        {
+                                                            @:selected
+                                                        }
+                                                        >@d.Nombre</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                }
+                                
+                                @if (Model.TipoViaje == 2)
+                                {
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Destino</label>
+                                        <div class="col-md-9">
+                                            <select id="DestinoId" name="DestinoId" class="form-control">
+                                                @foreach (var d in Model.Destinos)
+                                                {
+                                                    <option value="@d.Id"
+                                                        @if(((Pasifika.Model.ViajeTipo2)Model.Viaje).Ciudad != null && d.Id == ((Pasifika.Model.ViajeTipo2)Model.Viaje).Ciudad.Destino.Id)
+                                                        {
+                                                            @:selected
+                                                        }
+                                                        >@d.Nombre</option>
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Ciudad</label>
+                                        <div class="col-md-9">
+                                            <select id="CiudadId" name="CiudadId" class="form-control"></select>
+                                        </div>
+                                    </div>
+                                }
+                                
+                                @if (Model.TipoViaje == 1 && Model.SubTipoViaje == 2)
+                                { 
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">Nombre Empresa</label>
+                                            <div class="col-md-9">
+                                                @Html.TextBox("NombreCrucero", ((Pasifika.Model.Crucero)Model.Viaje).NombreCrucero, new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                }
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Referencia</label>
+                                    <div class="col-md-9">
+                                        @Html.TextBox("Referencia", ((Pasifika.Model.Viaje)Model.Viaje).Referencia, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Info Precio</label>
+                                    <div class="col-md-9">
+                                        @Html.TextBox("InfoPrecio", ((Pasifika.Model.Viaje)Model.Viaje).InfoPrecio, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">PDF</label>
+                                    <div class="col-md-9">
+                                        @Html.Hidden("PDF", ((Pasifika.Model.Viaje)Model.Viaje).PDF)
+                                        @if (!String.IsNullOrEmpty(((Pasifika.Model.Viaje)Model.Viaje).PDF))
+                                        { 
+                                            <a href="javascript:void(0)" onclick="$(this).parent().find('input[type=\'hidden\']').val('')"><i class="fa fa-times"></i></a>
+                                        }
+                                        <input type="file" name="filePDF" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Imagen listado</label>
+                                    <div class="col-md-9">
+                                        @Html.Hidden("ImagenListado", ((Pasifika.Model.Viaje)Model.Viaje).ImagenListado)
+                                        <input type="file" name="fileImagenListado" class="form-control">
+                                        @if (((Pasifika.Model.Viaje)Model.Viaje).ImagenListado != null)
+                                        {
+                                            <a href="javascript:void(0)" onclick="$(this).parent().find('input[type=\'hidden\']').val(''); $(this).parent().find('img').hide(); "><i class="fa fa-times"></i></a>
+                                            
+                                            <img src="~/Content/images/foto/listado/@(((Pasifika.Model.Viaje)Model.Viaje).ImagenListado)" width="50" height="50" />
+                                        }
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Alt</label>
+                                    <div class="col-md-9">
+                                        @Html.TextBox("AltImagenListado", ((Pasifika.Model.Viaje)Model.Viaje).AltImagenListado, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Tags</label>
+                                    <div class="col-md-9">
+                                        @{
+                                            var q = from t in ((Pasifika.Model.Viaje)Model.Viaje).TagsViaje.Where(x => x.Tag.Eliminado == false).OrderBy(x => x.Orden)
+                                                    select new
+                                                    {
+                                                        id = t.Tag.Id,
+                                                        text = t.Tag.Nombre
+                                                    };
+
+                                            var arrTags = q.ToList();
+                                            string strTags = string.Join(",", arrTags.Select(x => x.id));
+                                        }
+                                        @Html.Hidden("Tags", strTags, new { width = "100%" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="col-lg-4">
+                                    @Html.Hidden("txtJsonImagenes")
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-lg-8">Imagen</th>
+                                                    <th class="col-lg-4">Alt</th>
+                                                    <th><a href="javascript:void(0)" class="btn btn-xs btn-default btnAgregarImagen"><i class="icon glyphicon glyphicon-plus"></i></a></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="bodyImagen">
+                                                @if (((Pasifika.Model.Viaje)Model.Viaje).Fotos != null)
+                                                {
+                                                    foreach (var f in ((Pasifika.Model.Viaje)Model.Viaje).Fotos.OrderBy(x => x.Orden))
+                                                    {
+                                                        <tr data-idimagen="@f.Id.ToString()" data-src="@f.Archivo">
+                                                            <td>
+                                                                <img src="~/Content/images/foto/@f.Archivo" width="50" height="50" />
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="txtAlt col-lg-12" value="@f.Alt" />
+                                                            </td>
+                                                            <td>
+                                                                <a href="javascript:void(0)" class="btnEliminarImagen" tabindex="-1"><i class="icon glyphicon glyphicon-remove"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Descripcion</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Descripcion", ((((Pasifika.Model.Viaje)Model.Viaje).Descripcion)), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    @if (Model.TipoViaje == 1)
+                    { 
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Información general</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Itinerario", ((((Pasifika.Model.ViajeTipo1)Model.Viaje).Itinerario)), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">itinerario</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Alojamiento", (((Pasifika.Model.ViajeTipo1)Model.Viaje).Alojamiento), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">excursiones, actividades y visitas</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Actividades", (((Pasifika.Model.ViajeTipo1)Model.Viaje).Actividades), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">hoteles seleccionados</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Translados", (((Pasifika.Model.ViajeTipo1)Model.Viaje).Translados), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">cuándo viajar</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("CuandoIr", (((Pasifika.Model.ViajeTipo1)Model.Viaje).CuandoIr), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Presupuesto</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Presupuesto", (((Pasifika.Model.ViajeTipo1)Model.Viaje).Presupuesto), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">comentarios y consideraciones</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Comentarios", (((Pasifika.Model.ViajeTipo1)Model.Viaje).Comentarios), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+                    
+                    @if (Model.TipoViaje == 2)
+                    { 
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Informacion General</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("InformacionGeneral", ((((Pasifika.Model.ViajeTipo2)Model.Viaje).InformacionGeneral)), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Importante</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Importante", (((Pasifika.Model.ViajeTipo2)Model.Viaje).Importante), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+
+                    @if (Model.TipoViaje == 2)
+                    {
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Condicion</label>
+                                <div class="col-md-9">
+                                    @Html.TextArea("Condicion", (((Pasifika.Model.ViajeTipo2)Model.Viaje).Condicion), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Titulo Cuadro</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("TituloCuadro", (((Pasifika.Model.Viaje)Model.Viaje).TituloCuadro), new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Texto Cuadro</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("TextoCuadro", (((Pasifika.Model.Viaje)Model.Viaje).TextoCuadro), new { @class = "form-control", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.Hidden("Id", ((Pasifika.Model.Viaje)Model.Viaje).Id)
+                                @Html.Hidden("TipoViaje", Model.TipoViaje)
+                                @Html.Hidden("SubTipoViaje", Model.SubTipoViaje)
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}
+        
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/libs/mustache.js"></script>
+    <!--
+    <link href="~/Areas/Admin/Content/js/plugin/summernote/summernote.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/Content/js/plugin/summernote/summernote.min.js"></script>
+    
+        -->
+    
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/config.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/styles.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/adapters/jquery.js"></script>
+
+    
+        
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.summernote').ckeditor({
+                
+            });
+            
+        /*
+        $('.summernote').summernote({
+            height: 180,
+            focus: false,
+            tabsize: 2,
+            onenter: function(event) {
+                document.execCommand('insertHTML', false, '<br>');
+                return false;
+            },
+            enterHtml: '<br>',
+            onpaste: function(e) {
+                var thisNote = $(this);
+                var updatePastedText = function(someNote){
+                    var original = someNote.code();
+                    var cleaned = cleanHTML(original); //this is where to call whatever clean function you want. I have mine in a different file, called CleanPastedHTML.
+                    someNote.code('').html(cleaned); //this sets the displayed content editor to the cleaned pasted code.
+                };
+                setTimeout(function () {
+                    //this kinda sucks, but if you don't do a setTimeout, 
+                    //the function is called before the text is really pasted.
+                    updatePastedText(thisNote);
+                }, 10);
+            }
+        });
+        */
+
+        $('.bodyImagen').sortable().disableSelection();
+
+        @if(Model.TipoViaje == 2)
+        {
+            @:if ($('#CiudadId').length > 0)
+            @:{
+                @:cargarCiudades('@(((Pasifika.Model.ViajeTipo2)Model.Viaje).CiudadId)');
+            @:}
+        }
+
+        $('#DestinoId').change(function () {
+            if ($('#CiudadId').length > 0)
+                cargarCiudades(0);
+        });
+
+        function cargarCiudades(id) {
+            var data = JSON.stringify({
+                DestinoId: $('#DestinoId').val()
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/Admin/Ciudad/GetCiudades',
+                data: data,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json"
+            })
+            .done(function (msg) {
+                $('#CiudadId').empty();
+
+                $.each(msg, function (i, row) {
+                    $('#CiudadId').append($('<option>').text(row.Nombre).attr('value', row.Id));
+                });
+
+                if (id != 0)
+                {
+                    $('#CiudadId').val(id);
+                }
+            })
+            .fail(function () {
+                //alert("error");
+            })
+            .always(function () {
+                //alert("complete");
+            });
+        }
+
+        @{
+            var q = from t in Model.Tags
+                    select new
+            {
+                        id = t.Id,
+                        text = t.Nombre
+            };
+
+            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+
+            var arrTags = q.ToList();
+
+            string strTags = serializer.Serialize(arrTags);
+        }
+        $("#Tags").select2({
+            tags: @MvcHtmlString.Create(strTags),
+            width: '100%'
+        });
+        $("#Tags").select2("container").find("ul.select2-choices").sortable({
+            containment: 'parent',
+            start: function () { $("#Tags").select2("onSortStart"); },
+            update: function () { $("#Tags").select2("onSortEnd"); }
+        });
+
+
+        var idImagen = 0;
+        $('.btnAgregarImagen').click(function () {
+            idImagen--;
+            var template = $('#template-imagen').html();
+            Mustache.parse(template);   // optional, speeds up future uses
+            var rendered = Mustache.render(template, { idImagen: idImagen });
+            $('.bodyImagen').append(rendered);
+        });
+
+        $('body').on('click', '.btnEliminarImagen', function () {
+            var tr = $(this).closest('tr');
+            var id = $(tr).attr('data-idimagen');
+            if (parseInt(id) < 0) {
+                $(tr).remove();
+            } else {
+                $(tr).attr('data-operacion', 'B');
+                $(tr).hide();
+            }
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            var imagenes = [];
+            $('.bodyImagen tr').each(function (i, row) {
+                var imagen = {};
+                imagen.Id = $(row).attr('data-idimagen');
+                imagen.Operacion = $(row).attr('data-operacion');
+                imagen.Archivo = $(row).attr('data-src');
+                imagen.Alt = $(row).find('.txtAlt').val();
+                imagen.Orden = i;
+                imagenes.push(imagen);
+            });
+            $('#txtJsonImagenes').val(JSON.stringify(imagenes));
+
+            /*
+            $('.summernote').each(function (i) {
+                $(this).val($(this).code());
+            });
+            */
+            //var content = $('textarea[name="content"]').html($('#summernote').code());
+
+            $("#formEdit").submit();
+        });
+    });
+</script>
+}

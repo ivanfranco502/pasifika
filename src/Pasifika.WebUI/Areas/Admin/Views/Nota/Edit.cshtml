@@ -1,0 +1,114 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.NotaEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Nota", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Notas </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Titulo", Model.Nota.Titulo, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Sub Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("SubTitulo", Model.Nota.SubTitulo, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Url</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Url", Model.Nota.Url, new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Fecha</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Fecha", Model.Nota.Fecha.ToString("dd/MM/yyyy"), new { @class = "form-control datepicker", @data_dateformat = "dd/mm/yy"  })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Resumen</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Resumen", Model.Nota.Resumen, new { @class = "form-control", @rows = 10 })
+
+                                <div class="checkbox">
+                                    <label>
+                                        @Html.CheckBox("Visible", Model.Nota.Visible)
+                                        Visible
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        @Html.CheckBox("EnPrensa", Model.Nota.EnPrensa)
+                                        En Prensa
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Texto", (Model.Texto), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/config.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/styles.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/adapters/jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.summernote').ckeditor({
+
+            });
+
+            $('#btnEnviar').click(function (e) {
+                e.preventDefault();
+
+                $("#formEdit").submit();
+            });
+        });
+    </script>
+}

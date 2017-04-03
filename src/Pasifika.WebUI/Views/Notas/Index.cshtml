@@ -1,0 +1,140 @@
+﻿@model Pasifika.WebUI.ViewModels.NotasIndexViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 20 })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>Notas</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = 20, tipo = 2 })
+
+<div class="row modulo">
+    <div class="col-xs-9">
+
+        @foreach(var n in Model.Notas)
+        { 
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="resumen-nota">
+                        <p class="bold">@n.Titulo</p>
+                        <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                          url = n.Url })"><h2 class="texto-25 bold">@n.SubTitulo</h2></a>
+                        <p class="texto-16 fecha">@n.Fecha.ToString("d \\de MMMM \\de yyyy")</p>
+                        <p class="texto-5">
+                            @Html.Raw(n.Resumen)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <nav>
+                    <ul class="pager">
+                        <li class="previous">
+                            @if (!string.IsNullOrEmpty(Model.linkAnterior))
+                            {
+                                <a href="@Model.linkAnterior"><span aria-hidden="true" class="ico flecha-izq"></span> PÁGINA ANTERIOR</a>
+                            }
+                        </li>
+                        <li class="next">
+                            @if (!string.IsNullOrEmpty(Model.linkSiguiente))
+                            {
+                                <a href="@Model.linkSiguiente">PÁGINA SIGUIENTE <span aria-hidden="true" class="ico flecha-der"></span></a>
+                            }
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+      
+    </div>
+    <!-- / Col izquierda -->
+
+    <div class="col-xs-3">
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="bloque-gris text-center">
+                    <p class="texto-25">
+                        <strong>Directorio:</strong>
+                    </p>
+
+                    @{
+                        var qNotas = from n in Model.NotasDirectorio
+                                     group n by n.Fecha.Year into notasAnos
+                                     
+                                     orderby notasAnos.Key descending
+                                     select new
+                                     {
+                                         year = notasAnos.Key,
+                                         months = from o in notasAnos
+                                                  group o by o.Fecha.Month into notasMeses
+                                                  select new 
+                                                  {
+                                                    month = notasMeses.Key,
+                                                    notas = notasMeses.OrderByDescending(x => x.Fecha)
+                                                  }
+                                     };
+                    }
+
+                    <ul class="list-unstyled texto-5">
+                        @foreach (var y in qNotas.ToList())
+                        {
+                            <li>
+                                <strong>@y.year:</strong>
+                                <ul class="list-unstyled ">
+                                    @foreach(var m in y.months)
+                                    {
+                                        <li>
+                                            @{
+                                                string text = m.notas.First().Fecha.ToString("MMMM", System.Globalization.CultureInfo.CurrentCulture);
+                                            }
+                                            <a href="@Url.RouteUrl("notasFecha", new { 
+                                                        ano = y.year,
+                                                        mes = m.month})">@(char.ToUpper(text[0]) + ((text.Length > 1) ? text.Substring(1).ToLower() : string.Empty)) (@m.notas.Count().ToString().PadLeft(2, '0'))</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+        });
+    </script>
+}

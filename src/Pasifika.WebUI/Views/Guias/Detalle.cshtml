@@ -1,0 +1,151 @@
+﻿@model Pasifika.WebUI.ViewModels.GuiasDetalleViewModel
+@{
+    ViewBag.Title = "Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 18, destinoId = Model.Destino.Id })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>GUÍA DE VIAJE DE @Model.Destino.Nombre.ToUpper()</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = 18, destinoId = Model.Destino.Id, tipo = 2 })
+
+<div class="row modulo">
+    <div class="col-xs-9">
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h2 class="titular-3"><strong>Informaci&oacute;n tur&iacute;stica de @Model.Destino.Nombre</strong></h2>
+                <br>
+                <p class="texto-19 modulo">
+                    @Html.Raw(Model.Destino.Resumen)
+                </p>
+            </div>
+        </div>
+
+        @foreach(var t in Model.Destino.DestinoTitulos.OrderBy(x => x.Orden))
+        { 
+            <div class="row modulo">
+                <div class="col-xs-12">
+                    <div class="titular-1 f-linea-gris-b">
+                        <span>@t.Titulo</span>
+                    </div>
+                    <p class=" texto-5">
+                        @Html.Raw(t.Texto)    
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+    <!-- / Col izquierda -->
+
+    <div class="col-xs-3">
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="bloque-gris">
+                    <p class="texto-25">
+                        <strong>En resumen:</strong>
+                    </p>
+                    <ul class="list-unstyled texto-5">
+                        @{
+                            if (Model.Destino.Datos != null)
+                            { 
+                                string[] lineas = Model.Destino.Datos.Split('\n');
+                                foreach (var linea in lineas)
+                                {
+                                    string[] datos = linea.Split(':');
+                                    <li>
+                                        @datos[0]:
+                                        <br><strong>@datos[1]</strong>
+                                    </li>
+                                }
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+
+                <div class="botones-lateral">
+                    @if (Model.Destino.PDFGuia != null && Model.Destino.PDFGuia != "")
+                    {
+                        <a href="@Url.RouteUrl(new
+                                {
+                                    controller = "Formulario",
+                                    action = "Index",
+                                    tipo = 2
+                                })" class="btn btn-gris">
+                            SOLICITAR GU&Iacute;A DE @Model.Destino.Nombre.ToUpper() EN .PDF
+                        </a>
+                    }
+                    <a href="@Url.RouteUrl(new
+                                    {
+                                        controller = "Formulario",
+                                        action = "Compartir"
+                                    })" class="btn btn-gris">
+                        COMPARTIR
+                    </a>
+                    <a href="@Url.RouteUrl(new
+                                {
+                                    controller = "Tipo1",
+                                    action = "DestinoPortada",
+                                    url = Model.Destino.Url
+                                })" class="btn btn-gris">
+                        VER TODOS LOS VIAJES A @Model.Destino.Nombre.ToUpper()
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        @Html.Action("Cargar", "BannerInferior", new { seccionId = 18, destinoId = Model.Destino.Id })
+
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h3 class="titular-1 f-linea-gris">
+                <span>Tambi&eacute;n le puede interesar</span>
+            </h3>
+        </div>
+    </div>
+</div>
+
+
+@Html.Action("Cargar", "Sugerido", new { seccionId = 18, destinoId = Model.Destino.Id })
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+        });
+    </script>
+}

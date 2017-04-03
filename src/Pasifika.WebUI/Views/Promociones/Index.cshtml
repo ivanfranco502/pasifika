@@ -1,0 +1,86 @@
+﻿@model Pasifika.WebUI.ViewModels.PromocionesIndexViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 24 })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>Promociones & Descuentos</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = 24, tipo = 2 })
+
+<div class="row">
+    <div class="col-xs-12">
+        <p class="titular-2 texto-destacado">
+            @Html.Action("Cargar", "Texto", new { seccionId = 24 })
+        </p>
+    </div>
+</div>
+
+<div class="thumbnails">
+
+    <!-- row thumbs -->
+    <div class="row">
+        @{int cant = 0;}
+
+        @foreach (var p in Model.Promociones)
+        {
+            <!-- thumb-->
+            <div class="col-xs-4 text-center">
+                <div class="thumbnail-5">
+                    <p class="texto-26"><strong>@p.Promo</strong></p>
+
+                    <hr class="sep-2">
+
+                    <h2 class="texto-10">@p.Titulo</h2>
+
+                    <p class="texto-2b">@p.SubTitulo</p>
+
+                    <img src="~/Content/images/promocion/@p.Foto" class="img-responsive" alt="@p.Alt">
+
+                    <a href="@p.Link" class="btn btn-negro-2">+ INFO</a>
+                </div>
+            </div>
+
+            cant++;
+            if (cant % 3 == 0)
+            {
+                @:</div>
+                @:<div class="row">
+            }
+        }
+
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+        });
+    </script>
+}

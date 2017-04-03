@@ -1,0 +1,152 @@
+namespace Pasifika.Business.DataAccess.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class lengthColumnas : DbMigration
+    {
+        public override void Up()
+        {
+            AlterColumn("dbo.Banner", "Texto", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Banner", "Texto2", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Banner", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Banner", "Link", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Banner", "Title", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Banner", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Destacado", "Titulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Destacado", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Destacado", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Destacado", "SubTitulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Destacado", "SubTitulo2", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Destacado", "Link", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Destino", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Destino", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Destino", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Ciudad", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.DestinoTitulo", "Titulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Region", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Region", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.InfoRelacion", "Titulo1", c => c.String(maxLength: 100));
+            AlterColumn("dbo.InfoRelacion", "Foto1", c => c.String(maxLength: 300));
+            AlterColumn("dbo.InfoRelacion", "Alt1", c => c.String(maxLength: 100));
+            AlterColumn("dbo.InfoRelacion", "SubTitulo1", c => c.String(maxLength: 100));
+            AlterColumn("dbo.InfoRelacion", "Link1", c => c.String(maxLength: 300));
+            AlterColumn("dbo.MetaTag", "Title", c => c.String(maxLength: 300));
+            AlterColumn("dbo.MetaTag", "Description", c => c.String(maxLength: 800));
+            AlterColumn("dbo.MetaTag", "Keywords", c => c.String(maxLength: 800));
+            AlterColumn("dbo.Seccion", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Sugerencia", "Titulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Sugerencia", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Sugerencia", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Sugerencia", "SubTitulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Sugerencia", "SubTitulo2", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Sugerencia", "Link", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Tag", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Tag", "Url", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Tag", "Descripcion", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Viaje", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Viaje", "Referencia", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Viaje", "PDF", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Viaje", "ImagenListado", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Viaje", "AltImagenListado", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Viaje", "Paises", c => c.String(maxLength: 200));
+            AlterColumn("dbo.Viaje", "Ciudades", c => c.String(maxLength: 200));
+            AlterColumn("dbo.Viaje", "NombreCrucero", c => c.String(maxLength: 150));
+            AlterColumn("dbo.Viaje", "nombreTren", c => c.String(maxLength: 150));
+            AlterColumn("dbo.Viaje", "Horarios", c => c.String(maxLength: 500));
+            AlterColumn("dbo.Foto", "Archivo", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Foto", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.FormularioSesion", "Nombre", c => c.String(maxLength: 200));
+            AlterColumn("dbo.Nota", "Titulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Nota", "Resumen", c => c.String(maxLength: 1000));
+            AlterColumn("dbo.Nota", "Url", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Partner", "Nombre", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Partner", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Partner", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Prensa", "Titulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Prensa", "Revista", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Prensa", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Prensa", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Prensa", "PDF", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Prensa", "Link", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Promocion", "Titulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Promocion", "Foto", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Promocion", "Alt", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Promocion", "SubTitulo", c => c.String(maxLength: 100));
+            AlterColumn("dbo.Promocion", "Link", c => c.String(maxLength: 300));
+            AlterColumn("dbo.Promocion", "Promo", c => c.String(maxLength: 100));
+        }
+        
+        public override void Down()
+        {
+            AlterColumn("dbo.Promocion", "Promo", c => c.String());
+            AlterColumn("dbo.Promocion", "Link", c => c.String());
+            AlterColumn("dbo.Promocion", "SubTitulo", c => c.String());
+            AlterColumn("dbo.Promocion", "Alt", c => c.String());
+            AlterColumn("dbo.Promocion", "Foto", c => c.String());
+            AlterColumn("dbo.Promocion", "Titulo", c => c.String());
+            AlterColumn("dbo.Prensa", "Link", c => c.String());
+            AlterColumn("dbo.Prensa", "PDF", c => c.String());
+            AlterColumn("dbo.Prensa", "Alt", c => c.String());
+            AlterColumn("dbo.Prensa", "Foto", c => c.String());
+            AlterColumn("dbo.Prensa", "Revista", c => c.String());
+            AlterColumn("dbo.Prensa", "Titulo", c => c.String());
+            AlterColumn("dbo.Partner", "Alt", c => c.String());
+            AlterColumn("dbo.Partner", "Foto", c => c.String());
+            AlterColumn("dbo.Partner", "Nombre", c => c.String());
+            AlterColumn("dbo.Nota", "Url", c => c.String());
+            AlterColumn("dbo.Nota", "Resumen", c => c.String());
+            AlterColumn("dbo.Nota", "Titulo", c => c.String());
+            AlterColumn("dbo.FormularioSesion", "Nombre", c => c.String());
+            AlterColumn("dbo.Foto", "Alt", c => c.String());
+            AlterColumn("dbo.Foto", "Archivo", c => c.String());
+            AlterColumn("dbo.Viaje", "Horarios", c => c.String());
+            AlterColumn("dbo.Viaje", "nombreTren", c => c.String());
+            AlterColumn("dbo.Viaje", "NombreCrucero", c => c.String());
+            AlterColumn("dbo.Viaje", "Ciudades", c => c.String());
+            AlterColumn("dbo.Viaje", "Paises", c => c.String());
+            AlterColumn("dbo.Viaje", "AltImagenListado", c => c.String());
+            AlterColumn("dbo.Viaje", "ImagenListado", c => c.String());
+            AlterColumn("dbo.Viaje", "PDF", c => c.String());
+            AlterColumn("dbo.Viaje", "Referencia", c => c.String());
+            AlterColumn("dbo.Viaje", "Nombre", c => c.String());
+            AlterColumn("dbo.Tag", "Descripcion", c => c.String());
+            AlterColumn("dbo.Tag", "Url", c => c.String());
+            AlterColumn("dbo.Tag", "Nombre", c => c.String());
+            AlterColumn("dbo.Sugerencia", "Link", c => c.String());
+            AlterColumn("dbo.Sugerencia", "SubTitulo2", c => c.String());
+            AlterColumn("dbo.Sugerencia", "SubTitulo", c => c.String());
+            AlterColumn("dbo.Sugerencia", "Alt", c => c.String());
+            AlterColumn("dbo.Sugerencia", "Foto", c => c.String());
+            AlterColumn("dbo.Sugerencia", "Titulo", c => c.String());
+            AlterColumn("dbo.Seccion", "Nombre", c => c.String());
+            AlterColumn("dbo.MetaTag", "Keywords", c => c.String());
+            AlterColumn("dbo.MetaTag", "Description", c => c.String());
+            AlterColumn("dbo.MetaTag", "Title", c => c.String());
+            AlterColumn("dbo.InfoRelacion", "Link1", c => c.String());
+            AlterColumn("dbo.InfoRelacion", "SubTitulo1", c => c.String());
+            AlterColumn("dbo.InfoRelacion", "Alt1", c => c.String());
+            AlterColumn("dbo.InfoRelacion", "Foto1", c => c.String());
+            AlterColumn("dbo.InfoRelacion", "Titulo1", c => c.String());
+            AlterColumn("dbo.Region", "Foto", c => c.String());
+            AlterColumn("dbo.Region", "Nombre", c => c.String());
+            AlterColumn("dbo.DestinoTitulo", "Titulo", c => c.String());
+            AlterColumn("dbo.Ciudad", "Nombre", c => c.String());
+            AlterColumn("dbo.Destino", "Alt", c => c.String());
+            AlterColumn("dbo.Destino", "Foto", c => c.String());
+            AlterColumn("dbo.Destino", "Nombre", c => c.String());
+            AlterColumn("dbo.Destacado", "Link", c => c.String());
+            AlterColumn("dbo.Destacado", "SubTitulo2", c => c.String());
+            AlterColumn("dbo.Destacado", "SubTitulo", c => c.String());
+            AlterColumn("dbo.Destacado", "Alt", c => c.String());
+            AlterColumn("dbo.Destacado", "Foto", c => c.String());
+            AlterColumn("dbo.Destacado", "Titulo", c => c.String());
+            AlterColumn("dbo.Banner", "Alt", c => c.String());
+            AlterColumn("dbo.Banner", "Title", c => c.String());
+            AlterColumn("dbo.Banner", "Link", c => c.String());
+            AlterColumn("dbo.Banner", "Foto", c => c.String());
+            AlterColumn("dbo.Banner", "Texto2", c => c.String());
+            AlterColumn("dbo.Banner", "Texto", c => c.String());
+        }
+    }
+}

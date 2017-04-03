@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68766425-F96B-4A38-BCC9-343D0F20233C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pasifika.Business.DataAccess</RootNamespace>
+    <AssemblyName>Pasifika.Business.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IBannerHomeData.cs" />
+    <Compile Include="Abstract\IBusquedaData.cs" />
+    <Compile Include="Abstract\ICiudadData.cs" />
+    <Compile Include="Abstract\IContactoData.cs" />
+    <Compile Include="Abstract\IDestinoData.cs" />
+    <Compile Include="Abstract\IFormularioSesionData.cs" />
+    <Compile Include="Abstract\INotaData.cs" />
+    <Compile Include="Abstract\IPaginaData.cs" />
+    <Compile Include="Abstract\IPartnerData.cs" />
+    <Compile Include="Abstract\IPrensaData.cs" />
+    <Compile Include="Abstract\IPromocionData.cs" />
+    <Compile Include="Abstract\IRegionData.cs" />
+    <Compile Include="Abstract\ISeccionData.cs" />
+    <Compile Include="Abstract\ISugerenciaData.cs" />
+    <Compile Include="Abstract\ITagData.cs" />
+    <Compile Include="Abstract\IViajeData.cs" />
+    <Compile Include="Concrete\BusquedaData.cs" />
+    <Compile Include="Concrete\BannerHomeData.cs" />
+    <Compile Include="Concrete\CiudadData.cs" />
+    <Compile Include="Concrete\ContactoData.cs" />
+    <Compile Include="Concrete\DestinoData.cs" />
+    <Compile Include="Concrete\FormularioSesionData.cs" />
+    <Compile Include="Concrete\NotaData.cs" />
+    <Compile Include="Concrete\PaginaData.cs" />
+    <Compile Include="Concrete\PartnerData.cs" />
+    <Compile Include="Concrete\PrensaData.cs" />
+    <Compile Include="Concrete\PromocionData.cs" />
+    <Compile Include="Concrete\RegionData.cs" />
+    <Compile Include="Concrete\SeccionData.cs" />
+    <Compile Include="Concrete\SugerenciaData.cs" />
+    <Compile Include="Concrete\TagData.cs" />
+    <Compile Include="Concrete\ViajeData.cs" />
+    <Compile Include="Migrations\201410302004312_Init.cs" />
+    <Compile Include="Migrations\201410302004312_Init.Designer.cs">
+      <DependentUpon>201410302004312_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410311534353_arreglo1.cs" />
+    <Compile Include="Migrations\201410311534353_arreglo1.Designer.cs">
+      <DependentUpon>201410311534353_arreglo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410311932338_arreglo2.cs" />
+    <Compile Include="Migrations\201410311932338_arreglo2.Designer.cs">
+      <DependentUpon>201410311932338_arreglo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201410312105389_arreglo3.cs" />
+    <Compile Include="Migrations\201410312105389_arreglo3.Designer.cs">
+      <DependentUpon>201410312105389_arreglo3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411011519222_tags.cs" />
+    <Compile Include="Migrations\201411011519222_tags.Designer.cs">
+      <DependentUpon>201411011519222_tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411011655565_arreglo4.cs" />
+    <Compile Include="Migrations\201411011655565_arreglo4.Designer.cs">
+      <DependentUpon>201411011655565_arreglo4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411012054037_paginas.cs" />
+    <Compile Include="Migrations\201411012054037_paginas.Designer.cs">
+      <DependentUpon>201411012054037_paginas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411031407086_arreglo5.cs" />
+    <Compile Include="Migrations\201411031407086_arreglo5.Designer.cs">
+      <DependentUpon>201411031407086_arreglo5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411031557297_arreglo6.cs" />
+    <Compile Include="Migrations\201411031557297_arreglo6.Designer.cs">
+      <DependentUpon>201411031557297_arreglo6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411032131170_arreglo7.cs" />
+    <Compile Include="Migrations\201411032131170_arreglo7.Designer.cs">
+      <DependentUpon>201411032131170_arreglo7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411041455172_arreglo8.cs" />
+    <Compile Include="Migrations\201411041455172_arreglo8.Designer.cs">
+      <DependentUpon>201411041455172_arreglo8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411041456499_arreglo9.cs" />
+    <Compile Include="Migrations\201411041456499_arreglo9.Designer.cs">
+      <DependentUpon>201411041456499_arreglo9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411041704398_partners.cs" />
+    <Compile Include="Migrations\201411041704398_partners.Designer.cs">
+      <DependentUpon>201411041704398_partners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411041859175_region.cs" />
+    <Compile Include="Migrations\201411041859175_region.Designer.cs">
+      <DependentUpon>201411041859175_region.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411061626526_arreglo10.cs" />
+    <Compile Include="Migrations\201411061626526_arreglo10.Designer.cs">
+      <DependentUpon>201411061626526_arreglo10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411081927273_arregloViajes.cs" />
+    <Compile Include="Migrations\201411081927273_arregloViajes.Designer.cs">
+      <DependentUpon>201411081927273_arregloViajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411081949518_arregloViajes1.cs" />
+    <Compile Include="Migrations\201411081949518_arregloViajes1.Designer.cs">
+      <DependentUpon>201411081949518_arregloViajes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411082015070_arreglo11.cs" />
+    <Compile Include="Migrations\201411082015070_arreglo11.Designer.cs">
+      <DependentUpon>201411082015070_arreglo11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411082028213_arreglo12.cs" />
+    <Compile Include="Migrations\201411082028213_arreglo12.Designer.cs">
+      <DependentUpon>201411082028213_arreglo12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411101828017_paginaTexto.cs" />
+    <Compile Include="Migrations\201411101828017_paginaTexto.Designer.cs">
+      <DependentUpon>201411101828017_paginaTexto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411101939201_identity.cs" />
+    <Compile Include="Migrations\201411101939201_identity.Designer.cs">
+      <DependentUpon>201411101939201_identity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411102005504_identityArreglo1.cs" />
+    <Compile Include="Migrations\201411102005504_identityArreglo1.Designer.cs">
+      <DependentUpon>201411102005504_identityArreglo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411171645077_sugerencias.cs" />
+    <Compile Include="Migrations\201411171645077_sugerencias.Designer.cs">
+      <DependentUpon>201411171645077_sugerencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411172100260_promociones.cs" />
+    <Compile Include="Migrations\201411172100260_promociones.Designer.cs">
+      <DependentUpon>201411172100260_promociones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411181939147_prensa.cs" />
+    <Compile Include="Migrations\201411181939147_prensa.Designer.cs">
+      <DependentUpon>201411181939147_prensa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411182038350_sesiones.cs" />
+    <Compile Include="Migrations\201411182038350_sesiones.Designer.cs">
+      <DependentUpon>201411182038350_sesiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411191521187_destinoTitulo.cs" />
+    <Compile Include="Migrations\201411191521187_destinoTitulo.Designer.cs">
+      <DependentUpon>201411191521187_destinoTitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411191752223_arreglo13.cs" />
+    <Compile Include="Migrations\201411191752223_arreglo13.Designer.cs">
+      <DependentUpon>201411191752223_arreglo13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411191929556_notas.cs" />
+    <Compile Include="Migrations\201411191929556_notas.Designer.cs">
+      <DependentUpon>201411191929556_notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411192211035_arreglo14.cs" />
+    <Compile Include="Migrations\201411192211035_arreglo14.Designer.cs">
+      <DependentUpon>201411192211035_arreglo14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411201349387_arreglo15.cs" />
+    <Compile Include="Migrations\201411201349387_arreglo15.Designer.cs">
+      <DependentUpon>201411201349387_arreglo15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411201511474_arreglo16.cs" />
+    <Compile Include="Migrations\201411201511474_arreglo16.Designer.cs">
+      <DependentUpon>201411201511474_arreglo16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411201535518_arreglo17.cs" />
+    <Compile Include="Migrations\201411201535518_arreglo17.Designer.cs">
+      <DependentUpon>201411201535518_arreglo17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411211340076_arreglo18.cs" />
+    <Compile Include="Migrations\201411211340076_arreglo18.Designer.cs">
+      <DependentUpon>201411211340076_arreglo18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411211415202_lengthColumnas.cs" />
+    <Compile Include="Migrations\201411211415202_lengthColumnas.Designer.cs">
+      <DependentUpon>201411211415202_lengthColumnas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411211422204_arreglo19.cs" />
+    <Compile Include="Migrations\201411211422204_arreglo19.Designer.cs">
+      <DependentUpon>201411211422204_arreglo19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411211439150_arreglo20.cs" />
+    <Compile Include="Migrations\201411211439150_arreglo20.Designer.cs">
+      <DependentUpon>201411211439150_arreglo20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201411211641417_arreglo21.cs" />
+    <Compile Include="Migrations\201411211641417_arreglo21.Designer.cs">
+      <DependentUpon>201411211641417_arreglo21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412231856228_Arreglo22.cs" />
+    <Compile Include="Migrations\201412231856228_Arreglo22.Designer.cs">
+      <DependentUpon>201412231856228_Arreglo22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412252156049_Arreglo23.cs" />
+    <Compile Include="Migrations\201412252156049_Arreglo23.Designer.cs">
+      <DependentUpon>201412252156049_Arreglo23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412252209254_Arreglo24.cs" />
+    <Compile Include="Migrations\201412252209254_Arreglo24.Designer.cs">
+      <DependentUpon>201412252209254_Arreglo24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412261729348_Arreglo25.cs" />
+    <Compile Include="Migrations\201412261729348_Arreglo25.Designer.cs">
+      <DependentUpon>201412261729348_Arreglo25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412301906410_Arreglo26.cs" />
+    <Compile Include="Migrations\201412301906410_Arreglo26.Designer.cs">
+      <DependentUpon>201412301906410_Arreglo26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501022049271_Arreglo27.cs" />
+    <Compile Include="Migrations\201501022049271_Arreglo27.Designer.cs">
+      <DependentUpon>201501022049271_Arreglo27.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501022103557_Arreglo28.cs" />
+    <Compile Include="Migrations\201501022103557_Arreglo28.Designer.cs">
+      <DependentUpon>201501022103557_Arreglo28.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501061617497_Arreglo29.cs" />
+    <Compile Include="Migrations\201501061617497_Arreglo29.Designer.cs">
+      <DependentUpon>201501061617497_Arreglo29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501061834501_Arreglo30.cs" />
+    <Compile Include="Migrations\201501061834501_Arreglo30.Designer.cs">
+      <DependentUpon>201501061834501_Arreglo30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501121752528_Arreglo31.cs" />
+    <Compile Include="Migrations\201501121752528_Arreglo31.Designer.cs">
+      <DependentUpon>201501121752528_Arreglo31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501121822065_Arreglo32.cs" />
+    <Compile Include="Migrations\201501121822065_Arreglo32.Designer.cs">
+      <DependentUpon>201501121822065_Arreglo32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501131549577_Arreglo33.cs" />
+    <Compile Include="Migrations\201501131549577_Arreglo33.Designer.cs">
+      <DependentUpon>201501131549577_Arreglo33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501291451076_BannerInferior.cs" />
+    <Compile Include="Migrations\201501291451076_BannerInferior.Designer.cs">
+      <DependentUpon>201501291451076_BannerInferior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501301639241_BannerHome.cs" />
+    <Compile Include="Migrations\201501301639241_BannerHome.Designer.cs">
+      <DependentUpon>201501301639241_BannerHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502111455547_Contacto.cs" />
+    <Compile Include="Migrations\201502111455547_Contacto.Designer.cs">
+      <DependentUpon>201502111455547_Contacto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502111534471_Arreglo34.cs" />
+    <Compile Include="Migrations\201502111534471_Arreglo34.Designer.cs">
+      <DependentUpon>201502111534471_Arreglo34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502111840222_Arreglo35.cs" />
+    <Compile Include="Migrations\201502111840222_Arreglo35.Designer.cs">
+      <DependentUpon>201502111840222_Arreglo35.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502251743489_Arreglo36.cs" />
+    <Compile Include="Migrations\201502251743489_Arreglo36.Designer.cs">
+      <DependentUpon>201502251743489_Arreglo36.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503131944336_Arreglo37.cs" />
+    <Compile Include="Migrations\201503131944336_Arreglo37.Designer.cs">
+      <DependentUpon>201503131944336_Arreglo37.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505051509004_Arreglo38.cs" />
+    <Compile Include="Migrations\201505051509004_Arreglo38.Designer.cs">
+      <DependentUpon>201505051509004_Arreglo38.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505291420299_AgregarSPBusqueda.cs" />
+    <Compile Include="Migrations\201505291420299_AgregarSPBusqueda.Designer.cs">
+      <DependentUpon>201505291420299_AgregarSPBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506021952267_AddTableBannerContextual.cs" />
+    <Compile Include="Migrations\201506021952267_AddTableBannerContextual.Designer.cs">
+      <DependentUpon>201506021952267_AddTableBannerContextual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506221945417_Arreglo39.cs" />
+    <Compile Include="Migrations\201506221945417_Arreglo39.Designer.cs">
+      <DependentUpon>201506221945417_Arreglo39.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610261329599_Wellness.cs" />
+    <Compile Include="Migrations\201610261329599_Wellness.Designer.cs">
+      <DependentUpon>201610261329599_Wellness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PasifikaDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Pasifika.Model\Pasifika.Model.csproj">
+      <Project>{b81f3e7c-2977-4e7d-9f9d-39f74d96dd44}</Project>
+      <Name>Pasifika.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201410302004312_Init.resx">
+      <DependentUpon>201410302004312_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410311534353_arreglo1.resx">
+      <DependentUpon>201410311534353_arreglo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410311932338_arreglo2.resx">
+      <DependentUpon>201410311932338_arreglo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410312105389_arreglo3.resx">
+      <DependentUpon>201410312105389_arreglo3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411011519222_tags.resx">
+      <DependentUpon>201411011519222_tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411011655565_arreglo4.resx">
+      <DependentUpon>201411011655565_arreglo4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411012054037_paginas.resx">
+      <DependentUpon>201411012054037_paginas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411031407086_arreglo5.resx">
+      <DependentUpon>201411031407086_arreglo5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411031557297_arreglo6.resx">
+      <DependentUpon>201411031557297_arreglo6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411032131170_arreglo7.resx">
+      <DependentUpon>201411032131170_arreglo7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411041455172_arreglo8.resx">
+      <DependentUpon>201411041455172_arreglo8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411041456499_arreglo9.resx">
+      <DependentUpon>201411041456499_arreglo9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411041704398_partners.resx">
+      <DependentUpon>201411041704398_partners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411041859175_region.resx">
+      <DependentUpon>201411041859175_region.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411061626526_arreglo10.resx">
+      <DependentUpon>201411061626526_arreglo10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411081927273_arregloViajes.resx">
+      <DependentUpon>201411081927273_arregloViajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411081949518_arregloViajes1.resx">
+      <DependentUpon>201411081949518_arregloViajes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411082015070_arreglo11.resx">
+      <DependentUpon>201411082015070_arreglo11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411082028213_arreglo12.resx">
+      <DependentUpon>201411082028213_arreglo12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411101828017_paginaTexto.resx">
+      <DependentUpon>201411101828017_paginaTexto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411101939201_identity.resx">
+      <DependentUpon>201411101939201_identity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411102005504_identityArreglo1.resx">
+      <DependentUpon>201411102005504_identityArreglo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411171645077_sugerencias.resx">
+      <DependentUpon>201411171645077_sugerencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411172100260_promociones.resx">
+      <DependentUpon>201411172100260_promociones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411181939147_prensa.resx">
+      <DependentUpon>201411181939147_prensa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411182038350_sesiones.resx">
+      <DependentUpon>201411182038350_sesiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411191521187_destinoTitulo.resx">
+      <DependentUpon>201411191521187_destinoTitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411191752223_arreglo13.resx">
+      <DependentUpon>201411191752223_arreglo13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411191929556_notas.resx">
+      <DependentUpon>201411191929556_notas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411192211035_arreglo14.resx">
+      <DependentUpon>201411192211035_arreglo14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411201349387_arreglo15.resx">
+      <DependentUpon>201411201349387_arreglo15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411201511474_arreglo16.resx">
+      <DependentUpon>201411201511474_arreglo16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411201535518_arreglo17.resx">
+      <DependentUpon>201411201535518_arreglo17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411211340076_arreglo18.resx">
+      <DependentUpon>201411211340076_arreglo18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411211415202_lengthColumnas.resx">
+      <DependentUpon>201411211415202_lengthColumnas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411211422204_arreglo19.resx">
+      <DependentUpon>201411211422204_arreglo19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411211439150_arreglo20.resx">
+      <DependentUpon>201411211439150_arreglo20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201411211641417_arreglo21.resx">
+      <DependentUpon>201411211641417_arreglo21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412231856228_Arreglo22.resx">
+      <DependentUpon>201412231856228_Arreglo22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412252156049_Arreglo23.resx">
+      <DependentUpon>201412252156049_Arreglo23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412252209254_Arreglo24.resx">
+      <DependentUpon>201412252209254_Arreglo24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412261729348_Arreglo25.resx">
+      <DependentUpon>201412261729348_Arreglo25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412301906410_Arreglo26.resx">
+      <DependentUpon>201412301906410_Arreglo26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501022049271_Arreglo27.resx">
+      <DependentUpon>201501022049271_Arreglo27.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501022103557_Arreglo28.resx">
+      <DependentUpon>201501022103557_Arreglo28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501061617497_Arreglo29.resx">
+      <DependentUpon>201501061617497_Arreglo29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501061834501_Arreglo30.resx">
+      <DependentUpon>201501061834501_Arreglo30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501121752528_Arreglo31.resx">
+      <DependentUpon>201501121752528_Arreglo31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501121822065_Arreglo32.resx">
+      <DependentUpon>201501121822065_Arreglo32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501131549577_Arreglo33.resx">
+      <DependentUpon>201501131549577_Arreglo33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501291451076_BannerInferior.resx">
+      <DependentUpon>201501291451076_BannerInferior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501301639241_BannerHome.resx">
+      <DependentUpon>201501301639241_BannerHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502111455547_Contacto.resx">
+      <DependentUpon>201502111455547_Contacto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502111534471_Arreglo34.resx">
+      <DependentUpon>201502111534471_Arreglo34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502111840222_Arreglo35.resx">
+      <DependentUpon>201502111840222_Arreglo35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502251743489_Arreglo36.resx">
+      <DependentUpon>201502251743489_Arreglo36.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503131944336_Arreglo37.resx">
+      <DependentUpon>201503131944336_Arreglo37.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505051509004_Arreglo38.resx">
+      <DependentUpon>201505051509004_Arreglo38.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505291420299_AgregarSPBusqueda.resx">
+      <DependentUpon>201505291420299_AgregarSPBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506021952267_AddTableBannerContextual.resx">
+      <DependentUpon>201506021952267_AddTableBannerContextual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506221945417_Arreglo39.resx">
+      <DependentUpon>201506221945417_Arreglo39.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610261329599_Wellness.resx">
+      <DependentUpon>201610261329599_Wellness.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

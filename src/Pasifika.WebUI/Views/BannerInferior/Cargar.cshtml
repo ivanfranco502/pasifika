@@ -1,0 +1,10 @@
+﻿@model List<Pasifika.Model.BannerInferior>
+
+<div class="row modulo">
+    <div class="col-xs-12 text-right">
+        @foreach(var b in Model)
+        { 
+            <a href="@b.Link"><img src="~/Content/images/bannerinferior/@b.Pagina.Id/@b.Foto" alt="@b.Alt" class="img-responsive pull-right"></a><br />
+        }
+    </div>
+</div>

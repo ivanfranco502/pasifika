@@ -1,0 +1,288 @@
+﻿@model Pasifika.WebUI.ViewModels.Tipo2ListadoViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = ViewBag.seccionId, destinoId = Model.Destino.Id })
+
+    @Scripts.Render("~/bundles/helpers")
+}
+
+@Html.Action("Cargar", "Banner", new { seccionId = ViewBag.seccionId, destinoId = Model.Destino.Id, tipo = 1 })
+
+<div data-ng-app="exampleApp">
+    <div data-ng-controller="Tipo2Ctrl" class="mainContainer" style="display:none">
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="borde-top-gris">
+                            <h1 class="titular-1 f-linea-gris text-center">
+                                <span>@ViewBag.palabra1 @Model.Destino.Nombre.ToUpper()</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="texto-21 texto-destacado">
+                            @Html.Action("Cargar", "Texto", new { seccionId = ViewBag.seccionId, destinoId = Model.Destino.Id })
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="caja-drag">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <p class="texto-15">PRECIO</p>
+                            <div class="slider">
+                                <div id="presupuesto-lower" class="label-slide label-left">{{presupuesto.from}}</div>
+                                <div class="wrapper-slide presupuesto">
+                                    <div id="presupuesto" data-slider data-ng-from="presupuesto.from" data-ng-to="presupuesto.to" data-start="{{presupuesto.min}}" data-end="{{presupuesto.max}}" data-step="1"></div>
+                                </div>
+                                <div id="presupuesto-upper" class="label-slide label-right">{{presupuesto.to}}</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="clearfix">
+                                <p class="texto-15 pull-left">NOMBRE</p>
+                            </div>
+                            <select id="nombre">
+                                <option value="">TODOS</option>
+                                @foreach (var v in Model.Viajes)
+                                {
+                                    <option value="@v.Url">@v.Nombre</option>
+                                }
+                            </select>
+                            <input type="text" data-ng-model="viaje" id="txtViaje" style="display:none" />
+                        </div>
+                        <div class="col-xs-4">
+                            <div class=" clearfix">
+                                <p class="texto-15 pull-left">LOCALIZACIÓN</p>
+                                <a href="javascript:void(0);" class="btn-borrar texto-9 pull-right">Borrar selección</a>
+                            </div>
+
+                            <select id="destinos">
+                                <option value="">TODOS</option>
+                                @{
+                                    var ciudades2 = from v in Model.Viajes
+                                                    group ((Pasifika.Model.ViajeTipo2)v).Ciudad by ((Pasifika.Model.ViajeTipo2)v).Ciudad into ciudades
+                                                    select ciudades;
+                                }
+
+
+                                @foreach (var c in ciudades2)
+                                {
+                                    <option value="@c.Key.Url">@c.Key.Nombre</option>
+                                }
+                            </select>
+                            <input type="text" data-ng-model="ciudad" id="txtCiudad" style="display:none" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="caja-tags texto-12">
+                    <p class="pull-left">
+                        <strong>INTERESES SELECCIONADOS:</strong>
+                    </p>
+                    <div class="wrapper-tags pull-left">
+                        <div class="tag" data-ng-repeat="tag in tagsSelected track by $index"><span class="termino">{{tag.Nombre}}</span><i class="ico borrar" data-ng-click="removeTag($index)"></i></div>
+                    </div>
+                    <a data-ng-click="removeTags()" class="btn-borrar-tags texto-9 pull-right">Borrar selecci&oacute;n</a>
+                </div>
+            </div>
+        </div>
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris">
+                        <span>{{ (data | filter: categoryFilterFn).length}} @ViewBag.palabra3</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnails modulo">
+            <!-- row thumbs -->
+            <div class="row" data-ng-repeat="item in data | filter:categoryFilterFn" data-ng-if="$index % 2 == 0">
+                <!-- thumb-->
+                <div class="col-xs-6" data-ng-repeat="item in (data | filter: categoryFilterFn).slice($index, $index+2)">
+                    <div class="thumbnail-4">
+                        <div class="caption">
+                            <p class="texto-22">@ViewBag.palabra4 EN {{item.DestinoNombre | uppercase}}</p>
+                            <a data-ng-href="{{item.Link}}"><h3 class="texto-23">{{item.Nombre}}</h3></a>
+                            <p class="texto-9">{{item.DestinoNombre | uppercase}}, {{item.CiudadNombre | uppercase}}</p>
+                        </div>
+                        <div class="flexslider flexslider-small" data-my-repeat-directive>
+                            <ul class="slides">
+                                <li class="item" data-ng-repeat="foto in item.Fotos"><img src="/Content/images/FFFFFF-0.png" data-ng-src="/Content/images/foto/{{foto.Archivo}}" class="" alt="{{foto.Alt}}"></li>
+                            </ul>
+                        </div>
+                        <div class="caption">
+                            <p class="texto-5 em">
+                                {{item.Descripcion}}
+                            </p>
+                            <div class="tags texto-22">
+                                <p class="short">
+                                    <strong class="black">INTERESES:</strong>
+                                    <a href="javascript:void(0);" data-ng-repeat="tag in item.Tags" data-ng-click="addTag(tag.Url, tag.Nombre)" data-value="{{tag.Nombre}}">{{tag.Nombre | uppercase }}{{$last ? '' : ', '}}</a>
+                                </p>
+                                <p class="long">
+                                    <strong class="black">INTERESES:</strong>
+                                    <a href="javascript:void(0);" data-ng-repeat="tag in item.Tags" data-ng-click="addTag(tag.Url, tag.Nombre)" data-value="{{tag.Nombre}}">{{tag.Nombre | uppercase }}{{$last ? '' : ', '}}</a>
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-7">
+                                    <div class="precio">
+                                        <p class="texto-14">DESDE:</p>
+                                        <div class="clearfix">
+                                            <span class="texto-18">
+                                                <strong>
+                                                    {{item.Precio}} <span class="texto-4">Euros</span>
+                                                </strong>
+                                            </span>
+
+                                            <span data-ng-if="item.InfoPrecio != ''" class="badge-info" title="{{item.InfoPrecio}}" data-toggle="tooltip" data-placement="top">i</span>
+                                        </div>
+                                        <p class="texto-14">
+                                        @if (Model.Viajes.Count > 0 && Model.Viajes[0] is Pasifika.Model.Hotel)
+                                        {
+                                            @:POR NOCHE
+                                        }
+                                        else
+                                        {
+                                            @:POR PERSONA
+                                        }
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5">
+                                    <a data-ng-href="{{item.Link}}" class="btn btn-negro-2 pull-right">VER @ViewBag.palabra2</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.thumb-->
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script>
+        var viajesJson = @Html.Raw(Json.Encode(Model.ViajesJson));
+    </script>
+
+    @Scripts.Render("~/bundles/select2")
+    @Scripts.Render("~/bundles/angular")
+    <script src="~/js/libs/angular-route.min.js"></script>
+    <script src="~/js/libs/angular-route.min.js.map"></script>
+    @Scripts.Render("~/bundles/angular/myApp")
+
+    <script>
+        $(function () {
+            /*
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: false
+            });
+            */
+
+            //$('#presupuesto').Link('lower').to($('#presupuesto-lower'));
+            //$('#presupuesto').Link('upper').to($('#presupuesto-upper'));
+
+            // Localización
+            
+            $("#destinos").select2();
+            $('#destinos').on('change', function (e) {
+                var destino = $(this).val();
+                $('#txtCiudad').val(destino);
+                $('#txtCiudad').trigger('input');
+            });
+            
+
+            // Resetea filtro de destinos
+            $('.btn-borrar').on('click', function () {
+                $("#destinos, #nombre").select2("val", "").trigger('change');
+            });
+
+            // Nombre
+            $("#nombre").select2();
+            $('#nombre').on('change', function (e) {
+                var nombre = $(this).val();
+                $('#txtViaje').val(nombre);
+                $('#txtViaje').trigger('input');
+            });
+
+            /*
+            // Tags
+            //
+            var tags_selected = []; // Array que acumula los valores elegidos
+            $('.thumbnail-4 .tags a').on('click', function(e) {
+                e.preventDefault();
+                var that = $(e.currentTarget).attr('data-value');
+                tags_selected.push(that);
+                var tags = '';
+                $.unique(tags_selected);
+                for (var i = tags_selected.length - 1; i >= 0; i--) {
+                    tags += '<div class="tag"><span class="termino">' + tags_selected[i] + '</span><i class="ico borrar"></i></div>';
+                };
+                $('.wrapper-tags').html(tags);
+            });
+
+            // Borrar todos los tags
+            $('.btn-borrar-tags').on('click', function() {
+                tags_selected = [];
+                $('.wrapper-tags').empty();
+            });
+
+            // Borrar tag individualmente
+            $('.wrapper-tags').on('click', '.tag .borrar', function(e) {
+                e.preventDefault();
+                var that = $(e.currentTarget).parent();
+                var i = tags_selected.indexOf(that.text());
+                if (i != -1) {
+                    tags_selected.splice(i, 1);
+                    that.remove();
+                }
+            });
+            */
+
+            // Desplegar lista completa de tags
+            //
+
+            $('body').on('mouseenter', '.thumbnail-4 .tags', function () {
+                $(this).find('.long').slideDown(200);
+            });
+
+            $('body').on('mouseleave', '.thumbnail-4 .tags', function () {
+                $(this).find('.long').hide();
+            });
+
+            $('.thumbnail-4 .tags').on({
+                mouseenter: function () {
+                    $(this).find('.long').slideDown(200);
+                },
+                mouseleave: function () {
+                    $(this).find('.long').hide();
+                }
+            });
+
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+</script>
+}

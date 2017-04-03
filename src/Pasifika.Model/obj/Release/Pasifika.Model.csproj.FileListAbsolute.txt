@@ -1,0 +1,14 @@
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Pasifika.Model.dll.config
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Pasifika.Model.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Pasifika.Model.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\EntityFramework.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\EntityFramework.SqlServer.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\EntityFramework.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\EntityFramework.SqlServer.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\obj\Release\Pasifika.Model.csprojResolveAssemblyReference.cache
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\obj\Release\Pasifika.Model.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\obj\Release\Pasifika.Model.pdb

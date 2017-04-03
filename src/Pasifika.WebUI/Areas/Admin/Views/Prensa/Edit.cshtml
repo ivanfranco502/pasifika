@@ -1,0 +1,118 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.PrensaEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Prensa", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Prensa </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Titulo", Model.Prensa.Titulo, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Revista</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Revista", Model.Prensa.Revista, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Fecha</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Fecha", Model.Prensa.Fecha.ToString("dd/MM/yyyy"), new { @class = "form-control datepicker", @data_dateformat = "dd/mm/yy" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Resumen</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Resumen", (Model.Prensa.Resumen), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Foto</label>
+                            <div class="col-md-9">
+                                @if (@Model.Prensa.Foto != null)
+                                {
+                                    <img src="~/Content/images/prensa/foto/@Model.Prensa.Foto" width="50" height="50" /><br />
+                                }
+                                @Html.Hidden("Foto", Model.Prensa.Foto, new { @class = "form-control" })
+                                <input type="file" name="file1" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt", Model.Prensa.Alt, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">PDF</label>
+                            <div class="col-md-9">
+                                @Html.Hidden("PDF", Model.Prensa.PDF, new { @class = "form-control" })
+                                <input type="file" name="file2" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Link</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Link", Model.Prensa.Link, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/config.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/styles.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/adapters/jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.summernote').ckeditor({
+
+            });
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            $("#formEdit").submit();
+        });
+    </script>
+}

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3D34F63-4A69-41A7-9CA9-D553D116E0E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pasifika.Business</RootNamespace>
+    <AssemblyName>Pasifika.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IBusquedaBusiness.cs" />
+    <Compile Include="Abstract\IBannerHomeBusiness.cs" />
+    <Compile Include="Abstract\ICiudadBusiness.cs" />
+    <Compile Include="Abstract\IContactoBusiness.cs" />
+    <Compile Include="Abstract\IDestinoBusiness.cs" />
+    <Compile Include="Abstract\IExcelExportBusiness.cs" />
+    <Compile Include="Abstract\IFormularioSesionBusiness.cs" />
+    <Compile Include="Abstract\INotaBusiness.cs" />
+    <Compile Include="Abstract\IPaginaBusiness.cs" />
+    <Compile Include="Abstract\IPartnerBusiness.cs" />
+    <Compile Include="Abstract\IPrensaBusiness.cs" />
+    <Compile Include="Abstract\IPromocionBusiness.cs" />
+    <Compile Include="Abstract\IRegionBusiness.cs" />
+    <Compile Include="Abstract\ISeccionBusiness.cs" />
+    <Compile Include="Abstract\ISugerenciaBusiness.cs" />
+    <Compile Include="Abstract\ITagBusiness.cs" />
+    <Compile Include="Abstract\IViajeBusiness.cs" />
+    <Compile Include="Concrete\BusquedaBusiness.cs" />
+    <Compile Include="Concrete\BannerHomeBusiness.cs" />
+    <Compile Include="Concrete\CiudadBusiness.cs" />
+    <Compile Include="Concrete\ContactoBusiness.cs" />
+    <Compile Include="Concrete\DestinoBusiness.cs" />
+    <Compile Include="Concrete\ExcelExportBusiness.cs" />
+    <Compile Include="Concrete\FormularioSesionBusiness.cs" />
+    <Compile Include="Concrete\NotaBusiness.cs" />
+    <Compile Include="Concrete\PaginaBusiness.cs" />
+    <Compile Include="Concrete\PartnerBusiness.cs" />
+    <Compile Include="Concrete\PrensaBusiness.cs" />
+    <Compile Include="Concrete\PromocionBusiness.cs" />
+    <Compile Include="Concrete\RegionBusiness.cs" />
+    <Compile Include="Concrete\SeccionBusiness.cs" />
+    <Compile Include="Concrete\SugerenciaBusiness.cs" />
+    <Compile Include="Concrete\TagBusiness.cs" />
+    <Compile Include="Concrete\ViajeBusiness.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pasifika.Business.DataAccess\Pasifika.Business.DataAccess.csproj">
+      <Project>{68766425-f96b-4a38-bcc9-343d0f20233c}</Project>
+      <Name>Pasifika.Business.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pasifika.Model\Pasifika.Model.csproj">
+      <Project>{b81f3e7c-2977-4e7d-9f9d-39f74d96dd44}</Project>
+      <Name>Pasifika.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

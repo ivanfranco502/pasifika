@@ -1,0 +1,138 @@
+﻿@model Pasifika.WebUI.ViewModels.GuiasIndexViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 17 })
+}
+
+<div class="row modulo">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>GUÍAS DE VIAJE</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        @Html.Action("Cargar", "Banner", new { seccionId = 17, tipo = 2 })
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="titular-2 texto-destacado">
+                    @Html.Action("Cargar", "Texto", new { seccionId = 17 })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@foreach(var r in Model.Regiones)
+{ 
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h2 class="titular-1 f-linea-gris text-center">
+                <span>Gu&iacute;as de viaje - @r.Nombre</span>
+            </h2>
+        </div>
+    </div>
+</div>
+
+<div class="thumbnails modulo">
+
+    <!-- row thumbs -->
+    <div class="row">
+        @{int cant = 0;}
+
+        @foreach (var d in r.Destinos.Where(x => x.Eliminado == false).OrderBy(x => x.Orden))
+        {
+            <!-- thumb-->
+            <div class="col-xs-3 text-center">
+                <div class="thumbnail thumbnail-hover">
+                    <a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                          action = "Detalle",
+                                          destino = d.Url })"><img src="~/Content/images/destino/guia/@d.FotoGuia" alt="@d.Alt" class="img-responsive"></a>
+                    <div class="caption">
+                        <a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                          action = "Detalle",
+                                          destino = d.Url })"><h3 class="texto-6">GU&Iacute;A DE VIAJE DE @d.Nombre.ToUpper()</h3></a>
+                        <p class="texto-24">
+                            @{
+                                string resumen = d.Resumen == null ? "" : d.Resumen;
+                                
+                                string texto = System.Text.RegularExpressions.Regex.Replace(resumen, @"<[^>]*>", String.Empty);
+                                
+                                if (texto.Length > 157)
+                                {
+                                    @:@Html.Raw(texto.Substring(0, 157)) ...
+                                }
+                                else
+                                {
+                                    @:@Html.Raw(texto)
+                                }
+                            }
+                            <br><br>
+                            <a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                          action = "Detalle",
+                                          destino = d.Url })">Ver guía de viaje</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.thumb-->
+            <!-- thumb-->
+
+            cant++;
+            if (cant % 4 == 0)
+            {
+                @:</div>
+                if (cant == 8)
+                        {
+                            @:</div>    
+                            @:<div class="thumbnails modulo hide">
+                        }
+                @:<div class="row">
+            }
+        }
+    </div>
+    <!-- /.row thumbs -->
+    <!-- row thumbs -->
+</div>
+
+    if (r.Destinos.Count() > 8)
+    {
+        <div class="row modulo">
+            <div class="col-xs-12 text-center">
+                <a href="javascript:void(0);" class="btn btn-blanco ver-mas">VER MÁS GUÍAS DE VIAJE A DESTINOS EN @r.Nombre.ToUpper()</a>
+            </div>
+        </div>
+    }
+}
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+
+            $('.ver-mas').on('click', function (e) {
+                var that = $(e.currentTarget);
+                that.parent().parent().prev('.hide').removeClass('hide');
+                that.hide();
+            });
+        });
+    </script>
+}

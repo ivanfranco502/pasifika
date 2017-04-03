@@ -1,0 +1,30 @@
+﻿@model List<Pasifika.Model.SugerenciaPagina>
+
+<div class="thumbnails modulo">
+    <!-- row thumbs -->
+    <div class="row">
+    @{int cant = 0;}
+
+    @foreach (var s in Model)
+    {
+        <!-- thumb-->
+        <div class="col-xs-4">
+            <a href="@s.Sugerencia.Link" class="thumbnail">
+                <div class="texto-27">@s.Sugerencia.Titulo</div>
+                <img alt="@s.Sugerencia.Alt" src="~/Content/images/sugerencia/@s.Sugerencia.Foto" class="img-responsive">
+            </a>
+        </div>
+        <!-- /.thumb-->
+        <!-- thumb-->
+
+        cant++;
+        if (cant % 3 == 0)
+        {
+            @:</div>
+            @:<div class="row">
+        }
+    }
+
+    </div>
+    <!-- /.row thumbs -->
+</div>

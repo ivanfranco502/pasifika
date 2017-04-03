@@ -1,0 +1,154 @@
+﻿@model Pasifika.Model.InfoRelacion
+@if (Model != null)
+{ 
+if (!(string.IsNullOrEmpty(Model.Titulo1)) && !(string.IsNullOrEmpty(Model.Titulo2)) && !(string.IsNullOrEmpty(Model.Titulo3)) && !(string.IsNullOrEmpty(Model.Titulo4)))
+{
+<div class="row modulo">
+    <div class="col-xs-4">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris">
+                        <span>@Model.Titulo1</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="thumbnail">
+                    <a href="@Model.Link1"><img alt="@Model.Alt1" src="~/Content/images/info/@Model.PaginaId/@Model.Foto1" class="img-responsive"></a>
+                    <div class="caption">
+                        @if (string.IsNullOrEmpty(Model.Link1))
+                        {
+                            <div class="texto-6 uppercase"> @Model.SubTitulo1</div>
+                        }
+                        else
+                        {
+                            <a href="@Model.Link1" class="texto-6 uppercase"> @Model.SubTitulo1</a>
+                        }
+                        
+                        <br>
+                        <p class="texto-5">
+                            @Html.Raw(Model.Texto1)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris">
+                        <span>@Model.Titulo2</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="thumbnail">
+                    <a href="@Model.Link2"><img alt="@Model.Alt2" src="~/Content/images/info/@Model.PaginaId/@Model.Foto2" class="img-responsive"></a>
+                    <div class="caption">
+
+                        @if (string.IsNullOrEmpty(Model.Link2))
+                        {
+                            <div class="texto-6 uppercase"> @Model.SubTitulo2</div>
+                        }
+                        else
+                        {
+                            <a href="@Model.Link2" class="texto-6 uppercase"> @Model.SubTitulo2</a>
+                        }
+
+                        <br>
+                        <p class="texto-5">
+                            @Html.Raw(Model.Texto2)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+if (!(string.IsNullOrEmpty(Model.Titulo3)) && !(string.IsNullOrEmpty(Model.Titulo4)))
+{
+<div class="row">
+    <div class="col-xs-8">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris">
+                        <span>@Model.Titulo3</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="thumbnail">
+                    <a href="@Model.Link3"><img alt="@Model.Alt3" src="~/Content/images/info/@Model.PaginaId/@Model.Foto3" class="img-responsive"></a>
+                    <div class="caption">
+
+                        @if (string.IsNullOrEmpty(Model.Link3))
+                        {
+                            <div class="texto-6 uppercase"> @Model.SubTitulo3</div>
+                        }
+                        else
+                        {
+                            <a href="@Model.Link3" class="texto-6 uppercase"> @Model.SubTitulo3</a>
+                        }
+
+                        <br>
+                        <p class="texto-5">
+                            @Html.Raw(Model.Texto3)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-4">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris">
+                        <span>@Model.Titulo4</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="thumbnail">
+                    <a href="@Model.Link4"><img alt="@Model.Alt4" src="~/Content/images/info/@Model.PaginaId/@Model.Foto4" class="img-responsive"></a>
+                    <div class="caption">
+                        @if (string.IsNullOrEmpty(Model.Link4))
+                        {
+                            <div class="texto-6 uppercase"> @Model.SubTitulo4</div>
+                        }
+                        else
+                        {
+                            <a href="@Model.Link4" class="texto-6 uppercase"> @Model.SubTitulo4</a>
+                        }
+                        <br>
+                        <p class="texto-5">
+                            @Html.Raw(Model.Texto4)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+}
+}

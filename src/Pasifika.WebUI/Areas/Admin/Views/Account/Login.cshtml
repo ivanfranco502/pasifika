@@ -1,0 +1,117 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.AccountLoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Areas/Admin/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Areas/Admin/Content/css/font-awesome.min.css">
+
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Areas/Admin/Content/css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Areas/Admin/Content/css/smartadmin-skins.min.css">
+
+    <!-- page related CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="~/Areas/Admin/Content/css/lockscreen.min.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+</head>
+<body>
+    <div id="main" role="main">
+
+        <!-- MAIN CONTENT -->
+        @Html.ValidationSummary()
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "lockscreen animated flipInY" }))
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+            <div class="logo">
+                <h1 class="semi-bold"><img src="~/Areas/Admin/Content/img/logo-o.png" alt="" /> Pasifika</h1>
+            </div>
+            <div>
+                <div>
+                    <h1><i class="fa fa-user fa-3x text-muted air air-top-right hidden-mobile"></i>Acceso al panel &nbsp;<i class="fa fa-lock text-muted"></i> &nbsp;</h1>
+                    <p>
+                        <div class="input-group">
+                            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", @placeholder = "Usuario" })
+                            <div class="input-group-btn">
+                                <i class="fa fa-key"></i>
+                            </div>
+                        </div>
+                    </p>
+                    <div class="input-group">
+                        @Html.PasswordFor(x => x.Password, new { @class = "form-control", @placeholder = "Clave" })
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa fa-key"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p class="font-xs margin-top-5">
+                Copyright 3Pi Factory
+            </p>
+        }
+    </div>
+
+    <!--================================================== -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script> if (!window.jQuery) { document.write('<script src="~/Areas/Admin/Content/js/libs/jquery-2.0.2.min.js"><\/script>'); } </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script> if (!window.jQuery.ui) { document.write('<script src="~/Areas/Admin/Content/js/libs/jquery-ui-1.10.3.min.js"><\/script>'); } </script>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="~/Areas/Admin/Content/js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- CUSTOM NOTIFICATION -->
+    <script src="~/Areas/Admin/Content/js/notification/SmartNotification.min.js"></script>
+
+    <!-- JARVIS WIDGETS -->
+    <script src="~/Areas/Admin/Content/js/smartwidgets/jarvis.widget.min.js"></script>
+
+    <!-- EASY PIE CHARTS -->
+    <script src="~/Areas/Admin/Content/js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+    <!-- SPARKLINES -->
+    <script src="~/Areas/Admin/Content/js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- JQUERY VALIDATE -->
+    <script src="~/Areas/Admin/Content/js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+    <!-- JQUERY MASKED INPUT -->
+    <script src="~/Areas/Admin/Content/js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+    <!-- JQUERY SELECT2 INPUT -->
+    <script src="~/Areas/Admin/Content/js/plugin/select2/select2.min.js"></script>
+
+    <!-- JQUERY UI + Bootstrap Slider -->
+    <script src="~/Areas/Admin/Content/js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+    <!-- browser msie issue fix -->
+    <script src="~/Areas/Admin/Content/js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+    <!-- FastClick: For mobile devices -->
+    <script src="~/Areas/Admin/Content/js/plugin/fastclick/fastclick.js"></script>
+
+    <!--[if IE 7]>
+
+        <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+
+    <![endif]-->
+    <!-- MAIN APP JS FILE -->
+    <script src="~/Areas/Admin/Content/js/app.js"></script>
+</body>
+</html>
+

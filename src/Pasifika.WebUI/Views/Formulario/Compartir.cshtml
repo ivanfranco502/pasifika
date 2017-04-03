@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewBag.Title = "Compartir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 26 })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>COMPARTIR</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = 26, tipo = 2 })
+
+<div class="row modulo">
+    <div class="col-xs-9">
+
+        @using (Html.BeginForm("SaveCompartir", "Formulario", FormMethod.Post, new { @class = "form-horizontal modulo contacto", @role = "form" }))
+        {
+            <div class="row modulo">
+                <div class="col-xs-12">
+                    <h2 class="titular-1 f-linea-gris-b">
+                        <span>Enviar esta página por email</span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row modulo">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <div class="form-group">
+                                <label for="nombre" class="control-label label-izq">Su nombre*</label>
+                                <div class="form-control-wrapper-izq">
+                                    <input type="text" class="form-control" id="Nombre" name="Nombre">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-7">
+                            <div class="form-group">
+                                <label for="nombre-amigo" class="control-label label-der">Nombre de su amigo*</label>
+                                <div class="form-control-wrapper-der">
+                                    <input type="text" class="form-control" id="NombreAmigo" name="NombreAmigo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <div class="form-group">
+                                <label for="email" class="control-label label-izq">Su email*</label>
+                                <div class="form-control-wrapper-izq">
+                                    <input type="text" class="form-control" id="Email" name="Email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-7">
+                            <div class="form-group">
+                                <label for="email-amigo" class="control-label label-der">Email de su amigo*</label>
+                                <div class="form-control-wrapper-der">
+                                    <input type="text" class="form-control" id="EmailAmigo" name="EmailAmigo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="asunto" class="control-label label-izq">Asunto*</label>
+                                <div class="form-control-wrapper-izq">
+                                    <input type="text" class="form-control" id="Asunto" name="Asunto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row modulo">
+                <div class="col-xs-12">
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="mensaje" class="control-label">
+                                    <strong>Mensaje</strong>
+                                </label>
+                                <textarea class="form-control mensaje" id="Mensaje" name="Mensaje"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group pull-left">
+                                <div class="pull-left">
+                                    <label for="recibir" class="control-label">Recibir éste mensaje también en su email</label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="Recibir" id="Recibir" value="true">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group pull-left">
+                                <div class="pull-left privacidad">
+                                    <label for="privacidad" class="control-label">
+                                        He leido y acepto la <a href="#" target="_blank">política de privacidad</a>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="Privacidad" id="Privacidad" value="true">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <p class="modulo">* datos obligatorios</p>
+                        </div>
+
+                        <div class="col-xs-8">
+                            <p class="modulo texto-7 error-text hide">Por favor revise los campos.</p>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="form-group pull-right">
+                                <input type="hidden" name="Url" value="@Request.UrlReferrer" />
+                                <button type="submit" class="btn btn-negro pull-right">ENVIAR</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        }
+
+    </div>
+    <!-- / Col izquierda -->
+
+    <div class="col-xs-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bloque-negro">
+
+                    <p class="texto-10 bold">
+                        CONTACTE CON
+                        <br>NOSOTROS:
+                    </p>
+                    <p class="texto-10">
+                        T +34 91 715 5422
+                        <br><a href="mailto:info@pasifika.es">info@pasifika.es</a>
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>NUESTRA OFICINA</strong>
+                        </span>
+                        <br>Calle Francia 3 - Piso 1º B
+                        <br>28224 Pozuelo de Alarcón
+                        <br>Madrid - España
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>HORARIOS</strong>
+                        </span>
+                        <br>De lunes a viernes:
+                        <br>de 10.00h a 14.00h
+                        <br>y de 16.00h a 19.00h
+                    </p>
+                    <p class="texto-12">
+                        Skype: <a href="skype:pasifika.viajes">pasifika.viajes</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade feedbackContacto">
+    <div class="modal-dialog  modal-sm">
+        <div class="modal-content">
+            <div class="modal-header texto-9">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true"><i class="ico borrar-inv"></i></span><span class="sr-only">Cerrar</span>
+                </button>
+                <h4 class="modal-title  texto-9"><strong>Compartir</strong></h4>
+            </div>
+            <div class="modal-body">
+                <p class="texto-9">
+                    Muchas gracias.
+                    <br>
+                    <br>
+                    <i class="ico petalos-inv"></i>
+                </p>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+@section scripts
+{
+    <script>
+        $(function() {
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true,
+                slideshow: false
+            });
+            
+            // Contacto form
+            $('form.contacto').on('submit', function(e) {
+                $('.error-text').addClass('hide');
+
+                if (validacion() === true) {
+                    return true;
+                }
+
+                $('.error-text').removeClass('hide');
+                return false;
+            });
+
+            @if (ViewBag.cartel)
+            {
+                @:$('.feedbackContacto').modal('show');
+            }
+        });
+
+        var validacion = function() {
+            var form = $('form.contacto');
+            var formData = $('form.contacto').serializeArray();
+
+            $('form.contacto .has-error').removeClass('has-error');
+
+            if( $(form).find('[name=Nombre]').val() == '' ) {
+                addError('Nombre');
+            }
+            if( $(form).find('[name=NombreAmigo]').val() == '' ) {
+                addError('NombreAmigo');
+            }
+            if( $(form).find('[name=Email]').val() == '' ) {
+                addError('Email');
+            }
+            if( $(form).find('[name=EmailAmigo]').val() == '' ) {
+                addError('EmailAmigo');
+            }
+
+            if( $(form).find('[name=Asunto]').val() == '' ) {
+                addError('Asunto');
+            }
+
+            if( $(form).find('[name=Mensaje]').val() == '' ) {
+                addError('Mensaje');
+            }
+            if( $(form).find('[name=Privacidad]').prop('checked') === false ) {
+                addError('Privacidad');
+            }
+
+            if($('form.contacto .has-error').length > 0) {
+                return false;
+            }
+
+            return true;
+        };
+
+        var addError = function(where) {
+            $('form.contacto').find('[name=' + where + ']').closest('.form-group').addClass('has-error');
+        }
+    </script>
+}
+

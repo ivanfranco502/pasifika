@@ -1,0 +1,182 @@
+﻿@model Pasifika.WebUI.ViewModels.PrensaIndexViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 23 })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>PASIFIKA VIAJES EN LA PRENSA</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = 23, tipo = 2 })
+
+<div class="row modulo">
+    <div class="col-xs-9">
+
+        @foreach(var p in Model.Prensas)
+        { 
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <div class="resumen-nota">
+                        <div class="pull-left">
+                            <img src="~/Content/images/prensa/foto/@p.Foto" class="img-responsive" alt="@p.Alt">
+                            <a href="~/Content/images/prensa/pdf/@p.PDF" class="texto-5">Descargar .pdf</a>
+                        </div>
+
+                        <p class="bold margin-nota">@p.Revista</p>
+                        @if (p.Link != null && p.Link != "")
+                        { 
+                        <a href="@p.Link">
+                            <h2 class="texto-25 bold">@p.Titulo</h2>
+                        </a>
+                        }
+                        else
+                        {
+                            <h2 class="texto-25 bold">@p.Titulo</h2>
+                        }
+                        <p class="texto-16 fecha">@p.Fecha.ToString("d \\de MMMM \\de yyyy")</p>
+                        <p class="texto-5">
+                            @Html.Raw(p.Resumen)
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+    <!-- / Col izquierda -->
+
+    <div class="col-xs-3">
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="bloque-negro">
+
+                    <p class="texto-10">
+                        CONTACTE CON
+                        <br>NOSOTROS:
+                    </p>
+                    <p class="texto-10">
+                        T +34 91 715 5422
+                        <br><a href="mailto:info@pasifika.es">info@pasifika.es</a>
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>NUESTRA OFICINA</strong>
+                        </span>
+                        <br>Calle Francia 3 - Piso 1º B
+                        <br>28224 Pozuelo de Alarcón
+                        <br>Madrid - España
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>HORARIOS</strong>
+                        </span>
+                        <br>De lunes a viernes:
+                        <br>de 10.00h a 14.00h
+                        <br>y de 16.00h a 19.00h
+                    </p>
+                    <p class="texto-12">
+                        Skype: <a href="skype:pasifika.viajes">pasifika.viajes</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+
+                <div class="botones-lateral">
+
+                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "Kit-prensa" })" class="btn btn-gris">
+                        DOSSIER  DE PRENSA
+                    </a>
+                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "Kit-prensa" })" class="btn btn-gris">
+                        LOGOTIPO
+                    </a>
+                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "Kit-prensa" })" class="btn btn-gris">
+                        IMÁGENES
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="bloque-gris">
+                    <p class="texto-25">
+                        <strong>Directorio de Notas:</strong>
+                    </p>
+
+                    @{
+                        var qNotas = from n in Model.Notas
+                                     group n by n.Fecha.Year into notasAnos
+                                     orderby notasAnos.Key descending 
+                                     select new
+                                     {
+                                         year = notasAnos.Key,
+                                         notas = notasAnos.OrderByDescending(x => x.Fecha)
+                                     };
+                    }
+
+                    <ul class="list-unstyled">
+                        @foreach (var y in qNotas.ToList())
+                        { 
+                            <li>
+                                <strong class="texto-5">@y.year</strong>
+                                <ul class="list-unstyled enlaces-prensa texto-16">
+                                    @foreach(var n in y.notas)
+                                    { 
+                                        <li><a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                          url = n.Url })">@n.Titulo</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+        });
+    </script>
+}

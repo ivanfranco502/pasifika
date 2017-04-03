@@ -1,0 +1,246 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.InfoRelacionEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "InfoRelacion", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Info </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="form-horizontal">
+                    <fieldset>
+                        <legend>Info 1</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Titulo1", Model.InfoRelacion.Titulo1, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">SubTitulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("SubTitulo1", Model.InfoRelacion.SubTitulo1, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Texto1", (Model.InfoRelacion.Texto1), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Foto</label>
+                            <div class="col-md-9">
+                                @if (@Model.InfoRelacion.Foto1 != null) 
+                                { 
+                                    <img src="~/Content/images/info/@Model.InfoRelacion.Pagina.Id/@Model.InfoRelacion.Foto1" width="50" height="50" /><br />
+                                }
+                                @Html.Hidden("Foto1", Model.InfoRelacion.Foto1, new { @class = "form-control" })
+                                <input type="file" name="file1" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt1", Model.InfoRelacion.Alt1, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Link</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Link1", Model.InfoRelacion.Link1, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Info 2</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Titulo2", Model.InfoRelacion.Titulo2, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">SubTitulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("SubTitulo2", Model.InfoRelacion.SubTitulo2, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Texto2", (Model.InfoRelacion.Texto2), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Foto</label>
+                            <div class="col-md-9">
+                                @if (@Model.InfoRelacion.Foto2 != null)
+                                { 
+                                    <img src="~/Content/images/info/@Model.InfoRelacion.Pagina.Id/@Model.InfoRelacion.Foto2" width="50" height="50" /><br />
+                                }
+                                @Html.Hidden("Foto2", Model.InfoRelacion.Foto2, new { @class = "form-control" })
+                                <input type="file" name="file2" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt2", Model.InfoRelacion.Alt2, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Link</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Link2", Model.InfoRelacion.Link2, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Info 3</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Titulo3", Model.InfoRelacion.Titulo3, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">SubTitulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("SubTitulo3", Model.InfoRelacion.SubTitulo3, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Texto3", (Model.InfoRelacion.Texto3), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Foto</label>
+                            <div class="col-md-9">
+                                @if (@Model.InfoRelacion.Foto3 != null)
+                                {
+                                    <img src="~/Content/images/info/@Model.InfoRelacion.Pagina.Id/@Model.InfoRelacion.Foto3" width="50" height="50" /><br />
+                                }
+                                @Html.Hidden("Foto3", Model.InfoRelacion.Foto3, new { @class = "form-control" })
+                                <input type="file" name="file3" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt3", Model.InfoRelacion.Alt3, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Link</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Link3", Model.InfoRelacion.Link3, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Info 4</legend>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Titulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Titulo4", Model.InfoRelacion.Titulo4, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">SubTitulo</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("SubTitulo4", Model.InfoRelacion.SubTitulo4, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Texto4", (Model.InfoRelacion.Texto4), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Foto</label>
+                            <div class="col-md-9">
+                                @if (@Model.InfoRelacion.Foto4 != null)
+                                {
+                                    <img src="~/Content/images/info/@Model.InfoRelacion.Pagina.Id/@Model.InfoRelacion.Foto4" width="50" height="50" /><br />
+                                }
+                                @Html.Hidden("Foto4", Model.InfoRelacion.Foto4, new { @class = "form-control" })
+                                <input type="file" name="file4" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt4", Model.InfoRelacion.Alt4, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Link</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Link4", Model.InfoRelacion.Link4, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.Hidden("infoId", Model.InfoRelacion.Id)
+                                @if ((object)ViewBag.returnUrl != null){
+                                    @Html.Hidden("returnUrl", (object)ViewBag.returnUrl.ToString());
+                                }
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/config.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/styles.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/adapters/jquery.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.summernote').ckeditor({
+
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            $("#formEdit").submit();
+        });
+    });
+    </script>
+}

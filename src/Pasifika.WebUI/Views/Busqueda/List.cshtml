@@ -1,0 +1,323 @@
+﻿@model Pasifika.WebUI.ViewModels.BusquedaViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h2 class="titular-1 f-linea-gris">
+
+                <span>
+                    @if (Model.Busquedas.Count > 0)
+                    {                        
+                        @:@Model.Busquedas.FirstOrDefault().TotalROWS.ToString().ToUpper()
+                    }
+                    else
+                    {
+                        @:0
+                    } resultados encontrados
+            </span>
+        </h2>
+    </div>
+</div>
+</div>
+
+<div class="thumbnails modulo">
+    <!-- row thumbs -->
+
+    @helper MarcarPalabra(string texto)
+    {        
+        if (texto != null)
+        {
+            var terms = Model.Texto.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(s => s.Replace("|", "\\|"));
+            var regex = new System.Text.RegularExpressions.Regex("(" + string.Join("|", terms) + ")", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+        
+            @Html.Raw(regex.Replace(texto, "<b>${0}</b>"));
+        }
+        
+    }
+
+    @foreach (var busqueda in Model.Busquedas)
+    {
+        
+        if (busqueda.Tipo == 1)
+        {
+            string controller = "";
+            string action = "";
+
+            if (busqueda.Viaje is Pasifika.Model.ViajeTipo2)
+            {
+                var vt2 = busqueda.Viaje as Pasifika.Model.ViajeTipo2;
+
+                string titulo = "";
+
+                if (vt2 is Pasifika.Model.Hotel)
+                {
+                    titulo = "HOTEL";
+                    action = "HotelDetalle";
+                }
+                else
+                {
+                    titulo = "EXCURSION";
+                    action = "ExcursionDetalle";
+                }
+
+                controller = "tipo2";
+
+                <div class="row">
+                    <!-- thumb-->
+                    <div class="col-xs-12">
+                        <div class="thumbnail-4">
+                            <div class="caption">
+                                <p class="texto-20">@MarcarPalabra(titulo + " EN " + vt2.Nombre.ToUpper()) </p>
+                                <a href="@Url.RouteUrl(new { controller = controller, action = action, urlDestino = vt2.Ciudad.Destino.Url, urlCiudad = vt2.Ciudad.Url, url = vt2.Url })"><h4 class="texto-23">@vt2.Nombre</h4></a>
+                            </div>
+                            <div class="caption">
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <a href="@Url.RouteUrl(new { controller = controller, action = action, urlDestino = vt2.Ciudad.Destino.Url, urlCiudad = vt2.Ciudad.Url, url = vt2.Url })"><img src="/Content/images/foto/@vt2.Fotos.FirstOrDefault().Archivo" alt="@vt2.Fotos.FirstOrDefault().Alt" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-xs-8">
+
+                                        <p class="texto-9">@MarcarPalabra(vt2.Nombre.ToUpper() + "," +  vt2.Ciudad.Nombre.ToUpper())</p>
+
+                                        <hr class="sep-1">
+
+                                        <p class="texto-5 em">        
+                                            @MarcarPalabra(vt2.Descripcion)                                              
+                                        </p>
+                                        <hr class="sep-1">
+
+                                        <div class="row">
+                                            <div class="col-xs-7">
+                                                <div class="precio">
+                                                    <p class="texto-14">DESDE:</p>
+                                                    <div class="clearfix">
+                                                        <span class="texto-18">
+                                                            <strong>
+                                                                @vt2.Precio <span class="texto-4">Euros</span>
+                                                            </strong>
+                                                        </span>
+
+                                                        <span data-ng-if="item.InfoPrecio != ''" class="badge-info" title="@vt2.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
+                                                    </div>
+                                                    <p class="texto-14">POR PERSONA</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <a href="@Url.RouteUrl(new { controller = controller, action = action, urlDestino = vt2.Ciudad.Destino.Url, urlCiudad = vt2.Ciudad.Url, url = vt2.Url })" class="btn btn-negro-2 pull-right">VER @titulo</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.thumb-->
+                </div>
+            }
+            // VIAJE TIPO 1
+            else
+            {
+                controller = "tipo1";
+
+                var vt1 = busqueda.Viaje as Pasifika.Model.ViajeTipo1;
+
+                string titulo = "";
+
+                if (vt1 is Pasifika.Model.Tren)
+                {
+                    titulo = "TREN DE LUJO";
+                    action = "TrenDetalle";
+                }
+                else if (vt1 is Pasifika.Model.Crucero)
+                {
+                    titulo = "CRUCERO";
+                    action = "CruceroDetalle";
+                }
+                else if (vt1 is Pasifika.Model.Wellnes)
+                {
+                    titulo = "WELLNESS & SPA";
+                    action = "WellnesDetalle";
+                }
+                else
+                {
+                    titulo = "VIAJE";
+                    action = "DestinoDetalle";
+                }
+
+                <div class="thumbnails modulo">
+                    <!-- row thumbs -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="thumbnail-4">
+                                <div class="caption">
+                                    <p class="texto-20">@MarcarPalabra(titulo + " A " + vt1.Destino.Nombre)</p>
+                                    <a href="@Url.RouteUrl(new { controller = controller, action = action, urlDestino = vt1.Destino.Url, url = vt1.Url })"><h4 class="texto-23">@vt1.Nombre</h4></a>
+                                </div>
+                                <div class="caption">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <a href="@Url.RouteUrl(new { controller = controller, action = action, urlDestino = vt1.Destino.Url, url = vt1.Url })"><img src="/Content/images/foto/listado/@vt1.ImagenListado" alt="@vt1.AltImagenListado" class="img-responsive"></a>
+                                        </div>
+                                        <div class="col-xs-8">
+                                            <p class="texto-5 em">
+                                                 @MarcarPalabra(vt1.Descripcion))
+                                            </p>
+                                            <hr class="sep-1">
+
+                                            <div class="row">
+                                                <div class="col-xs-7">
+                                                    <ul class="list-unstyled texto-14 text-left">
+                                                        <li>
+                                                            <strong>DURACIÓN:</strong>@vt1.Duracion DÍAS
+                                                        </li>
+                                                        <li>
+                                                            <strong>PRECIO:</strong>DESDE @vt1.Precio €
+                                                        </li>
+                                                        <li>
+                                                            <strong>PAÍS:</strong>@MarcarPalabra(vt1.Paises.ToUpper())
+                                                        </li>
+                                                        <li>
+                                                            <strong>CIUDADES:</strong>@MarcarPalabra(vt1.Ciudades.ToUpper());
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-xs-5">
+                                                    <a href="@Url.RouteUrl(new { controller = controller, action = action, urlDestino = vt1.Destino.Url, url = vt1.Url })" class="btn btn-negro-2 pull-right">VER @titulo</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        }
+        else
+        {
+            if (busqueda.Tipo == 2)
+            {
+                <div class="row">
+                    <!-- thumb-->
+                    <div class="col-xs-12">
+                        <div class="thumbnail-4">
+                            <div class="caption">
+                                <p class="texto-20">@busqueda.Nota.Titulo</p>
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                          url = busqueda.Nota.Url })"><h2 class="texto-25 bold">@busqueda.Nota.SubTitulo</h2></a>
+                                        <p class="texto-16 fecha">@busqueda.Nota.Fecha.ToString("d \\de MMMM \\de yyyy")</p>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <p class="texto-5 em">
+                                                    @MarcarPalabra(busqueda.Nota.Resumen)
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                    action = "Detalle",
+                                    url = busqueda.Nota.Url })" class="btn btn-negro-2 pull-right">VER NOTA</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            }
+            // Tipo 3
+            else
+            {
+                <div class="row">
+                    <!-- thumb-->
+                    <div class="col-xs-12">
+                        <div class="thumbnail-4">
+                            <div class="caption">
+                                <a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                          action = "Detalle",
+                                          destino = busqueda.Destino.Url })"><h4 class="texto-6">GU&Iacute;A DE VIAJE DE @busqueda.Destino.Nombre.ToUpper()</h4></a>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                @*<a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                                    action = "Detalle",
+                                                    destino = busqueda.Destino.Url })"><img src="~/Content/images/destino/guia/@busqueda.Destino.FotoGuia" alt="@busqueda.Destino.Alt" class="img-responsive"></a>*@
+                                            </div>
+                                            <div class="col-xs-8">
+
+                                                <p class="texto-24">
+                                                    @{
+                string resumen = busqueda.Destino.Resumen == null ? "" : busqueda.Destino.Resumen;
+
+                string texto = System.Text.RegularExpressions.Regex.Replace(resumen, @"<[^>]*>", String.Empty);
+
+                if (texto.Length > 157)
+                {
+                    @:@Html.Raw(texto.Substring(0, 157)) ...
+                                            }
+                else
+                {
+                    @:@MarcarPalabra(texto)
+                                            }
+                                                    }
+
+
+                                                </p>
+
+                                                <hr class="sep-1">
+
+                                                <div class="row">
+
+                                                    <div class="col-xs-12">
+                                                        <a href="@Url.RouteUrl(new
+                                            {
+                                                controller = "Guias",
+                                                action = "Detalle",
+                                                destino = busqueda.Destino.Url
+                                            })" class="btn btn-negro-2 pull-right">Ver guía de viaje</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            }
+        }
+    }
+</div>
+<div class="row modulo">
+    <div class="col-xs-12">
+        <nav>
+            <ul class="pager">
+                <li class="previous">        
+                    @if (Model.Pagina - 1 > 0) {                                
+                        <a href="@Url.RouteUrl(new { controller = "Busqueda", action = "List", Texto = Model.Texto , Pagina = Model.Pagina - 1})"><span aria-hidden="true" class="ico flecha-izq"></span> PÁGINA ANTERIOR</a>
+                    }
+                </li>
+                <li class="next">
+                    @if (Model.Pagina + 1 <= Model.CantidadPagina)
+                    {
+                        <a href="@Url.RouteUrl(new { controller = "Busqueda", action = "List", Texto = Model.Texto, Pagina = Model.Pagina + 1 }) ">PÁGINA SIGUIENTE <span aria-hidden="true" class="ico flecha-der"></span></a>
+                    }
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

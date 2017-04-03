@@ -1,0 +1,143 @@
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.WebUI.dll.config
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.WebUI.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.WebUI.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Antlr3.Runtime.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\EntityFramework.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\EntityFramework.SqlServer.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Newtonsoft.Json.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Ninject.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Ninject.Web.Common.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Ninject.Web.Mvc.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.Business.DataAccess.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.Business.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.Model.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Helpers.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Mvc.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Optimization.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Razor.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Webpages.Deployment.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Webpages.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Webpages.Razor.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\WebActivatorEx.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\WebGrease.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.Business.DataAccess.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.Business.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Pasifika.Model.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Antlr3.Runtime.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\EntityFramework.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\EntityFramework.SqlServer.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Newtonsoft.Json.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Ninject.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Ninject.Web.Common.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Ninject.Web.Mvc.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Optimization.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Razor.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Webpages.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Webpages.Deployment.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Webpages.Razor.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Helpers.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\System.Web.Mvc.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.csprojResolveAssemblyReference.cache
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.pdb
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Security.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Owin.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Security.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\CRM.Business.DataAccess.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\CRM.Business.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\CRM.Model.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\DocX.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\EPPlus.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Practices.Unity.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\Microsoft.Practices.Unity.Interception.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\MvcSiteMapProvider.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\MvcSiteMapProvider.WebActivator.dll
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\MvcSiteMapProvider.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\MvcSiteMapProvider.WebActivator.xml
+D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.WebUI\bin\EPPlus.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.WebUI.dll.config
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.WebUI.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.WebUI.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Antlr3.Runtime.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\EntityFramework.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\EntityFramework.SqlServer.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Security.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\MvcSiteMapProvider.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\MvcSiteMapProvider.WebActivator.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Newtonsoft.Json.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Ninject.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Ninject.Web.Common.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Ninject.Web.Mvc.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Owin.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.Business.DataAccess.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.Business.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.Model.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Helpers.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Mvc.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Optimization.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Razor.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Webpages.Deployment.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Webpages.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Webpages.Razor.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\WebActivatorEx.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\WebGrease.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\EPPlus.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\DocX.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Practices.Unity.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Practices.Unity.Interception.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.Business.DataAccess.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.Business.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Pasifika.Model.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Antlr3.Runtime.pdb
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\EntityFramework.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\EntityFramework.SqlServer.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Security.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\MvcSiteMapProvider.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\MvcSiteMapProvider.WebActivator.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Newtonsoft.Json.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Ninject.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Ninject.Web.Common.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\Ninject.Web.Mvc.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Optimization.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Razor.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Webpages.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Webpages.Deployment.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Webpages.Razor.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Helpers.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\System.Web.Mvc.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\bin\EPPlus.xml
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.csprojResolveAssemblyReference.cache
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.dll
+C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.pdb
