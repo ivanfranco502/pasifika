@@ -12,3 +12,17 @@ D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Debu
 D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Documentos\ProyectosNET\Pasifika\trunk\src\Pasificav2\Pasifika.Model\obj\Debug\Pasifika.Model.csprojResolveAssemblyReference.cache
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Pasifika.Model.dll.config
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Pasifika.Model.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Pasifika.Model.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\EntityFramework.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\EntityFramework.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.csprojResolveAssemblyReference.cache
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.pdb

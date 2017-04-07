@@ -10,7 +10,7 @@
 
 @Html.Action("Cargar", "Banner", new { seccionId = 1, tipo = 1 })
 
-<div class="row modulo">
+<div class="row modulo hidden-xs">
     <div class="col-xs-9">
         <div class="row">
             <div class="col-xs-12">
@@ -75,6 +75,18 @@
         </div>
     </div>
 </div>
+
+<div class="dropdown visible-xs">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+        ¿POR QUE PASIFIKA VIAJES?s
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Quienes somos</a></li>
+        <li><a href="#">Notas de prensa</a></li>
+        <li><a href="#">Acreditaciones y Colaboracioness</a></li>
+    </ul>
+</div> 
 
 <div class="row modulo">
     <div class="col-xs-12">

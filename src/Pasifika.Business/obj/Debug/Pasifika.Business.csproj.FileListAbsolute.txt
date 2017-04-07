@@ -36,3 +36,24 @@ C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business\bin\Debug\Microsoft
 C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business\obj\Debug\Pasifika.Business.csprojResolveAssemblyReference.cache
 C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business\obj\Debug\Pasifika.Business.dll
 C:\dev\Tinka Lawinka\Pasifika\src\pasifika\Pasifika.Business\obj\Debug\Pasifika.Business.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Business.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Business.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\EPPlus.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Business.DataAccess.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Model.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\EntityFramework.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Business.DataAccess.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Business.DataAccess.dll.config
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Model.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Pasifika.Model.dll.config
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\EPPlus.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Newtonsoft.Json.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\EntityFramework.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\obj\Debug\Pasifika.Business.csprojResolveAssemblyReference.cache
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\obj\Debug\Pasifika.Business.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Business\obj\Debug\Pasifika.Business.pdb
