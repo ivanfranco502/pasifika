@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1063,6 +1064,8 @@
     <Content Include="js\libs\angular-route.min.js.map" />
     <Content Include="js\libs\angular.min.js.map" />
     <Content Include="Areas\Admin\Views\BannerContextual\Edit.cshtml" />
+    <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\testpasifika - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\testpasifika - Web Deploy.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
