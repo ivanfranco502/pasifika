@@ -23,6 +23,5 @@ C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Enti
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.csprojResolveAssemblyReference.cache
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.dll
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.pdb

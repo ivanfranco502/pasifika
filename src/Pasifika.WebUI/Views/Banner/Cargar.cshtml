@@ -14,7 +14,8 @@
                             @:<a href="@b.Link">
                         }
                         
-                        <img src="~/Content/images/banner/@b.PaginaId/@b.Foto" class="" alt="@b.Alt">
+                        <div style="background-image: url('/Content/images/banner/@b.PaginaId/@b.Foto'); background-size:cover; height:400px; max-width:100%"> </div>
+            
                         <div class="carousel-caption">
                             <span class="texto-1">@b.Title</span>
                             <br>
@@ -22,13 +23,13 @@
                             <p class="texto-3">@b.Texto2</p>
                             <br>
                             @if (b.Link != "")
-                            { 
+                            {
                                 <span class="btn btn-negro-2">VER MÁS</span>
                             }
                         </div>
 
                         @if (b.Link != "")
-                        { 
+                        {
                             @:</a>
                         }
                     </li>

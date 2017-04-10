@@ -76,33 +76,27 @@
     </div>
 </div>
 
-<div class="dropdown visible-xs">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
-        ¿POR QUE PASIFIKA VIAJES?s
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Quienes somos</a></li>
-        <li><a href="#">Notas de prensa</a></li>
-        <li><a href="#">Acreditaciones y Colaboracioness</a></li>
-    </ul>
-</div> 
-
 <div class="row modulo">
     <div class="col-xs-12">
         <div class="borde-top-gris">
-            <h2 class="titular-1 f-linea-gris">
-                <span>Viajes  &amp; propuestas destacadas</span>
-            </h2>
+            <div class="hidden-xs">
+                <h2 class="titular-1 f-linea-gris">
+                    <span>Viajes  &amp; propuestas destacadas</span>
+                </h2>
+            </div>
+            <div class="visible-xs">
+                <h2 class="titular-1 f-linea-gris">
+                    <span>Destinos Destacados</span>
+                </h2>
+            </div>
         </div>
     </div>
-</div>
-
+ </div>
 
 
 @Html.Action("Cargar", "Destacado", new { seccionId = 1 })
-
 @Html.Action("Cargar", "InfoRelacion", new { seccionId = 1 })
+
 
 @section scripts
 {
