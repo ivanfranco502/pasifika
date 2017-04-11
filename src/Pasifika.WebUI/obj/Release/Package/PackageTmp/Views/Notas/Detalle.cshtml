@@ -1,0 +1,81 @@
+﻿@model Pasifika.WebUI.ViewModels.NotasDetalleViewModel
+@{
+    ViewBag.Title = "Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { notaId = Model.Nota.Id })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>@Model.Nota.Titulo</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { notaId = Model.Nota.Id, tipo = 2 })
+
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            @if (Model.Nota.Resumen != null && Model.Nota.Resumen.Trim() != "")
+            {
+                <p class="texto-21 texto-destacado">
+                    @Html.Raw(Model.Nota.Resumen)
+                </p>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <p class="texto-5">
+            @Html.Raw(Model.Texto)
+        </p>
+    </div>
+</div>
+
+@if (Model.Nota.Visible)
+{ 
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h4 class="titular-1 f-linea-gris">
+                <span>Tambi&eacute;n le puede interesar</span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+@Html.Action("Cargar", "Sugerido", new { notaId = Model.Nota.Id })
+}
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+        });
+    </script>
+}

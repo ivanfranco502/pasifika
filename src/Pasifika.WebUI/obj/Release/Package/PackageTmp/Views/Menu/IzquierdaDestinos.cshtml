@@ -1,0 +1,52 @@
+﻿@model Pasifika.WebUI.ViewModels.MenuIzquierdaDestinosViewModel
+
+@{string menuRegion = "";}
+
+<ul class="nav-sidebar list-unstyled bold">
+    @foreach (var r in Model.Regiones)
+    {
+        <li>
+            <a href="javascript:void(0);" 
+               @if (ViewBag.menusseleccionado != null && r.Destinos.Where(a => a.Url == ViewBag.menusseleccionado).FirstOrDefault() != null)
+                {
+                    @:class="tipo-1 selected active"
+                    menuRegion = "#submenu-" + r.Url;
+                } 
+                else
+                {
+                    @:class="tipo-1"
+                }  data-toggle="collapse" data-target="#submenu-@r.Url" aria-expanded="true" aria-controls="submenu-@r.Url" title="@r.Descripcion"><span>@r.Descripcion</span> <i class="ico flecha-der"></i></a>
+
+            <ul class="list-unstyled collapse" id="submenu-@r.Url">
+
+                @foreach(var d in r.Destinos.Where(x => x.Eliminado == false).OrderBy(x => x.Orden))
+                {
+                    <li>
+                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                     action = "DestinoListado",
+                                                     url = d.Url
+                                })" 
+                             @if (ViewBag.menusseleccionado == d.Url)
+                               {
+                                    @:class="tipo-2 selected"
+                               } 
+                               else
+                               {
+                                   @:class="tipo-2"
+                               } title="Viajes a @d.Nombre"><span>@d.Nombre</span><i class="ico flecha-der"></i></a>
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        @if(menuRegion != string.Empty){
+            @:$('@menuRegion').collapse('show')
+        }
+    });
+
+</script>

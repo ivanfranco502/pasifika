@@ -1,0 +1,212 @@
+﻿
+@{
+    ViewBag.Title = "Baja";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 27 })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>SOLICITUD DE BAJA</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = 27, tipo = 2 })
+
+<div class="row modulo">
+    <div class="col-xs-9">
+
+        @using (Html.BeginForm("SaveBaja", "Formulario", FormMethod.Post, new { @class = "form-horizontal modulo baja", @role = "form" }))
+        {
+            <div class="row modulo">
+                <div class="col-xs-12">
+                    <h2 class="titular-1 f-linea-gris-b">
+                        <span>Solicitud de baja</span>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row modulo">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p class="texto-5">
+                                Si desea dejar de recibir nuestras comunicaciones por favor, complete los siguientes datos.<br><br>
+                            </p>
+                            <div class="form-group">
+                                <label for="email" class="">Indique a continuación la dirección de email en la que NO desea recibir más mensajes*:</label>
+                                <div class="">
+                                    <input type="text" class="form-control" id="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row modulo">
+                <div class="col-xs-12">
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="mensaje" class="control-label">
+                                    <strong>Por favor escriba el motivo en el siguiente espacio:</strong>
+                                </label>
+                                <textarea class="form-control mensaje" id="mensaje" name="mensaje"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <p class="modulo">* datos obligatorios</p>
+                        </div>
+
+                        <div class="col-xs-8">
+                            <p class="modulo texto-7 error-text hide">Por favor revise los campos.</p>
+                        </div>
+
+                        <div class="col-xs-1">
+                            <div class="form-group pull-right">
+                                <button type="submit" class="btn btn-negro pull-right">ENVIAR</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+    <!-- / Col izquierda -->
+
+    <div class="col-xs-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bloque-negro">
+
+                    <p class="texto-10 bold">
+                        CONTACTE CON
+                        <br>NOSOTROS:
+                    </p>
+                    <p class="texto-10">
+                        T +34 91 715 5422
+                        <br><a href="mailto:info@pasifika.es">info@pasifika.es</a>
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>NUESTRA OFICINA</strong>
+                        </span>
+                        <br>Calle Francia 3 - Piso 1º B
+                        <br>28224 Pozuelo de Alarcón
+                        <br>Madrid - España
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>HORARIOS</strong>
+                        </span>
+                        <br>De lunes a viernes:
+                        <br>de 10.00h a 14.00h
+                        <br>y de 16.00h a 19.00h
+                    </p>
+                    <p class="texto-12">
+                        Skype: <a href="skype:pasifika.viajes">pasifika.viajes</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade confirmBaja">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header texto-9">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true"><i class="ico borrar-inv"></i></span><span class="sr-only">Cerrar</span>
+                </button>
+                <h4 class="modal-title  texto-9"><strong>SOLICITUD DE BAJA</strong></h4>
+            </div>
+            <div class="modal-body">
+                <div class="confirm">
+                    <p class="texto-9">
+                        Su email se ha dado de baja correctamente.
+                        <br>
+                        <i class="ico petalos-inv"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+@section scripts
+{
+    <script>
+        $(function() {
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true,
+                slideshow: false
+            });
+            // Contacto form
+            $('form.baja').on('submit', function(e) {
+                $('.error-text').addClass('hide');
+
+                if (validacion() === true) {
+                    return true;
+                }
+
+                $('.error-text').removeClass('hide');
+                return false;
+            });
+
+            @if (ViewBag.cartel)
+            {
+                @:$('.confirmBaja').modal('show');
+            }
+        });
+
+        var validacion = function() {
+            var form = $('form.baja');
+            var formData = $('form.baja').serializeArray();
+
+            $('form.baja .has-error').removeClass('has-error');
+            if( $(form).find('[name=email]').val() == '' ) {
+                addError('email');
+            }
+
+            if($('form.baja .has-error').length > 0) {
+                return false;
+            }
+
+            return true;
+        };
+
+        var addError = function(where) {
+            $('form.baja').find('[name=' + where + ']').closest('.form-group').addClass('has-error');
+        }
+    </script>
+}

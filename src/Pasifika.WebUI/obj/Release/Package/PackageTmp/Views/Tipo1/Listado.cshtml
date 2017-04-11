@@ -1,0 +1,322 @@
+﻿@model Pasifika.WebUI.ViewModels.Tipo1ListadoViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+
+    @Scripts.Render("~/bundles/helpers")
+}
+
+@Html.Action("Cargar", "Banner", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId, tipo = 1 })
+
+<div data-ng-app="exampleApp">
+    <div data-ng-controller="Tipo1Ctrl" class="mainContainer" style="display:none">
+        <div class="row modulo">
+            <div class="col-xs-12">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="borde-top-gris">
+                            <h1 class="titular-1 f-linea-gris text-center">
+                                <span>@ViewBag.palabra</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="texto-21 texto-destacado">
+                            @Html.Action("Cargar", "Texto", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @Html.Action("Cargar", "Destacado", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+
+        @Html.Action("Cargar", "InfoRelacion", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+
+                <div class="caja-drag">
+
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <p class="texto-15">PRESUPUESTO</p>
+                            <div class="slider">
+                                <div id="presupuesto-lower" class="label-slide label-left">{{presupuesto.from}}</div>
+                                <div class="wrapper-slide presupuesto">
+                                    <div id="presupuesto" data-slider data-ng-from="presupuesto.from" data-ng-to="presupuesto.to" data-start="{{presupuesto.min}}" data-end="{{presupuesto.max}}" data-step="1"></div>
+                                </div>
+                                <div id="presupuesto-upper" class="label-slide label-right">{{presupuesto.to}}</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <p class="texto-15">DURACIÓN</p>
+                            <div class="slider">
+                                <div id="estancia-lower" class="label-slide label-left">{{duracion.from}} @ViewBag.palabra5</div>
+                                <div class="wrapper-slide estancia">
+                                    <div id="estancia" data-slider data-ng-from="duracion.from" data-ng-to="duracion.to" data-start="{{duracion.min}}" data-end="{{duracion.max}}" data-step="1"></div>
+                                </div>
+                                <div id="estancia-upper" class="label-slide label-right">{{duracion.to}} @ViewBag.palabra5</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="clearfix">
+                                <p class="texto-15 pull-left">
+                                    @if (ViewBag.seccionId == 15)
+                                    {
+                                        @:TIPO DE VIAJE
+                                    }
+                                    else
+                                    {
+                                        @:DESTINO
+                                    }
+                                </p>
+                                <a href="javascript:void(0);" class="btn-borrar texto-9 pull-right">Borrar selecci&oacute;n</a>
+                            </div>
+
+                            @{
+                                string nombre = "destinos";
+                                if (ViewBag.seccionId == 15)
+                                {
+                                    nombre = "tipoViaje";
+                                }
+                            }
+                            <select id="@nombre">
+                                <option value="">TODOS</option>
+                                @{
+                                    if (ViewBag.seccionId == 15)
+                                    {
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-a-medida")).ToList().Count() > 0)
+                                        {
+                                            <option value="viajes-a-medida">VIAJES A MEDIDA</option>
+                                        }
+
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-de-novios")).ToList().Count() > 0)
+                                        {
+                                            <option value="viajes-de-novios">VIAJES DE NOVIOS</option>
+                                        }
+
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-en-familia")).ToList().Count() > 0)
+                                        {
+                                            <option value="viajes-en-familia">VIAJES EN FAMILIA</option>
+                                        }
+
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "vueltas-al-mundo")).ToList().Count() > 0)
+                                        {
+                                            <option value="vueltas-al-mundo">VUELTAS AL MUNDO</option>
+                                        }
+
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-combinados")).ToList().Count() > 0)
+                                        {
+                                            <option value="viajes-combinados">VIAJES COMBINADOS</option>
+                                        }
+
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-de-lujo")).ToList().Count() > 0)
+                                        {
+                                            <option value="viajes-de-lujo">VIAJES DE LUJO</option>
+                                        }
+
+                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "high-end-travel")).ToList().Count() > 0)
+                                        {
+                                            <option value="high-end-travel">HIGH END TRAVEL</option>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        var grupo = from v in Model.Viajes
+                                                    group ((Pasifika.Model.ViajeTipo1)v).Destino.Region by ((Pasifika.Model.ViajeTipo1)v).Destino.Region into Region
+                                                    select new
+                                                    {
+                                                        Region.Key,
+                                                        destino =
+                                                                (
+                                                                    from v1 in Model.Viajes
+                                                                    where
+                                                                        ((Pasifika.Model.ViajeTipo1)v1).Destino.Region == Region.Key
+                                                                    group ((Pasifika.Model.ViajeTipo1)v1).Destino by ((Pasifika.Model.ViajeTipo1)v1).Destino into Destino
+                                                                    select new
+                                                                    {
+                                                                        Destino.Key
+                                                                    }
+                                                                )
+                                                    };
+
+                                        foreach (var r in grupo.ToList())
+                                        {
+                                            <optgroup label="@r.Key.Nombre">
+                                                @foreach (var d in r.destino)
+                                                {
+                                                    <option value="@d.Key.Url">@d.Key.Nombre</option>
+                                                }
+                                            </optgroup>
+                                        }
+                                    }
+                                }
+                            </select>
+                            <input type="text" data-ng-model="ciudad" id="txtCiudad" style="display:none" />
+                            <input type="text" data-ng-model="tipoViaje" id="txtTipoViaje" style="display:none" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="caja-tags texto-12">
+                    <p class="pull-left"><strong>INTERESES SELECCIONADOS:</strong></p>
+                    <div class="wrapper-tags pull-left">
+                        <div class="tag" data-ng-repeat="tag in tagsSelected track by $index"><span class="termino">{{tag.Nombre}}</span><i class="ico borrar" data-ng-click="removeTag($index)"></i></div>
+                    </div>
+                    <a data-ng-click="removeTags()" class="btn-borrar-tags texto-9 pull-right">Borrar selecci&oacute;n</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris">                      
+                            <span>{{ (data | filter: categoryFilterFn | filter: SinBanner).length}} @ViewBag.palabra2 encontrados</span>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnails modulo">
+            <!-- row thumbs -->
+           
+            <div class="row" data-ng-repeat="item in data | filter:categoryFilterFn" data-ng-if="$index % 3 == 0">
+
+                <div class="col-xs-4" data-ng-repeat="item in (data | filter: categoryFilterFn).slice($index, $index+3)">
+                    <a data-ng-href="{{item.Link}}" data-ng-show="item.EsBannerContextual == true"><img src="/Content/images/FFFFFF-0.png" data-ng-src="/Content/images/bannercontextual/{{item.IdContextual}}/{{item.ImagenListado}}" alt="{{item.AltImagenListado}}" class="img-responsive margin-down" title="{{item.Nombre}}" /></a>
+
+                    <div class="thumbnail-2" data-ng-hide="item.EsBannerContextual == true">
+                        <div class="texto-20">
+                            @if (Model.Tag != null)
+                            {
+                                @Model.Tag.Nombre
+                            }
+                            else
+                            {
+                                @ViewBag.palabra3
+                            }
+
+                            A {{item.DestinoNombre | uppercase }}
+                        </div>
+                        <a data-ng-href="{{item.Link}}"><img src="/Content/images/FFFFFF-0.png" data-ng-src="/Content/images/foto/listado/{{item.ImagenListado}}" alt="{{item.AltImagenListado}}" class="img-responsive"></a>
+                        <div class="caption">
+
+                            <h3 class="texto-10 black">
+                                <a data-ng-href="{{item.Link}}" class="texto-10b black"><strong>{{item.Nombre | uppercase }}</strong></a>
+                            </h3>
+
+                            <hr class="sep-1">
+
+                            <p class="texto-5 em">
+                                {{item.Descripcion}}
+                            </p>
+
+                            <hr class="sep-1">
+
+                            <ul class="list-unstyled texto-14 text-left">
+                                <li>
+                                    <strong>DURACIÓN:</strong>{{item.Duracion}} @ViewBag.palabra5.ToUpper()
+                                </li>
+                                <li>
+                                    <strong>PRECIO:</strong>DESDE {{item.Precio}}€
+                                </li>
+                                <li>
+                                    <strong>PAÍS:</strong>{{item.Paises | uppercase }}
+                                </li>
+                                <li>
+                                    <strong>@ViewBag.palabra6.ToUpper():</strong>{{item.Ciudades | uppercase }}
+                                </li>
+                            </ul>
+
+                            <a data-ng-href="{{item.Link}}" class="btn btn-negro-2">@ViewBag.palabra4</a>
+
+                            <div class="tags texto-8">
+                                <p class="short">
+                                    <a href="javascript:void(0);" data-ng-repeat="tag in item.Tags" data-ng-click="addTag(tag.Url, tag.Nombre)" data-value="{{tag.Nombre}}">{{tag.Nombre | uppercase }}{{$last ? '' : ', '}}</a>
+                                </p>
+                                <p class="long">
+                                    <a href="javascript:void(0);" data-ng-repeat="tag in item.Tags" data-ng-click="addTag(tag.Url, tag.Nombre)" data-value="{{tag.Nombre}}">{{tag.Nombre | uppercase }}{{$last ? '' : ', '}}</a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    @section scripts
+{
+        <script>
+            var viajesJson = @Html.Raw(Json.Encode(Model.ViajesJson));
+        </script>
+
+        @Scripts.Render("~/bundles/select2")
+        @Scripts.Render("~/bundles/angular")
+        <script src="~/js/libs/angular-route.min.js"></script>
+        <script src="~/js/libs/angular-route.min.js.map"></script>
+        @Scripts.Render("~/bundles/angular/myApp")
+
+        <script>
+            $(function () {
+
+                $('.flexslider').flexslider({
+                    animation: "fade",
+                    controlNav: true,
+                    directionNav: false
+                });
+
+                @if (ViewBag.seccionId != 15)
+            {
+                @:// Destinos
+                                                @:$("#destinos").select2();
+                                                @:$('#destinos').on('change', function (e) {
+                                                        @:    var destino = $(this).val();
+                                                        @:    $('#txtCiudad').val(destino);
+                                                        @:    $('#txtCiudad').trigger('input');
+                                                        @:});
+                                            }
+            else
+            {
+                @:// Destinos
+                                                @:$("#tipoViaje").select2();
+                                                @:$('#tipoViaje').on('change', function (e) {
+                                                        @:    var tipoViaje = $(this).val();
+                                                        @:    $('#txtTipoViaje').val(tipoViaje);
+                                                        @:    $('#txtTipoViaje').trigger('input');
+                                                        @:});
+                                            }
+
+                // Resetea filtro de destinos
+                $('.btn-borrar').on('click', function () {
+                    $("#destinos, #tipoViaje").select2("val", "all").trigger('change');
+                });
+
+                // Desplegar lista completa de tags
+                //
+                $('body').on('mouseenter', '.thumbnail-2 .tags', function () {
+                    $(this).find('.long').slideDown(200);
+                });
+
+                $('body').on('mouseleave', '.thumbnail-2 .tags', function () {
+                    $(this).find('.long').hide();
+                });
+            });
+        </script>
+    }

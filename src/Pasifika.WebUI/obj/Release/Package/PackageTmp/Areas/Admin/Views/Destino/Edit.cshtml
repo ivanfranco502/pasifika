@@ -1,0 +1,230 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.DestinoEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<script id="template-texto" type="x-tmpl-mustache">
+    <div class="itemTexto panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><button class="btnEliminarTexto btn btn-danger btn-xs">Eliminar</button><button class="btnSubirTexto btn btn-primary btn-xs"><i class="fa fa-angle-up"></i></button><button class="btnBajarTexto btn btn-primary btn-xs"><i class="fa fa-angle-down"></i></button></h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label class="col-md-2 control-label">Titulo</label>
+                <div class="col-md-9">
+                    <input type="text" name="Titulo" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Texto</label>
+                <div class="col-md-9">
+                    <textarea name="Texto" class="summernote"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+@using (Html.BeginForm("Edit", "Destino", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Destinos </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Nombre</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Nombre", Model.Destino.Nombre, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Url</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Url", Model.Destino.Url, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Foto Guia</label>
+                            <div class="col-md-9">
+                                @if (Model.Destino.FotoGuia != null)
+                                {
+                                    @Html.Hidden("FotoGuia", Model.Destino.FotoGuia)
+                                    <img src="~/Content/images/destino/guia/@Model.Destino.FotoGuia" width="50" height="50" /><br />
+                                }
+                                <input type="file" name="file1" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Foto Hotel</label>
+                            <div class="col-md-9">
+                                @if (Model.Destino.FotoHotel != null)
+                                {
+                                    @Html.Hidden("FotoHotel", Model.Destino.FotoHotel)
+                                    <img src="~/Content/images/destino/hotel/@Model.Destino.FotoHotel" width="50" height="50" /><br />
+                                }
+                                <input type="file" name="file2" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Foto Excursion</label>
+                            <div class="col-md-9">
+                                @if (Model.Destino.FotoExcursion != null)
+                                {
+                                    @Html.Hidden("FotoExcursion", Model.Destino.FotoExcursion)
+                                    <img src="~/Content/images/destino/excursion/@Model.Destino.FotoExcursion" width="50" height="50" /><br />
+                                }
+                                <input type="file" name="file3" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">PDF Guia</label>
+                            <div class="col-md-9">
+                                @Html.Hidden("PDF", Model.Destino.PDFGuia)
+                                @if (!String.IsNullOrEmpty(Model.Destino.PDFGuia))
+                                {
+                                    <a href="javascript:void(0)" onclick="$(this).parent().find('input[type=\'hidden\']').val('')"><i class="fa fa-times"></i></a>
+                                }
+                                <input type="file" name="filePDFGuia" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt", Model.Destino.Alt, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Resumen</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Resumen", (Model.Destino.Resumen), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Datos</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Datos", @Model.Destino.Datos, new { @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset id="divTexto">
+                        <legend>Textos <button id="btnAgregarTexto" class="btn btn-primary btn-xs">Agregar</button></legend>
+                        @foreach(var dt in Model.Destino.DestinoTitulos.OrderBy(x => x.Orden))
+                        { 
+                            <div class="itemTexto panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><button class="btnEliminarTexto btn btn-danger btn-xs">Eliminar</button><button class="btnSubirTexto btn btn-primary btn-xs"><i class="fa fa-angle-up"></i></button><button class="btnBajarTexto btn btn-primary btn-xs"><i class="fa fa-angle-down"></i></button></h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Titulo</label>
+                                        <div class="col-md-9">
+                                            @Html.TextBox("Titulo", dt.Titulo, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Texto</label>
+                                        <div class="col-md-9">
+                                            @Html.TextArea("Texto", (dt.Texto), new { @class = "summernote", @cols = 40, @rows = 6 })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.Hidden("RegionId", Model.Destino.RegionId, new { @class = "form-control" })
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/libs/mustache.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/config.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/styles.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/adapters/jquery.js"></script>
+
+    <script type="text/javascript">
+        /*
+        $('#divTexto').sortable({
+            items: ".itemTexto"
+        }).disableSelection();
+        */
+
+        $(document).ready(function () {
+            $('.summernote').ckeditor({
+
+            });
+        });
+
+        $('#btnAgregarTexto').click(function (e) {
+            e.preventDefault();
+
+            var template = $('#template-texto').html();
+            Mustache.parse(template);   // optional, speeds up future uses
+            var rendered = Mustache.render(template, {  });
+            $('#divTexto').append(rendered);
+
+            var sn = $('#divTexto .itemTexto:last .summernote');
+
+            sn.ckeditor({
+                height: 180,
+                focus: false,
+                tabsize: 2
+            });
+        });
+
+        $('body').on('click', '.btnEliminarTexto', function (e) {
+            e.preventDefault();
+
+            $(this).closest('.itemTexto').remove();
+        });
+
+        $('body').on('click', '.btnSubirTexto', function (e) {
+            e.preventDefault();
+
+            $(this).parents('.itemTexto').insertBefore($(this).parents('.itemTexto').prev());
+        });
+
+        $('body').on('click', '.btnBajarTexto', function (e) {
+            e.preventDefault();
+
+            $(this).parents('.itemTexto').insertAfter($(this).parents('.itemTexto').next());
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            $("#formEdit").submit();
+        });
+    </script>
+}

@@ -1,0 +1,65 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.MetatagEditViewModel
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Metatag", FormMethod.Post, new { id = "formEdit" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Meta Tags </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Title</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Title", Model.MetaTag.Title, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Description</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Description", Model.MetaTag.Description, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Keywords</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Keywords", Model.MetaTag.Keywords, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.Hidden("metaId", Model.MetaTag.Id)
+                                @if ((object)ViewBag.returnUrl != null)
+                                {
+                                    @Html.Hidden("returnUrl", (object)ViewBag.returnUrl.ToString());
+                                }
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}

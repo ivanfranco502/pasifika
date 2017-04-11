@@ -1,0 +1,135 @@
+﻿@model Pasifika.WebUI.ViewModels.Tipo2PortadaViewModel
+@{
+    ViewBag.Title = "Portada";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = ViewBag.seccionId })
+}
+
+@Html.Action("Cargar", "Banner", new { seccionId = ViewBag.seccionId, tipo = 1 })
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>@ViewBag.palabra1</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="titular-2 texto-destacado">
+                    @Html.Action("Cargar", "Texto", new { seccionId = ViewBag.seccionId })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    var result = from r in Model.Regiones
+                 select new
+                 {
+                     Region = r,
+                     DestinoGroup =
+                         from d in r.Destinos
+                         where
+                            d.Eliminado == false
+                         orderby
+                            d.Orden
+                         from c in d.Ciudades
+                         where
+                            c.Eliminado == false
+                            && c.Viajes.Any(x => x.Eliminado == false && ((x is Pasifika.Model.Hotel && ViewBag.seccionId == 12) || (x is Pasifika.Model.Excursion && ViewBag.seccionId == 8)))
+                          group d by d into destinogroup
+                         select destinogroup
+                 };
+
+    foreach (var r in result)
+    {
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h2 class="titular-1 f-linea-gris text-center">
+                        <span>@ViewBag.palabra2 @r.Region.Nombre.ToUpper()</span>
+                    </h2>
+                    <p class="texto-5 text-center pad20 modulo">
+                        @Html.Action("Cargar", "Texto", new { seccionId = ViewBag.seccionId, regionId = r.Region.Id })
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnails modulo">
+            <div class="row">
+                @{int cant = 0;}
+                @foreach (var d in r.DestinoGroup)
+                {
+                    <div class="col-xs-4 text-center">
+                        <a href="@Url.RouteUrl(new { controller = "Tipo2", action = ViewBag.action, url = d.Key.Url })" class="thumbnail no-hover">
+                            <div class="texto-4">@ViewBag.palabra3 @d.Key.Nombre.ToUpper()</div>
+                            @if (ViewBag.seccionId == 12)
+                            { 
+                                <img alt="@d.Key.Alt" src="~/Content/images/destino/hotel/@d.Key.FotoHotel" class="img-responsive" />
+                            }
+                            
+                            @if (ViewBag.seccionId == 8)
+                            {
+                                <img alt="@d.Key.Alt" src="~/Content/images/destino/excursion/@d.Key.FotoExcursion" class="img-responsive" />
+                            }
+                        </a>
+                    </div>
+
+                    cant++;
+                    if (cant % 3 == 0)
+                    {
+                        @:</div>
+
+                        if (cant == 6)
+                        {
+                            @:</div>    
+                            @:<div class="thumbnails modulo hide">
+                        }
+                        @:<div class="row">
+                    }
+                }
+            </div>
+        </div>
+
+        if (r.DestinoGroup.Count() > 6)
+        { 
+            <div class="row modulo">
+                <div class="col-xs-12 text-center">
+                    <a href="javascript:void(0);" class="btn btn-blanco ver-mas">@ViewBag.palabra4 @r.Region.Nombre.ToUpper()</a>
+                </div>
+            </div>
+        }
+    }
+}
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: false
+            });
+
+            $('.ver-mas').on('click', function (e) {
+                var that = $(e.currentTarget);
+                that.parent().parent().prev('.hide').removeClass('hide');
+                that.hide();
+            });
+        });
+    </script>
+}

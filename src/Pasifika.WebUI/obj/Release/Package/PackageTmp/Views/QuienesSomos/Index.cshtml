@@ -1,0 +1,265 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = 2 })
+}
+
+@Html.Action("Cargar", "Banner", new { seccionId = 2, tipo = 1 })
+
+<div class="row modulo">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>QUI&Eacute;NES SOMOS</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="titular-2 texto-destacado">
+                    Somos una agencia especializada en viajes a medida y de lujo a destinos de Asia y  Pac&iacute;fico.&nbsp; Brindamos un servicio profesional&nbsp; y personalizado donde cada propuesta es dise&ntilde;ada a medida y de acuerdo a las preferencias de cada cliente.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="media quienes borde-top-gris-2">
+            <div class="media-body text-center texto-5">
+                <h2 class="titular-2b">
+                    QUEREMOS QUE SU VIAJE SEA EXCEPCIONAL
+                </h2>
+                <p>NOS TOMAREMOS EL TIEMPO NECESARIO PARA ENTENDER EL VIAJE QUE DESEA REALIZAR</p>
+                <p>
+                    Previamente  a enviarle una propuesta mantendremos <br>
+                    una conversaci&oacute;n telef&oacute;nica en la que le pediremos que nos cuente<br>
+                    en detalle su idea de viaje.<br><br>
+
+                    Una vez que tengamos toda la informaci&oacute;n necesaria, elaboraremos una propuesta inicial para poder comenzar a trabajar. <br>
+                    <br>
+
+                    Podr&aacute; implicarse en todo el proceso hasta donde lo desee y juntos definiremos su  viaje ideal.
+                </p>
+
+            </div>
+            <div class="media-right">
+                <img src="img/quienes-1.jpg" class="" alt="Agencia de Viajes a medida">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="media quienes borde-top-gris-2">
+            <div class="media-left">
+                <img src="img/quienes-2.jpg" class="" alt="Agencia de Viajes a medida documentacion">
+            </div>
+            <div class="media-body text-center texto-5">
+                <h2 class="titular-2b">
+                    S&Oacute;LO TENDR&Aacute; QUE PREOCUPARSE POR DISFRUTAR
+                </h2>
+                <p>
+                    NOSOTROS NOS ENCARGAREMOS DE TODO
+
+                </p>
+                <p>
+                    Coordinaremos  y organizaremos todas y cada una de las partes de su viaje: Reservas de vuelos, alojamientos, traslados, gu&iacute;as, excursiones, actividades y cualquier otro servicio que le interese.<br>
+                    <br>
+                    Una vez realizadas todas las gestiones emitiremos su documentaci&oacute;n meticulosamente, con esmero y dedicación.
+
+                    <br>
+                    <br>
+                    Recibir&aacute; toda la informaci&oacute;n cuidadosamente preparada, de forma clara y profesional.<br>
+                    <br>
+
+                    S&oacute;lo deber&aacute; esperar a la fecha de su viaje, disfrutar y descansar.
+                </p>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+
+        <div class="media quienes borde-top-gris-2">
+            <div class="media-body text-center texto-5">
+                <h2 class="titular-2b">
+                    QUEREMOS ACOMPA&Ntilde;ARLO EN SU VIAJE
+                </h2>
+                <p>ESTAREMOS DISPONIBLES PARA USTED 24HS DURANTE SU VIAJE</p>
+                <p>
+                    Si durante su viaje surgiera alg&uacute;n imprevisto, sin importar lo lejos que se encuentre, nosotros estaremos disponibles para usted. Le facilitaremos un tel&eacute;fono en el que nos podr&aacute; contactar para cualquier urgencia las 24hs del día.<br>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12  text-center">
+        <div class="borde-top-gris-2">
+            <div class="modulo clearfix">
+                <h3 class="titular-2b modulo">
+                    SOBRE NOSOTROS
+                </h3>
+
+                <p class="texto-5">En el a&ntilde;o 2009 Victoria Palladino y Mat&iacute;as Juda Ungar, despu&eacute;s de muchos a&ntilde;os de experiencia en el sector y habiendo viajado por los cinco continentes fundan Pasifika Viajes. Un concepto de agencia  diferente, especializada en destinos de Asia y Pac&iacute;fico y focalizada en un cliente que busca y valora un servicio profesional y de muy alta calidad.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+
+    <div class="col-xs-6">
+        <div class="thumbnail-3 pull-right">
+            <img src="img/nosotros-1.jpg" alt="Matías Juda Ungar" class="img-responsive">
+            <div class="caption">
+                <div class="texto-4 nosotros">Matías Juda Ungar</div>
+                <p class="texto-6">Founder &amp; CEO</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-6">
+        <div class="thumbnail-3 pull-left">
+            <img src="img/nosotros-2.jpg" alt="Victoria Palladino" class="img-responsive">
+            <div class="caption">
+                <div class="texto-4 nosotros">Victoria Palladino</div>
+                <p class="texto-6">Founder  &amp; CMO</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/nosotros-3.jpg" alt="Yasmina Yebenes" class="img-responsive">
+            <div class="caption">
+                <div class="texto-4 nosotros">Yasmina Yebenes</div>
+                <p class="texto-6">Professional Travel Consultant</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/nosotros-4.jpg" alt="Rodrigo Peláez Morón" class="img-responsive">
+            <div class="caption">
+                <div class="texto-4 nosotros">CRISTINA RIAÑO</div>
+                <p class="texto-6">Professional Travel Consultant</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/nosotros-5.jpg" alt="Ana De la Jara" class="img-responsive">
+            <div class="caption">
+                <div class="texto-4 nosotros">CLARA PEÑA</div>
+                <p class="texto-6">Travel Consultant</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12  text-center">
+        <br>
+        <div class="borde-top-gris-2">
+            <div class="modulo clearfix">
+                <h3 class="titular-2b modulo">
+                    NUESTRA OFICINA
+                </h3>
+
+                <p class="texto-5">
+                    Nuestra oficina se encuentra localizada en Madrid, en Pozuelo de Alarc&oacute;n, en una zona tranquila y residencial al noroeste de la ciudad.&nbsp; Aqu&iacute; atendemos a nuestros clientes, realizamos seminarios y brindamos nuestros servicios a todas las regiones de Espa&ntilde;a.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/oficina-1.jpg" alt="Oficina de Pasifika Viajes Equipo" class="img-responsive">
+        </div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/oficina-2.jpg" alt="Oficina de Pasifika Viajes Salon" class="img-responsive">
+        </div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/oficina-3.jpg" alt="Oficina de Pasifika Viajes entrada" class="img-responsive">
+        </div>
+    </div>
+
+</div>
+
+<div class="row modulo">
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/oficina-4.jpg" alt="Oficina de Pasifika Viajes hall" class="img-responsive">
+        </div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/oficina-5.jpg" alt="Oficina de Pasifika Viajes" class="img-responsive">
+        </div>
+    </div>
+
+    <div class="col-xs-4">
+        <div class="thumbnail-3">
+            <img src="img/oficina-6.jpg" alt="Oficina de Pasifika Viajes" class="img-responsive">
+        </div>
+    </div>
+
+</div>
+
+<div class="row modulo"></div>
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: false
+            });
+        });
+    </script>
+}

@@ -1,0 +1,157 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.BannerEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<script id="template-banner" type="x-tmpl-mustache">
+    <tr data-idbanner="{{idBanner}}">
+        <td><input type="text" class="txtTexto col-lg-12" /></td>
+        <td><input type="text" class="txtTexto2 col-lg-12" /></td>
+        <td><input type="file" name="fileBanners" class="col-lg-12" /></td>
+        <td><input type="text" class="txtLink col-lg-12" /></td>
+        <td><input type="text" class="txtTitle col-lg-12" /></td>
+        <td><input type="text" class="txtAlt col-lg-12" /></td>
+        <td><a href="javascript:void(0)" class="btnEliminarBanner" tabindex="-1"><i class="icon glyphicon glyphicon-remove"></i></a></td>
+    </tr>
+</script>
+
+@using (Html.BeginForm("Edit", "Banner", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Banners</h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        @Html.Hidden("txtJsonBanners")
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="col-lg-2">Texto</th>
+                                    <th class="col-lg-2">Texto2</th>
+                                    <th class="col-lg-2">Imagen</th>
+                                    <th class="col-lg-2">Link</th>
+                                    <th class="col-lg-2">Title</th>
+                                    <th class="col-lg-2">Alt</th>
+                                    <th><a href="javascript:void(0)" class="btn btn-xs btn-default btnAgregarBanner"><i class="icon glyphicon glyphicon-plus"></i></a></th>
+                                </tr>
+                            </thead>
+                            <tbody class="bodyBanner">
+                                @if (Model.Pagina.Banners != null)
+                                {
+                                    foreach (var b in Model.Pagina.Banners.OrderBy(x => x.Orden))
+                                    {
+                                        <tr data-idbanner="@b.Id.ToString()" data-src="@b.Foto">
+                                            <td>
+                                                <input type="text" class="txtTexto col-lg-12" value="@b.Texto" />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="txtTexto2 col-lg-12" value="@b.Texto2" />
+                                            </td>
+                                            <td>
+                                                <img src="~/Content/images/banner/@Model.Pagina.Id/@b.Foto" width="50" height="50" /><br />
+                                                <input type="file" name="fileBanners" class="col-lg-12" />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="txtLink col-lg-12" value="@b.Link" />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="txtTitle col-lg-12" value="@b.Title" />
+                                            </td>
+                                            <td>
+                                                <input type="text" class="txtAlt col-lg-12" value="@b.Alt" />
+                                            </td>
+                                            <td>
+                                                <a href="javascript:void(0)" class="btnEliminarBanner" tabindex="-1"><i class="icon glyphicon glyphicon-remove"></i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-12">
+                            @if ((object)ViewBag.returnUrl != null){
+                                @Html.Hidden("returnUrl", (object)ViewBag.returnUrl.ToString());
+                            }
+                            <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/libs/mustache.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.bodyBanner').sortable().disableSelection();
+
+        var idBanner = 0;
+        $('.btnAgregarBanner').click(function () {
+            idBanner--;
+            var template = $('#template-banner').html();
+            Mustache.parse(template);   // optional, speeds up future uses
+            var rendered = Mustache.render(template, { idBanner: idBanner });
+            $('.bodyBanner').append(rendered);
+        });
+
+        $('body').on('click', '.btnEliminarBanner', function () {
+            var tr = $(this).closest('tr');
+            var id = $(tr).attr('data-idbanner');
+            if (parseInt(id) < 0) {
+                $(tr).remove();
+            } else {
+                $(tr).attr('data-operacion', 'B');
+                $(tr).hide();
+            }
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            var imagenes = [];
+            $('.bodyBanner tr').each(function (i, row) {
+                var imagen = {};
+                imagen.Id = $(row).attr('data-idbanner');
+                imagen.Operacion = $(row).attr('data-operacion');
+                imagen.Foto = $(row).attr('data-src');
+                imagen.Texto = $(row).find('.txtTexto').val();
+                imagen.Texto2 = $(row).find('.txtTexto2').val();
+                imagen.Link = $(row).find('.txtLink').val();
+                imagen.Title = $(row).find('.txtTitle').val();
+                imagen.Alt = $(row).find('.txtAlt').val();
+                imagen.Orden = i;
+                imagenes.push(imagen);
+            });
+            $('#txtJsonBanners').val(JSON.stringify(imagenes));
+
+            $("#formEdit").submit();
+        });
+    });
+    </script>
+}

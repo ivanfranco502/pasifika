@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+}
+
+@Html.Action("Cargar", "Banner", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId, tipo = 1 })
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>@ViewBag.palabra</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="titular-2 texto-destacado">
+                    @Html.Action("Cargar", "Texto", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h2 class="titular-1 f-linea-gris">
+                <span>@ViewBag.palabra3 destacados</span>
+            </h2>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <a href="@ViewBag.link" class="btn btn-negro-2 pull-right">@ViewBag.palabra2</a>
+    </div>
+</div>
+
+@Html.Action("Cargar", "Destacado", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <a href="@ViewBag.link" class="btn btn-negro-2 pull-right">@ViewBag.palabra2</a>
+    </div>
+</div>
+
+
+@Html.Action("Cargar", "InfoRelacion", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+
+@section scripts
+{
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: false
+            });
+        });
+    </script>
+}

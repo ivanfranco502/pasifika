@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Contacto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { seccionId = ViewBag.seccionId })
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>@ViewBag.titulo</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Action("Cargar", "Banner", new { seccionId = ViewBag.seccionId, tipo = 2 })
+
+<div class="row modulo">
+    <div class="col-xs-9">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="texto-19">@Html.Action("Cargar", "Texto", new { seccionId = ViewBag.seccionId })</p>
+            </div>
+        </div>
+        
+        @Html.Action("Cargar", "Formulario", new { tipo = ViewBag.tipo, cartel = ViewBag.cartel, id = ViewBag.id })
+
+    </div>
+    <!-- / Col izquierda -->
+    <div class="col-xs-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bloque-negro">
+                    <p class="texto-10 bold">
+                        CONTACTE CON
+                        <br>NOSOTROS:
+                    </p>
+                    <p class="texto-10">
+                        T +34 91 715 5422
+                        <br><a href="mailto:info@pasifika.es">info@pasifika.es</a>
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>NUESTRA OFICINA</strong>
+                        </span>
+                        <br>Calle Francia 3 - Piso 1º B
+                        <br>28224 Pozuelo de Alarcón
+                        <br>Madrid - España
+                    </p>
+                    <p class="texto-12">
+                        <span class="texto-11">
+                            <strong>HORARIOS</strong>
+                        </span>
+                        <br>De lunes a viernes:
+                        <br>de 09.00h a 14.00h
+                        <br>y de 16.00h a 19.00h
+                        <br>Sábados con cita previa
+                    </p>
+                    <p class="texto-12">
+                        Skype: <a href="skype:pasifika.viajes">pasifika.viajes</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/select2")
+
+    <script src="~/js/functions/formularioSeminrario.js"></script>
+
+    <script>
+        $(function () {
+
+            $('.flexslider').flexslider({
+                animation: "fade",
+                controlNav: true,
+                directionNav: true
+            });
+
+            @if (ViewBag.cartel)
+            {
+                @:$('.feedbackFormulario').modal('show');
+            }
+        });
+    </script>
+}

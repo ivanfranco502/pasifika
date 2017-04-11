@@ -1,0 +1,79 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.PartnerEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Partner", FormMethod.Post, new { id = "formEdit", enctype = "multipart/form-data" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Partners </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Nombre</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Nombre", Model.Partner.Nombre, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Texto", Model.Partner.Texto, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Link</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Link", Model.Partner.Link, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Foto</label>
+                            <div class="col-md-9">
+                                @if (Model.Partner.Foto != null)
+                                { 
+                                    @Html.Hidden("Foto", Model.Partner.Foto)
+                                    <img src="~/Content/images/partner/@Model.Partner.Foto" width="50" height="50" /><br />
+                                }
+                                <input type="file" name="file1" class="col-lg-12" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Alt</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Alt", Model.Partner.Alt, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.Hidden("Orden", Model.Partner.Orden, new { @class = "form-control" })
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}

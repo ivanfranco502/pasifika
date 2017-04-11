@@ -1,0 +1,96 @@
+﻿@model List<Pasifika.Model.Contacto>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Widget ID (each widget will need unique ID)-->
+<div class="jarviswidget" id="wid-id-0">
+    <header>
+        <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+        <h2>Emails </h2>
+
+    </header>
+
+    <!-- widget div-->
+    <div>
+
+        <!-- widget edit box -->
+        <div class="jarviswidget-editbox">
+            <!-- This area used as dropdown edit box -->
+        </div>
+
+        <div class="row center-block">
+            <div class="col-lg-1 col-lg-offset-11">
+                @using (Html.BeginForm("Exportar", "Contacto", FormMethod.Post, new { id = "exportForm", Class = "formSimple" }))
+                {
+                    <input id="btnEnviar" type="submit" class="btn btn-primary" value="Exportar" />
+                }
+            </div>
+        </div>
+        <br />
+        <!-- end widget edit box -->
+        <!-- widget content -->
+        <div class="table-responsive" style="overflow-x:auto;">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="">Fecha</th>
+                        <th class="">Hora</th>
+                        <th class="">Form</th>
+                        <th class="">Sesion</th>
+                        <th class="">Sexo</th>
+                        <th class="">Nombre</th>
+                        <th class="">Apellido</th>
+                        <th class="">Email</th>
+                        <th class="">España</th>
+                        <th class="">Provincia</th>
+                        <th class="">Otros Paises</th>
+                        <th class="">Telefono</th>
+                        <th class="">D.O.B</th>
+                        <th class="">Conocio</th>
+                        <th class="">Newsletter</th>
+                        <th class="">Privacidad</th>
+                        <th class="">Url</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in Model)
+                    {
+                        <tr>
+                            <td>@c.Fecha.ToString("dd/MM/yyyy")</td>
+                            <td>@c.Fecha.ToString("HH:mm")</td>
+                            <td>@c.Tipo</td>
+                            <td>@c.Sesion</td>
+                            <td>@c.Sexo</td>
+                            <td>@c.Nombre</td>
+                            <td>@c.Apellido</td>
+                            <td>@c.Email</td>
+                            <td>@c.Europa</td>
+                            <td>@c.Provincia</td>
+                            <td>@c.Pais</td>
+                            <td>@c.Telefono</td>
+                            <td>@(c.FechaNacimiento.HasValue ? c.FechaNacimiento.Value.ToString("dd/MM/yyyy") : "")</td>
+                            <td>@c.Conocio</td>
+                            <td>@c.Newsletter</td>
+                            <td>Si</td>
+                            <td>@c.Url</td>
+                            <td>
+                                @using (Html.BeginForm("Delete", "Contacto"))
+                                {
+                                    @Html.Hidden("Id", c.Id)
+                                    <input type="submit" class="btn btn-default btn-xs" value="Delete" />
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <!-- end widget content -->
+</div>
+<!-- end widget div -->

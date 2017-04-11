@@ -1,0 +1,325 @@
+﻿@model Pasifika.WebUI.ViewModels.Tipo1DetalleViewModel
+@{
+    ViewBag.Title = "Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { viajeId = Model.Viaje.Id })
+
+    @Scripts.Render("~/bundles/helpers")
+}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>@ViewBag.palabra1</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="text-right texto-17">
+                    REF:  @Model.Viaje.Referencia
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="wrapper-detail">
+            <div class="lat-izq-detail">
+                <h2 class="titular-3">@Model.Viaje.Nombre </h2>
+
+                <div class="dias">
+                    <p class="texto-16b">DURACIÓN:</p>
+                    <span class="texto-18"><strong>@(((Pasifika.Model.ViajeTipo1)Model.Viaje).Duracion) @ViewBag.palabra5</strong></span>
+                </div>
+                <div class="precio">
+                    <p class="texto-16b">A PARTIR DE:</p>
+                    <span class="texto-18"><strong>@Model.Viaje.Precio Euros</strong></span>
+                    @if (Model.Viaje.InfoPrecio != "")
+                    { 
+                        <span class="badge-info" title="@Model.Viaje.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
+                    }
+                </div>
+
+                <hr class="sep-1-total">
+
+                <p class="texto-16b">
+                    <strong>País:</strong> @(((Pasifika.Model.ViajeTipo1)Model.Viaje).Paises.ToUpper())
+                    <br><br>
+                    <strong>Ciudades:</strong> @(((Pasifika.Model.ViajeTipo1)Model.Viaje).Ciudades.ToUpper())
+                </p>
+
+                <a href="@Url.RouteUrl(new
+                                        {
+                                            controller = "Formulario",
+                                            action = "Index",
+                                            tipo = 1
+                                        })" class="btn btn-negro-2 center-block">SOLICITAR PRESUPUESTO</a>
+
+            </div>
+
+            <div class="wrapper-slide-detail">
+                <div class="flexslider">
+                    <ul class="slides">
+                        @foreach(var f in Model.Viaje.Fotos.OrderBy(x => x.Orden))
+                        { 
+                            <li class="item">
+                                <img src="~/Content/images/foto/@f.Archivo" class="" alt="@f.Alt">
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <p>
+            <strong>@ViewBag.palabraIntereses:</strong> 
+            @{int cantTags = 0;}
+            @foreach (var t in Model.Viaje.TagsViaje.Where(x => x.Tag.Eliminado == false).OrderBy(x => x.Orden).ToList())
+            {
+                cantTags++;
+                @t.Tag.Nombre if (cantTags != Model.Viaje.TagsViaje.Where(x => x.Tag.Eliminado == false).ToList().Count)
+                                {
+                                    @:,
+                                }
+            }
+        </p>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-9">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="texto-19">
+                    @Html.Raw(Model.Viaje.Descripcion)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>información general</span>
+                </h3>
+                <p class="texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).Itinerario)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>
+                        @if (Model.Viaje is Pasifika.Model.Wellnes)
+                        {
+                            @:DETALLE DEL PROGRAMA
+                        }
+                        else
+                        {
+                            @:itinerario
+                        }
+                    </span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).Alojamiento)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>
+                        @if (Model.Viaje is Pasifika.Model.Wellnes)
+                        {
+                            @:INSTALACIONES
+                        }
+                        else
+                        {
+                            @:excursiones, actividades y visitas
+                        }
+                    </span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).Actividades)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>
+                        @if (Model.Viaje is Pasifika.Model.Tren)
+                        {
+                            @:TREN & SERVICIOS
+                        }
+                        else
+                        {
+                            if (Model.Viaje is Pasifika.Model.Crucero)
+                            {
+                                @:EMBARCACIÓN & SERVICIOS
+                            }
+                            else
+                            {
+                                if (Model.Viaje is Pasifika.Model.Wellnes)
+                                {
+                                    @:LOCALIZACIÓN
+                                }
+                                else
+                                { 
+                                    @:HOTELES SELECCIONADOS
+                                }
+                            }
+                        }
+                    </span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).Translados)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>cuándo viajar</span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).CuandoIr)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>Presupuesto</span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).Presupuesto)
+                </p>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>comentarios y consideraciones</span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo1)Model.Viaje).Comentarios)
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <!-- / Col izquierda -->
+
+    <div class="col-xs-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bloque-negro text-center">
+                    <p class="texto-6c  text-center">@Model.Viaje.TituloCuadro</p>
+                    <p class="texto-19b  text-center">
+                        @Model.Viaje.TextoCuadro
+                    </p>
+                    <a href="@Url.RouteUrl(new
+                                        {
+                                            controller = "Formulario",
+                                            action = "Index",
+                                            tipo = 1
+                                        })" class="btn btn-negro-2 center-block">CONTACTAR</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row modulo">
+            <div class="col-xs-12">
+
+                <div class="botones-lateral">
+                    @if (Model.Viaje.PDF != null && Model.Viaje.PDF != "")
+                    {
+                        <a href="@Url.RouteUrl(new
+                                    {
+                                        controller = "Formulario",
+                                        action = "Index",
+                                        tipo = 2,
+                                        id = Model.Viaje.Id
+                                    })" class="btn btn-gris">
+                            SOLICITAR DETALLE DE ESTE @ViewBag.palabra2 EN.PDF
+                        </a>
+                    }
+                    <a href="@Url.RouteUrl(new
+                                    {
+                                        controller = "Formulario",
+                                        action = "Compartir"
+                                    })" class="btn btn-gris">
+                        COMPARTIR
+                    </a>
+                    <a href="@ViewBag.palabra3Link" class="btn btn-gris">
+                        VER TODAS LAS PROPUESTAS DE @ViewBag.palabra3
+                    </a>
+                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "contratacion-reserva" })" class="btn btn-gris">
+                        CÓMO CONTRATAR ESTE @ViewBag.palabra4
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        @Html.Action("Cargar", "BannerInferior", new { viajeId = Model.Viaje.Id })
+
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h2 class="titular-1 f-linea-gris">
+                <span>Tambi&eacute;n le puede interesar</span>
+            </h2>
+        </div>
+    </div>
+</div>
+
+
+@Html.Action("Cargar", "Sugerido", new { viajeId = Model.Viaje.Id })
+
+@section scripts
+{
+    <script>
+    $(function () {
+
+        $('.flexslider').flexslider({
+            animation: "fade",
+            controlNav: true,
+            directionNav: true
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+}

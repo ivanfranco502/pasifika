@@ -1,0 +1,81 @@
+﻿@model Pasifika.WebUI.ViewModels.MenuIzquierdaDestinosViewModel
+
+@{string menuRegion = "";}
+
+    @foreach (var r in Model.Regiones)
+    {
+        <div id="viajes-a-@r.Url" class="visible-xs">
+            <ul class="sidebar-nav">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <a href="#cerrar-@r.Url" id="cerrar-@r.Url"><img src="/img/back-arrow.png"></a>
+                    </div>
+                    <div class="col-xs-10">
+                        <span class="tipo-1"> VOLVER</span>
+                    </div>
+                </div>
+                
+                 <br>
+                
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-10">
+                        <span>Viajes a @r.Url</span>
+                        @foreach (var d in r.Destinos.Where(x => x.Eliminado == false).OrderBy(x => x.Orden))
+                {
+                            <li>
+                                <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                     action = "DestinoListado",
+                                                     url = d.Url
+                                })">
+                                  @d.Nombre</a>
+                                                                                                                                </li>
+                        }
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+    }
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        @if(menuRegion != string.Empty){
+            @:$('@menuRegion').collapse('show')
+        }
+    });
+
+
+    $("#viajes-asia").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-asia", true);
+    });
+
+    $("#viajes-pacifico").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-pacifico", true);
+    });
+
+    $("#viajes-america").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-america", true);
+    });
+
+
+    $("#cerrar-asia").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-asia", false);
+    });
+
+    $("#cerrar-pacifico").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-pacifico", false);
+    });
+
+
+    $("#cerrar-america").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-america", false);
+    });
+</script>

@@ -43,30 +43,21 @@
                             </div>
                         </div>
                     </li>
-                    <div class="row">
+                    <div class="row" id="links">
                         <div class="col-xs-2"></div>
                         <div class="col-xs-10">
                             <li>
-                                <a href="#quienessomos">Quienes Somos</a>
+                                <a href="#quienessomos" class="tipo-1">Quienes Somos</a>
                             </li>
                             <li>
-                                <a href="#tipodeviaje" id="tipodeviaje">Tipo de Viaje</a>
-                            </li>
-                            <li>
-                                <a href="#viajesasia" id="viajesasia">Viajes a Asia</a>
-                            </li>
-                            <li>
-                                <a href="#viajespacifico" id="viajespacifico">Viajes al Pacifico</a>
-                            </li>
-                            <li>
-                                <a href="#viajesamerica" id="viajesamerica">Viajes a América</a>
+                                <a href="#tipodeviaje" id="tipodeviaje" class="tipo-1">Tipo de Viaje</a>
                             </li>
                             @Html.Action("IzquierdaDestinos", "Menu", new { url = ViewBag.menusseleccionado })
                             <li>
-                                <a href="#">Selección de Hoteles</a>
+                                <a href="#" class="tipo-1">Selección de Hoteles</a>
                             </li>
                             <li>
-                                <a href="#experiencias" id="experiencias">Experiencias</a>
+                                <a href="#experiencias" id="experiencias" class="tipo-1">Experiencias</a>
                             </li>
                             <li>
                                 <a href="#">Guías de Viaje</a>
@@ -79,87 +70,91 @@
                             </li>
                         </div>
                     </div>
+
+
                 </ul>
+                <div id="tipo-de-viaje">
+                    <ul class="sidebar-nav">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <a href="#cerrartipo" id="cerrartipo"><img src="/img/back-arrow.png"></a>
+                            </div>
+                            <div class="col-xs-10">
+                                <span class="tipo-1"> VOLVER</span>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-10">
+
+                                <span> Tipo de Viaje</span>
+                                <li>
+                                    <a href="#">Viajes a Medida</a>
+                                </li>
+                                <li>
+                                    <a href="#">Viajes de Novios</a>
+                                </li>
+                                <li>
+                                    <a href="#">Viajes en Familia</a>
+                                </li>
+                                <li>
+                                    <a href="#">Vueltas al mundo</a>
+                                </li>
+                                <li>
+                                    <a href="#">Viajes combinados</a>
+                                </li>
+                                <li>
+                                    <a href="#">Viajes de lujo</a>
+                                </li>
+                                <li>
+                                    <a href="#">High End Travel</a>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                @Html.Action("Destinos", "Menu", new { url = ViewBag.menusseleccionado })
+
+                <div id="-experiencias">
+                    <ul class="sidebar-nav">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <a href="#cerrarexperiencias" id="cerrarexperiencias"><img src="/img/back-arrow.png"></a>
+                            </div>
+                            <div class="col-xs-10">
+                                <span class="tipo-1"> VOLVER</span>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-10">
+                                <span> Experiencias</span>
+                                <li>
+                                    <a href="#">Wellness & Spa</a>
+                                </li>
+                                <li>
+                                    <a href="#">Excursiones</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cruceros</a>
+                                </li>
+                                <li>
+                                    <a href="#">Trenes</a>
+                                </li>
+
+                            </div>
+                        </div>
+                    </ul>
+                </div>
 
             </div>
-            <div id="tipo-de-viaje">
-                <ul class="sidebar-nav">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <a href="#cerrartipo" id="cerrartipo" class="volver"><img src="/img/back-arrow.png"></a>
-                        </div>
-                        <div class="col-xs-9">
-                            ATRAS
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-10">
-                            <li>
-                                <a href="#">Viajes a Medida</a>
-                            </li>
-                            <li>
-                                <a href="#">Viajes de Novios</a>
-                            </li>
-                            <li>
-                                <a href="#">Viajes en Familia</a>
-                            </li>
-                            <li>
-                                <a href="#">Vueltas al mundo</a>
-                            </li>
-                            <li>
-                                <a href="#">Viajes combinados</a>
-                            </li>
-                            <li>
-                                <a href="#">Viajes de lujo</a>
-                            </li>
-                            <li>
-                                <a href="#">High End Travel</a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-
-
-            <div id="-experiencias">
-                <ul class="sidebar-nav">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <a href="#cerrarexperiencias" id="cerrarexperiencias" class="volver"><img src="/img/back-arrow.png"></a>
-                        </div>
-                        <div class="col-xs-9">
-                            ATRAS
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-10">
-                            <li>
-                                <a href="#">Tailandia</a>
-                            </li>
-                            <li>
-                                <a href="#">Vietnam</a>
-                            </li>
-                            <li>
-                                <a href="#">Camboya</a>
-                            </li>
-                            <li>
-                                <a href="#">Laos</a>
-                            </li>
-                            <li>
-                                <a href="#">Myanmar</a>
-                            </li>
-                            <li>
-                                <a href="#">Japón</a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-
         </div>
         <!-- /#menu-lateral -->
 
@@ -541,7 +536,42 @@
                     </div>
                 </div>
                 <div class="col-xs-2"> </div>
-            </div>
+
+                <div class="row">
+                    <div class="col visible-xs">
+                        <ul class="list-unstyled">
+
+                            <li class="doble">
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "contratacion-reserva" })">CONTRATACI&Oacute;N &amp; RESERVA</a>
+                            </li>
+                            <li>
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "gastos-gestion" })">GASTOS &amp; GESTI&Oacute;N</a>
+                            </li>
+                            <li>
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "seguro-de-viaje" })">SEGURO DE VIAJE</a>
+                            </li>
+
+
+                            <li class="doble">
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "politica-privacidad" })">POLITICA DE PRIVACIDAD</a>
+                            </li>
+                            <li>
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "Condiciones-generales" })">CONDICIONES GENERALES</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
 
 
             <div class="container hidden-xs">
@@ -556,7 +586,7 @@
 
                 <div class="row">
                     <div class="col-xs-12 texto-8">
-                        <div class="col hidden-xs">
+                        <div class="col">
                             <strong>TOP viajes</strong>
                             <ul class="list-unstyled">
                                 <li>
@@ -682,7 +712,7 @@
                             </ul>
                         </div>
 
-                        <div class="col hidden-xs">
+                        <div class="col ">
                             <strong>Ideas de Viajes</strong>
                             <ul class="list-unstyled">
                                 <li>
@@ -775,38 +805,7 @@
                             </ul>
                         </div>
 
-                        <div class="col visible-xs">
-                            <ul class="list-unstyled">
-
-                                <li class="doble">
-                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
-                                          action = "Detalle",
-                                        url = "contratacion-reserva" })">CONTRATACI&Oacute;N &amp; RESERVA</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
-                                          action = "Detalle",
-                                        url = "gastos-gestion" })">GASTOS &amp; GESTI&Oacute;N</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
-                                          action = "Detalle",
-                                        url = "seguro-de-viaje" })">SEGURO DE VIAJE</a>
-                                </li>
-
-
-                                <li class="doble">
-                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
-                                          action = "Detalle",
-                                        url = "politica-privacidad" })">POLITICA DE PRIVACIDAD</a>
-                                </li>
-                                <li>
-                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
-                                          action = "Detalle",
-                                        url = "Condiciones-generales" })">CONDICIONES GENERALES</a>
-                                </li>
-                            </ul>
-                        </div>
+                
 
                         <div class="col">
                             <form class="newsletter-footer newsletter-form">
@@ -822,7 +821,7 @@
 
                             </form>
 
-                            <div class="redes-sociales hidden-xs">
+                            <div class="redes-sociales ">
                                 <p class="texto-9">
                                     <strong>REDES SOCIALES</strong>
                                 </p>
@@ -920,7 +919,7 @@
 
                     </div>
                 </div>
-                <div class="row modulo hidden-xs">
+                <div class="row modulo">
                     <div class="col-xs-12 texto-8">
                         <strong>ACREDITACIONES</strong>
                         <p class="texto-8">
@@ -931,7 +930,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row modulo hidden-xs">
+                <div class="row modulo">
                     <div class="col-xs-12">
                         <a class="badges">
                             <img src="/img/footer_logos.png" alt="">
@@ -1062,22 +1061,6 @@
         $("#cerrartipo").click(function (e) {
             e.preventDefault();
             $("#contenedor-principal").toggleClass("tipodeviaje", false);
-        });
-
-        $("#cerrarasia").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajes-asia", false);
-        });
-
-        $("#cerrarpacifico").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajes-pacifico", false);
-        });
-
-
-        $("#cerraramerica").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajes-america", false);
         });
 
         $("#cerrarexperiencias").click(function (e) {

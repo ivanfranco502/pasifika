@@ -1,0 +1,89 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.TagEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Tag", FormMethod.Post, new { id = "formEdit" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Tags </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Nombre</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Nombre", Model.Tag.Nombre, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Url</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Url", Model.Tag.Url, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Descripcion</label>
+                            <div class="col-md-9">
+                                @Html.TextBox("Descripcion", Model.Tag.Descripcion, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">Texto</label>
+                            <div class="col-md-9">
+                                @Html.TextArea("Texto", (Model.Tag.Texto), new { @class = "summernote", @cols = 40, @rows = 6 })
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}
+
+@section scripts
+{
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/config.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/styles.js"></script>
+    <script src="~/Areas/Admin/Content/js/plugin/ckeditor/adapters/jquery.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $('.summernote').ckeditor({
+
+        });
+
+        $('#btnEnviar').click(function (e) {
+            e.preventDefault();
+
+            $("#formEdit").submit();
+        });
+    });
+    </script>
+}

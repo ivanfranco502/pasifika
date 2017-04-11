@@ -1,0 +1,101 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.RegionListViewModel
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Widget ID (each widget will need unique ID)-->
+<div class="jarviswidget" id="wid-id-0">
+    <header>
+        <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+        <h2>Regiones </h2>
+
+    </header>
+
+    <!-- widget div-->
+    <div>
+
+        <!-- widget edit box -->
+        <div class="jarviswidget-editbox">
+            <!-- This area used as dropdown edit box -->
+        </div>
+        <!-- end widget edit box -->
+        <!-- widget content -->
+        <div class="widget-body no-padding">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="col-lg-1">Código</th>
+                                <th class="col-lg-11">Partner</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            @foreach (var r in Model.Regiones)
+                            {
+                                <tr data-id="@r.Id">
+                                    <td>
+                                        @Html.ActionLink(r.Id.ToString(), "Edit", new
+                                            {
+                                                id = r.Id
+                                            })
+                                    </td>
+                                    <td>@r.Nombre</td>
+                                    <td>
+                                        @Html.ActionLink("Destinos", "List", "Destino", new
+                                        {
+                                            regionId = r.Id
+                                        }, null)
+                                    </td>
+                                    <td>
+                                        @using (Html.BeginForm("Delete", "Region"))
+                                        {
+                                            @Html.Hidden("Id", r.Id)
+                                            <input type="submit" class="btn btn-default btn-xs" value="Delete" />
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="widget-footer padding-bottom-10">
+                @using (Html.BeginForm("Order", "Region", FormMethod.Post, new { id = "formEdit" }))
+                {
+                    @Html.Hidden("txtJsonOrden")
+                    <input id="btnEnviar" type="button" class="btn btn-primary" value="Guardar Orden" />
+                    @Html.ActionLink("Nueva Region", "Create", null, new { @class = "btn btn-primary" })
+                }
+                
+            </div>
+        </div>
+    </div>
+    <!-- end widget content -->
+</div>
+<!-- end widget div -->
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.tbody').sortable({}).disableSelection();
+
+            $('#btnEnviar').click(function (e) {
+                e.preventDefault();
+
+                var orden = [];
+                $('.tbody tr').each(function (i, row) {
+                    orden.push($(row).attr('data-id'));
+                });
+
+                $('#txtJsonOrden').val(JSON.stringify(orden));
+
+                $("#formEdit").submit();
+            });
+        });
+    </script>
+}

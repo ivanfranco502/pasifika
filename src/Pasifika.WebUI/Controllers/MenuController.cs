@@ -31,5 +31,17 @@ namespace Pasifika.WebUI.Controllers
                 Regiones = r
             });
         }
+        public PartialViewResult Destinos(string url)
+        {
+
+            var r = _region.Get();
+
+            ViewBag.menusseleccionado = url;
+
+            return PartialView(new ViewModels.MenuIzquierdaDestinosViewModel
+            {
+                Regiones = r
+            });
+        }
     }
 }

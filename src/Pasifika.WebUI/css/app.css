@@ -11761,8 +11761,11 @@ body {
     transition: all 0.5s ease;
 }
 
-    #contenedor-principal.toggled {
+#contenedor-principal.toggled{
         padding-left: 250px;
+}
+    #contenedor-principal.toggled #menu-toggle {
+        display:none;
     }
 
 #menu-lateral, #tipo-de-viaje, #viajes-a-asia, #viajes-a-pacifico, #viajes-a-america, #-experiencias {
@@ -11781,7 +11784,7 @@ body {
 }
 
 #tipo-de-viaje, #viajes-a-asia, #viajes-a-pacifico, #viajes-a-america, #-experiencias {
-    margin-top: 80px;
+    margin-top: 70px;
     width: 250px;
     visibility: hidden;
     opacity: 0;
@@ -11896,11 +11899,9 @@ body {
 #buscar {
     background: transparent url("/img/search-mobile.png") no-repeat right center;
     width: 180px;
+    height:40px;
     border: none;
-}
-
-.volver {
-    float: right;
+    border-bottom: 1px solid grey;
 }
 
 .glyphicon-menu-hamburger:before {
@@ -11913,15 +11914,17 @@ body {
     height: 110px;
     zoom: 0.7;
 }
-    
+
 
 @media(max-width:768px) {
     body {
         padding-top: 0;
     }
+
     .logo {
         margin-top: 0;
     }
+
     .thumbnail .texto-27 {
         font-size: 10px;
         vertical-align: text-bottom;
@@ -11929,10 +11932,64 @@ body {
         overflow-y: hidden;
         height: 25px;
     }
+
     .nav-sidebar li ul {
         display: block;
+        background: white;
+    }
+
+    .nav-sidebar {
+        margin-bottom: 0px;
+    }
+
+        .nav-sidebar li, .nav-sidebar {
+            border: none;
+        }
+
+            .nav-sidebar li a {
+                padding: 0px;
+                line-height:0px;
+            }
+
+            .sidebar-nav li, .nav-sidebar li {
+                line-height: 30px;
+            }
+
+                .sidebar-nav li a.tipo-1, .sidebar-nav span:not(.tipo-1){
+                    line-height: 30px;
+                    display: inline-block;
+                    width: 100%;
+                    border-top: 1px solid transparent;
+                    border-bottom: 1px solid transparent;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    padding: 0px;
+                }
+                .sidebar-nav li a{
+                    color:black;
+                }
+
+    #links {
+        border-bottom: 1px solid grey;
+    }
+
+    .telefono{
+        height:10px;
+        font-size:15px;
+    }
+    .texto-2{
+        font-size:12px;
+    }
+    .carousel-caption .texto-3{
+        font-size:20px;
+    }
+    #contenido-pagina{
+        padding:0px;
     }
 }
+
+
 .topbar .btn {
     padding: 0;
 }

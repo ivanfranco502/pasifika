@@ -1,0 +1,112 @@
+﻿@model Pasifika.WebUI.Areas.Admin.ViewModels.PaginaEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Edit", "Pagina", FormMethod.Post, new { id = "formEdit" }))
+{
+    <div class="jarviswidget" id="wid-id-10">
+        <header>
+            <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+            <h2>Paginas </h2>
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+
+            <!-- end widget edit box -->
+            <!-- widget content -->
+            <div class="widget-body">
+
+                <div class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Seccion</label>
+                            <div class="col-md-9">
+                                <select id="SeccionId" name="SeccionId" class="form-control">
+                                    <option value=""></option>
+                                    @foreach (var s in Model.Secciones)
+                                    {
+                                        <option value="@s.Id"
+                                                @if (Model.Pagina.SeccionId == s.Id)
+                                                {
+                                                    @:selected
+                                                }
+                                                >@s.Nombre</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Tag</label>
+                            <div class="col-md-9">
+                                <select id="TagId" name="TagId" class="form-control">
+                                    <option value=""></option>
+                                    @foreach (var t in Model.Tags)
+                                    {
+                                        <option value="@t.Id"
+                                                @if (Model.Pagina.TagId == t.Id)
+                                                {
+                                                    @:selected
+                                                }
+                                                >@t.Nombre</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Destino</label>
+                            <div class="col-md-9">
+                                <select id="TagId" name="DestinoId" class="form-control">
+                                    <option value=""></option>
+                                    @foreach (var d in Model.Destinos)
+                                    {
+                                        <option value="@d.Id"
+                                                @if (Model.Pagina.DestinoId == d.Id)
+                                                {
+                                                    @:selected
+                                                }
+                                                >@d.Nombre</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Region</label>
+                            <div class="col-md-9">
+                                <select id="TagId" name="RegionId" class="form-control">
+                                    <option value=""></option>
+                                    @foreach (var r in Model.Regiones)
+                                    {
+                                        <option value="@r.Id"
+                                                @if (Model.Pagina.RegionId == r.Id) { @: selected
+                                                                                                }>
+                                            @r.Nombre
+                                                                                            </option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-12">
+                                @Html.Hidden("Id", Model.Pagina.Id)
+                                <input id="btnEnviar" type="submit" class="btn btn-primary" value="Guardar" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end widget content -->
+        </div>
+    </div>
+}

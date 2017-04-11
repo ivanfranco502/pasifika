@@ -1,0 +1,232 @@
+﻿@model Pasifika.WebUI.ViewModels.Tipo2DetalleViewModel
+@{
+    ViewBag.Title = "Detalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section header
+{
+    @Html.Action("Cargar", "Metatag", new { viajeId = Model.Viaje.Id })
+
+    @Scripts.Render("~/bundles/helpers")
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="borde-top-gris">
+                    <h1 class="titular-1 f-linea-gris text-center">
+                        <span>@ViewBag.palabra1</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="flexslider">
+            <ul class="slides">
+                @foreach(var f in Model.Viaje.Fotos.OrderBy(x => x.Orden))
+                { 
+                    <li class="item">
+                        <img src="~/Content/images/foto/@f.Archivo" class="" alt="@f.Alt">
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="f-gris datos-caption">
+                    <div class="row">
+                        <div class="col-xs-5 borde-der">
+                            <h2 class="texto-23">@Model.Viaje.Nombre</h2>
+                            <p class="texto-28 ">
+                                @(((Pasifika.Model.ViajeTipo2)Model.Viaje).Ciudad.Destino.Nombre.ToUpper()), @(((Pasifika.Model.ViajeTipo2)Model.Viaje).Ciudad.Nombre.ToUpper())
+                            </p>
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="row">
+                                <div class="col-xs-7">
+                                    <div class="precio">
+                                        <p class="texto-14">DESDE:</p>
+                                        <div class="clearfix">
+                                            <span class="texto-18">
+                                                <strong>
+                                                    @Model.Viaje.Precio <span class="texto-4">Euros</span>
+                                                </strong>
+                                            </span>
+                                            @if (Model.Viaje.InfoPrecio != "")
+                                            { 
+                                                <span class="badge-info" title="@Model.Viaje.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
+                                            }
+                                        </div>
+                                        <p class="texto-14">
+                                            @if (Model.Viaje is Pasifika.Model.Hotel)
+                                            {
+                                                @:POR NOCHE
+                                            }
+                                            else
+                                            {
+                                                @:POR PERSONA
+                                            }
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-xs-5">
+                                    <a href="@Url.RouteUrl(new
+                                        {
+                                            controller = "Formulario",
+                                            action = "Index",
+                                            tipo = 1
+                                        })" class="btn btn-negro-2 pull-right presupuesto">SOLICITAR PRESUPUESTO</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row modulo">
+    <div class="col-xs-12">
+        <p>
+            <strong>@ViewBag.palabra1 :</strong> 
+            @{int cantTags = 0;}
+            @foreach (var t in Model.Viaje.TagsViaje.Where(x => x.Tag.Eliminado == false).OrderBy(x => x.Orden).ToList())
+            {
+                cantTags++;
+                @t.Tag.Nombre if (cantTags != Model.Viaje.TagsViaje.Where(x => x.Tag.Eliminado == false).ToList().Count)
+                              {
+                                @:,
+                              }
+            }
+        </p>
+    </div>
+</div>
+<div class="row modulo">
+    <div class="col-xs-9">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="texto-19">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo2)Model.Viaje).Condicion)
+                </p>
+            </div>
+        </div>
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>@Model.Viaje.Nombre</span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(Model.Viaje.Descripcion)
+                </p>
+            </div>
+        </div>
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>información general</span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo2)Model.Viaje).InformacionGeneral)
+                </p>
+            </div>
+        </div>
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <h3 class="titular-1 f-linea-gris-b">
+                    <span>Nota importante</span>
+                </h3>
+                <p class=" texto-5">
+                    @Html.Raw(((Pasifika.Model.ViajeTipo2)Model.Viaje).Importante)
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- / Col izquierda -->
+    <div class="col-xs-3">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bloque-negro text-center">
+                    <p class="texto-10  text-center">
+                        <strong>@Model.Viaje.TituloCuadro</strong>
+                    </p>
+                    <p class="texto-19c text-center">
+                        @Model.Viaje.TextoCuadro
+                    </p>
+                    <a href="@Url.RouteUrl(new
+                                        {
+                                            controller = "Formulario",
+                                            action = "Index",
+                                            tipo = 1
+                                        })" class="btn btn-negro-2 center-block">CONTACTAR</a>
+                </div>
+            </div>
+        </div>
+        <div class="row modulo">
+            <div class="col-xs-12">
+                <div class="botones-lateral">
+                    @if (Model.Viaje.PDF != null && Model.Viaje.PDF != "")
+                    {
+                        <a href="@Url.RouteUrl(new
+                                    {
+                                        controller = "Formulario",
+                                        action = "Index",
+                                        tipo = 2,
+                                        id = Model.Viaje.Id
+                                    })" class="btn btn-gris">
+                            @ViewBag.palabra2
+                        </a>
+                    }
+                    <a href="@Url.RouteUrl(new
+                                    {
+                                        controller = "Formulario",
+                                        action = "Compartir"
+                                    })" class="btn btn-gris">
+                        COMPARTIR
+                    </a>
+                    <a href="@ViewBag.palabra4Link" class="btn btn-gris">
+                        @ViewBag.palabra4
+                    </a> 
+                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Detalle",
+                                        url = "contratacion-reserva" })" class="btn btn-gris">@ViewBag.palabra3</a>
+                </div>
+            </div>
+        </div>
+
+        @Html.Action("Cargar", "BannerInferior", new { viajeId = Model.Viaje.Id })
+
+    </div>
+</div>
+<div class="row modulo">
+    <div class="col-xs-12">
+        <div class="borde-top-gris">
+            <h3 class="titular-1 f-linea-gris">
+                <span>También le puede interesar</span>
+            </h3>
+        </div>
+    </div>
+</div>
+
+@Html.Action("Cargar", "Sugerido", new { viajeId = Model.Viaje.Id })
+
+@section scripts
+{
+    <script>
+    $(function () {
+
+        $('.flexslider').flexslider({
+            animation: "fade",
+            controlNav: true,
+            directionNav: true
+        });
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+}
