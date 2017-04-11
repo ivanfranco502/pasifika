@@ -61,6 +61,7 @@
                             <li>
                                 <a href="#viajesamerica" id="viajesamerica">Viajes a América</a>
                             </li>
+                            @Html.Action("IzquierdaDestinos", "Menu", new { url = ViewBag.menusseleccionado })
                             <li>
                                 <a href="#">Selección de Hoteles</a>
                             </li>
@@ -121,116 +122,6 @@
                 </ul>
             </div>
 
-            <div id="viajes-a-asia">
-                <ul class="sidebar-nav">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <a href="#cerrarasia" id="cerrarasia" class="volver"><img src="/img/back-arrow.png"></a>
-                        </div>
-                        <div class="col-xs-9">
-                            ATRAS
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-10">
-                            <li>
-                                <a href="#">Tailandia</a>
-                            </li>
-                            <li>
-                                <a href="#">Vietnam</a>
-                            </li>
-                            <li>
-                                <a href="#">Camboya</a>
-                            </li>
-                            <li>
-                                <a href="#">Laos</a>
-                            </li>
-                            <li>
-                                <a href="#">Myanmar</a>
-                            </li>
-                            <li>
-                                <a href="#">Japón</a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-
-            <div id="viajes-a-pacifico">
-                <ul class="sidebar-nav">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <a href="#cerrarpacifico" id="cerrarpacifico" class="volver"><img src="/img/back-arrow.png"></a>
-                        </div>
-                        <div class="col-xs-9">
-                            ATRAS
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-10">
-                            <li>
-                                <a href="#">Tailandia</a>
-                            </li>
-                            <li>
-                                <a href="#">Vietnam</a>
-                            </li>
-                            <li>
-                                <a href="#">Camboya</a>
-                            </li>
-                            <li>
-                                <a href="#">Laos</a>
-                            </li>
-                            <li>
-                                <a href="#">Myanmar</a>
-                            </li>
-                            <li>
-                                <a href="#">Japón</a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-
-            <div id="viajes-a-america">
-                <ul class="sidebar-nav">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <a href="#cerraramerica" id="cerraramerica" class="volver"><img src="/img/back-arrow.png"></a>
-                        </div>
-                        <div class="col-xs-9">
-                            ATRAS
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-10">
-                            <li>
-                                <a href="#">Tailandia</a>
-                            </li>
-                            <li>
-                                <a href="#">Vietnam</a>
-                            </li>
-                            <li>
-                                <a href="#">Camboya</a>
-                            </li>
-                            <li>
-                                <a href="#">Laos</a>
-                            </li>
-                            <li>
-                                <a href="#">Myanmar</a>
-                            </li>
-                            <li>
-                                <a href="#">Japón</a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
-            </div>
 
             <div id="-experiencias">
                 <ul class="sidebar-nav">
@@ -1152,9 +1043,9 @@
             e.preventDefault();
             $("#contenedor-principal").toggleClass("toggled");
             $("#contenedor-principal").toggleClass("tipodeviaje", false);
-            $("#contenedor-principal").toggleClass("viajesasia", false);
-            $("#contenedor-principal").toggleClass("viajespacifico", false);
-            $("#contenedor-principal").toggleClass("viajesamerica", false);
+            $("#contenedor-principal").toggleClass("viajes-asia", false);
+            $("#contenedor-principal").toggleClass("viajes-pacifico", false);
+            $("#contenedor-principal").toggleClass("viajes-america", false);
             $("#contenedor-principal").toggleClass("experiencias", false);
         });
 
@@ -1162,9 +1053,9 @@
             e.preventDefault();
             $("#contenedor-principal").toggleClass("toggled", false);
             $("#contenedor-principal").toggleClass("tipodeviaje", false);
-            $("#contenedor-principal").toggleClass("viajesasia", false);
-            $("#contenedor-principal").toggleClass("viajespacifico", false);
-            $("#contenedor-principal").toggleClass("viajesamerica", false);
+            $("#contenedor-principal").toggleClass("viajes-asia", false);
+            $("#contenedor-principal").toggleClass("viajes-pacifico", false);
+            $("#contenedor-principal").toggleClass("viajes-america", false);
             $("#contenedor-principal").toggleClass("experiencias", false);
         });
 
@@ -1175,18 +1066,18 @@
 
         $("#cerrarasia").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajesasia", false);
+            $("#contenedor-principal").toggleClass("viajes-asia", false);
         });
 
         $("#cerrarpacifico").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajespacifico", false);
+            $("#contenedor-principal").toggleClass("viajes-pacifico", false);
         });
 
 
         $("#cerraramerica").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajesamerica", false);
+            $("#contenedor-principal").toggleClass("viajes-america", false);
         });
 
         $("#cerrarexperiencias").click(function (e) {
@@ -1197,21 +1088,6 @@
         $("#tipodeviaje").click(function (e) {
             e.preventDefault();
             $("#contenedor-principal").toggleClass("tipodeviaje", true);
-        });
-
-        $("#viajesasia").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajesasia", true);
-        });
-
-        $("#viajespacifico").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajespacifico", true);
-        });
-
-        $("#viajesamerica").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("viajesamerica", true);
         });
 
         $("#experiencias").click(function (e) {

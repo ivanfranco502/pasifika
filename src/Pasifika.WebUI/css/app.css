@@ -11792,9 +11792,9 @@ body {
 }
 
 #contenedor-principal.toggled.tipodeviaje #tipo-de-viaje,
-#contenedor-principal.toggled.viajesasia #viajes-a-asia,
-#contenedor-principal.toggled.viajespacifico #viajes-a-pacifico,
-#contenedor-principal.toggled.viajesamerica #viajes-a-america,
+#contenedor-principal.toggled.viajes-asia #viajes-a-asia,
+#contenedor-principal.toggled.viajes-pacifico #viajes-a-pacifico,
+#contenedor-principal.toggled.viajes-america #viajes-a-america,
 #contenedor-principal.toggled.experiencias #-experiencias {
     visibility: visible;
     opacity: 1;
@@ -11929,6 +11929,9 @@ body {
         overflow-y: hidden;
         height: 25px;
     }
+    .nav-sidebar li ul {
+        display: block;
+    }
 }
 .topbar .btn {
     padding: 0;
@@ -11942,3 +11945,5 @@ body {
 .topbar .glyphicon.glyphicon-menu-hamburger {
     font-size: 27px;
 }
+
+

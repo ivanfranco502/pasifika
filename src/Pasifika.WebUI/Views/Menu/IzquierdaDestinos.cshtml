@@ -14,7 +14,7 @@
                 } 
                 else
                 {
-                    @:class="tipo-1"
+                    @:class="tipo-1 hidden-xs"
                 }  data-toggle="collapse" data-target="#submenu-@r.Url" aria-expanded="true" aria-controls="submenu-@r.Url" title="@r.Descripcion"><span>@r.Descripcion</span> <i class="ico flecha-der"></i></a>
 
             <ul class="list-unstyled collapse" id="submenu-@r.Url">
@@ -37,6 +37,39 @@
                     </li>
                 }
             </ul>
+
+            <a href="#viajes-@r.Url" id="viajes-@r.Url" class="visible-xs" ><span>@r.Descripcion</span></a>
+
+            <div id="viajes-a-@r.Url" class="visible-xs">
+                <ul class="sidebar-nav">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <a href="#cerrar-@r.Url" id="cerrar-@r.Url" class="volver"><img src="/img/back-arrow.png"></a>
+                        </div>
+                        <div class="col-xs-9">
+                            ATRAS
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-10">
+                            @foreach (var d in r.Destinos.Where(x => x.Eliminado == false).OrderBy(x => x.Orden))
+                            {
+                                <li>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                     action = "DestinoListado",
+                                                     url = d.Url
+                                })"
+                                       @if (ViewBag.menusseleccionado == d.Url) { @: class="tipo-2 selected"
+                                                                      } else { @: class="tipo-2"
+                                                                      } title="Viajes a @d.Nombre"><span>@d.Nombre</span><i class="ico flecha-der"></i></a>
+                                                                </li>
+                            }
+                        </div>
+                    </div>
+                </ul>
+            </div>
         </li>
     }
 </ul>
@@ -49,4 +82,19 @@
         }
     });
 
+
+    $("#viajes-asia").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-asia", true);
+    });
+
+    $("#viajes-pacifico").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-pacifico", true);
+    });
+
+    $("#viajes-america").click(function (e) {
+        e.preventDefault();
+        $("#contenedor-principal").toggleClass("viajes-america", true);
+    });
 </script>
