@@ -11975,6 +11975,9 @@ body {
     }
 
     .telefono{
+        text-align:center;
+        font-weight:bold;
+        margin-top:10px;
         height:10px;
         font-size:15px;
     }
@@ -11986,6 +11989,9 @@ body {
     }
     #contenido-pagina{
         padding:0px;
+    }
+    .newsletter-conatiner {
+        background-color: #eaeae8;
     }
 }
 
