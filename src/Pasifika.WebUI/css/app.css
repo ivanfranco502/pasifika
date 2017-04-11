@@ -10682,16 +10682,10 @@ footer .col-negro {
     margin-top: -20px;
     padding-top: 20px;
     padding-bottom: 30px;
-    width: 224px;
-    height: 435px;
+    min-height: 435px;
     color: #fff;
 }
 
-@media screen and (min-width: 1233px) {
-    footer .col-negro {
-        width: 320px;
-    }
-}
 
 footer .col-negro a {
     color: #fff;
@@ -11626,7 +11620,6 @@ footer {
 
 footer .container {
     background-color: #EAEAE8;
-    padding-bottom: 50px;
 }
 
 @media (max-width: 1024px) {
@@ -11639,9 +11632,6 @@ footer .container {
     footer .container {
         padding-right: 10px;
         padding-left: 209px;
-    }
-    footer .col-negro {
-        width: 222px;
     }
 }
 
@@ -11709,7 +11699,7 @@ h2.titular-3 {
     footer .col-negro {
         width: 100%;
         text-align: center;
-        height: auto;
+        min-height: unset;
     }
     footer .col-negro .petalos{
          margin-top:0px;
@@ -11871,6 +11861,8 @@ body {
     height:40px;
     border: none;
     border-bottom: 1px solid grey;
+    font-size: 14px;
+    color: grey;
 }
 
 .glyphicon-menu-hamburger:before {
@@ -11966,6 +11958,9 @@ body {
         margin-top:30px;
         background-color: #eaeae8;
     }
+    footer .newsletter-container {
+        margin-top: 0;
+    }
 
 }
 
@@ -12042,7 +12037,7 @@ body {
 
 .main .flexslider .carousel-caption {
     width: auto;
-    max-width: 90%;
+    max-width: 585px;
 }
 
 @media (max-width: 991px) {
@@ -12055,4 +12050,8 @@ body {
     .blq-der .telefono {
         font-size: 13px;
     }
+}
+#menu-lateral .redes-sociales li {
+    padding-left: 2px;
+    padding-right: 2px;
 }

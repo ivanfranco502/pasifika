@@ -38,14 +38,14 @@
                             </div>
                             <div class="col-xs-10">
                                 <form>
-                                    <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+                                    <input type="search" name="buscar" id="buscar" placeholder="BUSCAR...">
                                 </form>
                             </div>
                         </div>
                     </li>
                     <div class="row" id="links">
                         <div class="col-xs-2"></div>
-                        <div class="col-xs-10">
+                        <div class="col-xs-10 text-uppercase">
                             <li>
                                 <a href="@Url.RouteUrl(new
                                 {
@@ -77,18 +77,16 @@
                     <br>
 
                     <div class="row">
-                        <div class="col-xs-2"></div>
-                            <div class="col-xs-6">
-                                <a class="btn btn-negro" href="@Url.RouteUrl(new
-                                {
-                                    controller = "Formulario",
-                                    action = "Index",
-                                    tipo = 1
-                                })" title="Ir a contacto">
-                                    CONTACTO
-                                </a>
-                            </div>
-                        <div class="col-xs-4"></div>
+                        <div class="col-xs-12 text-center">
+                            <a class="btn btn-negro-3" href="@Url.RouteUrl(new
+                            {
+                                controller = "Formulario",
+                                action = "Index",
+                                tipo = 1
+                            })" title="Ir a contacto">
+                                CONTACTO
+                            </a>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -561,9 +559,8 @@
                             </div>
                         <div class="newsletter-container">
                             <div class="row">
-                                <div class="col-xs-2"> </div>
 
-                                <div class="col-xs-8 text-center">
+                                <div class="col-xs-8 col-xs-offset-2 text-center">
                                     <form class="newsletter-footer newsletter-form">
 
                                         <div class="form-group">
@@ -621,7 +618,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-2"> </div>
                         </div>
                         <div class="pre-footer-mobile visible-xs">
                             <div class="row">
@@ -668,339 +664,333 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-xs-12 texto-8">
-                                <div class="col">
-                                    <strong>TOP viajes</strong>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                        <div class="row texto-8">
+                            <div class="col-sm-4 col-md-3">
+                                <strong>TOP viajes</strong>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "australia"
                                 })">Viajes a Australia</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "nueva-zelanda"
                                 })">Viajes a Nueva Zelanda</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "polinesia-francesa"
                                 })">Viajes a la Polinesia</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "peru"
                                 })">Viajes a Per&uacute;</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "canada"
                                 })">Viajes a Canad&aacute;</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "chile"
                                 })">Viajes a Chile</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "japon"
                                 })">Viajes a Jap&oacute;n</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "tailandia"
                                 })">Viajes a Tailandia</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "vietnam"
                                 })">Viajes a Vietnam</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "camboya"
                                 })">Viajes a Camboya</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "myanmar"
                                 })">Viajes a Birmania</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "indonesia"
                                 })">Viajes a Bali</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "india"
                                 })">Viajes a India</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "sri-lanka"
                                 })">Viajes a Sri Lanka</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "maldivas"
                                 })">Viajes a Maldivas</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "emiratos-arabes"
                                 })">Viajes a Dubai</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "qatar"
                                 })">Viajes a Qatar</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "oman"
                                 })">Viajes a Om&aacute;n</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "jordania"
                                 })">Viajes a Jordania</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "DestinoListado",
                                                      url = "turquia"
                                 })">Viajes a Turqu&iacute;a</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </li>
+                                </ul>
+                            </div>
 
-                                <div class="col ">
-                                    <strong>Ideas de Viajes</strong>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                            <div class="col-sm-4 col-md-3">
+                                <strong>Ideas de Viajes</strong>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "InteresListado",
                                                          url = "viajes-de-novios"
                                 })">VIAJES DE NOVIOS</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "InteresListado",
                                                          url = "viajes-de-lujo"
                                 })">VIAJES DE LUJO</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "InteresListado",
                                                          url = "viajes-en-familia"
                                 })">VIAJES EN FAMILIA</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "InteresListado",
                                                          url = "viajes-a-medida"
                                 })">VIAJES A MEDIDA</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "InteresListado",
                                                          url = "vueltas-al-mundo"
                                 })">VUELTAS AL MUNDO</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
                                           action = "HotelPortada"})">HOTELES DE LUJO</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "CruceroListado"
                                     })">CRUCEROS DE LUJO</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
                                                              action = "TrenListado"
                                     })">TRENES DE LUJO</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
                                           action = "ExcursionPortada"})">EXCURSIONES</a>
-                                        </li>
+                                    </li>
 
-                                        <li class="doble">
-                                            <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                    <li class="doble">
+                                        <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                         url = "contratacion-reserva" })">CONTRATACI&Oacute;N &amp; RESERVA</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                         url = "gastos-gestion" })">GASTOS &amp; GESTI&Oacute;N</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                         url = "seguro-de-viaje" })">SEGURO DE VIAJE</a>
-                                        </li>
+                                    </li>
 
-                                        <li class="doble">
-                                            <a href="@Url.RouteUrl(new { controller = "Prensa" ,
+                                    <li class="doble">
+                                        <a href="@Url.RouteUrl(new { controller = "Prensa" ,
                                           action = "Index"})">PRENSA</a>
-                                        </li>
+                                    </li>
 
-                                        <li class="doble">
-                                            <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                    <li class="doble">
+                                        <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                         url = "politica-privacidad" })">POLITICA DE PRIVACIDAD</a>
-                                        </li>
-                                        <li>
-                                            <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                    </li>
+                                    <li>
+                                        <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                         url = "Condiciones-generales" })">CONDICIONES GENERALES</a>
-                                        </li>
+                                    </li>
 
-                                        <li class="doble">
-                                            <a href="@Url.RouteUrl(new
+                                    <li class="doble">
+                                        <a href="@Url.RouteUrl(new
                                     {   controller = "Formulario",
                                         action = "Baja",
                                     })">SOLICITUD DE BAJA</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-md-3">
+                                <form class="newsletter-footer newsletter-form">
+
+                                    <div class="form-group">
+                                        <label class="control-label texto-6">
+                                            Nuestra
+                                            <br>Newsletter:
+                                        </label>
+                                        <input class="form-control input-text" id="emailNews" type="text" placeholder="">
+                                        <button type="submit" class="btn btn-negro-3 submit-button">Suscribirse</button>
+                                    </div>
+
+                                </form>
+
+                                <div class="redes-sociales ">
+                                    <p class="texto-9">
+                                        <strong>REDES SOCIALES</strong>
+                                    </p>
+                                    <ul class="list-inline list-unstyled iconos">
+                                        <li>
+                                            <a href="https://plus.google.com/u/0/116815403460620717793/posts" target="_blank" class="ico gplus">
+                                                <span>Google Plus</span>
+                                            </a>
                                         </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/pasifika.es/" target="_blank" class="ico facebook">
+                                                <span>Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/PasifikaViajes" target="_blank" class="ico twitter">
+                                                <span>Twitter</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/user/PasifikaViajes" target="_blank" class="ico youtube">
+                                                <span>Youtube</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pinterest.com/pasifikaviajes/" target="_blank" class="ico pinterest">
+                                                <span>Pinterest</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/pasifikaviajes/" target="_blank" class="ico instagram">
+                                                <span>Instagram</span>
+                                            </a>
+                                        </li>
+                                        <!--<li>
+                    <a href="http://pasifikaviajes.tumblr.com/" target="_blank" class="ico tumblr">
+                        <span>Tumblr</span>
+                    </a>
+                </li>-->
+                                    </ul>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://plus.google.com/u/0/116815403460620717793/posts" class="texto-9" target="_blank">Google +</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/pages/Pasifika-Viajes/165148560163674" class="texto-9" target="_blank">Facebook</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/PasifikaViajes" class="texto-9" target="_blank">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/user/PasifikaViajes" class="texto-9" target="_blank">YouTube</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pinterest.com/pasifikaviajes/" class="texto-9" target="_blank">Pinterest</a>
+                                        </li>
+                                        <li>
+                                            <a class="texto-9" target="_blank">Instagram</a>
+                                        </li>
+                                        <!--<li>
+                    <a href="http://pasifikaviajes.tumblr.com/" class="texto-9" target="_blank">Tumblr</a>
+                </li>-->
                                     </ul>
                                 </div>
+                            </div>
 
-
-
-                                <div class="col">
-                                    <form class="newsletter-footer newsletter-form">
-
-                                        <div class="form-group">
-                                            <label class="control-label texto-6">
-                                                Nuestra
-                                                <br>Newsletter:
-                                            </label>
-                                            <input class="form-control input-text" id="emailNews" type="text" placeholder="">
-                                            <button type="submit" class="btn btn-negro-3 submit-button">Suscribirse</button>
-                                        </div>
-
-                                    </form>
-
-                                    <div class="redes-sociales ">
-                                        <p class="texto-9">
-                                            <strong>REDES SOCIALES</strong>
-                                        </p>
-                                        <ul class="list-inline list-unstyled iconos">
-                                            <li>
-                                                <a href="https://plus.google.com/u/0/116815403460620717793/posts" target="_blank" class="ico gplus">
-                                                    <span>Google Plus</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.facebook.com/pasifika.es/" target="_blank" class="ico facebook">
-                                                    <span>Facebook</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://twitter.com/PasifikaViajes" target="_blank" class="ico twitter">
-                                                    <span>Twitter</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/user/PasifikaViajes" target="_blank" class="ico youtube">
-                                                    <span>Youtube</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.pinterest.com/pasifikaviajes/" target="_blank" class="ico pinterest">
-                                                    <span>Pinterest</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.instagram.com/pasifikaviajes/" target="_blank" class="ico instagram">
-                                                    <span>Instagram</span>
-                                                </a>
-                                            </li>
-                                            <!--<li>
-                                    <a href="http://pasifikaviajes.tumblr.com/" target="_blank" class="ico tumblr">
-                                        <span>Tumblr</span>
-                                    </a>
-                                </li>-->
-                                        </ul>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="https://plus.google.com/u/0/116815403460620717793/posts" class="texto-9" target="_blank">Google +</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.facebook.com/pages/Pasifika-Viajes/165148560163674" class="texto-9" target="_blank">Facebook</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://twitter.com/PasifikaViajes" class="texto-9" target="_blank">Twitter</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/user/PasifikaViajes" class="texto-9" target="_blank">YouTube</a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.pinterest.com/pasifikaviajes/" class="texto-9" target="_blank">Pinterest</a>
-                                            </li>
-                                            <li>
-                                                <a class="texto-9" target="_blank">Instagram</a>
-                                            </li>
-                                            <!--<li>
-                                    <a href="http://pasifikaviajes.tumblr.com/" class="texto-9" target="_blank">Tumblr</a>
-                                </li>-->
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="col col-negro">
-                                    <p class="texto-10">
-                                        CONTACTE CON
-                                        <br>NOSOTROS:
-                                    </p>
-                                    <p class="texto-10">
-                                        T +34 91 715 5422
-                                        <br><a href="mailto:info@pasifika.es">info@pasifika.es</a>
-                                    </p>
-                                    <p class="texto-12">
-                                        <span class="texto-11">
-                                            <strong>NUESTRA OFICINA</strong>
-                                        </span>
-                                        <br>Calle Francia 3 - Piso 1º B
-                                        <br>28224 Pozuelo de Alarcón
-                                        <br>Madrid - España
-                                    </p>
-                                    <p class="texto-12">
-                                        <span class="texto-11">
-                                            <strong>HORARIOS</strong>
-                                        </span>
-                                        <br>De lunes a viernes:
-                                        <br>de 09.00h a 14.00h
-                                        <br>y de 16.00h a 19.00h
-                                        <br>Sábados con cita previa
-                                    </p>
-                                    <i class="ico petalos"></i>
-                                </div>
-
+                            <div class="col-sm-12 col-md-3 col-negro">
+                                <p class="texto-10">
+                                    CONTACTE CON
+                                    <br>NOSOTROS:
+                                </p>
+                                <p class="texto-10">
+                                    T +34 91 715 5422
+                                    <br><a href="mailto:info@pasifika.es">info@pasifika.es</a>
+                                </p>
+                                <p class="texto-12">
+                                    <span class="texto-11">
+                                        <strong>NUESTRA OFICINA</strong>
+                                    </span>
+                                    <br>Calle Francia 3 - Piso 1º B
+                                    <br>28224 Pozuelo de Alarcón
+                                    <br>Madrid - España
+                                </p>
+                                <p class="texto-12">
+                                    <span class="texto-11">
+                                        <strong>HORARIOS</strong>
+                                    </span>
+                                    <br>De lunes a viernes:
+                                    <br>de 09.00h a 14.00h
+                                    <br>y de 16.00h a 19.00h
+                                    <br>Sábados con cita previa
+                                </p>
+                                <i class="ico petalos"></i>
                             </div>
                         </div>
                         <div class="row modulo">
