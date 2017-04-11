@@ -9463,6 +9463,7 @@ h3.texto-25 {
     font-size: 24px;
 }
 
+
 .titular-2.titular-2b,
 .titular-2b.titular-2b {
     line-height: 1.4em;
@@ -10242,11 +10243,7 @@ a.thumbnail-2:hover .texto-6 {
     padding: 0;
 }
 
-@media screen and (min-width: 1233px) {
-    .container {
-        width: 1233px;
-    }
-}
+
  
 hr.sep-1,
 hr.sep-1-total,
@@ -10317,28 +10314,17 @@ hr.sep-2.sep-2 {
 
 .wrapper-logo {
     display: inline-block;
-    float: left;
-    width: 177px;
-    margin-right: 33px;
     height: 146px;
-    border-bottom: 1px solid #dededb;
 }
 
 .blq-der {
     display: inline-block;
     float: left;
     margin-top: 18px;
-    width: 803px;
     height: 128px;
-    border-bottom: 1px solid #dededb;
 }
 
-    
-@media screen and (min-width: 1233px) {
-    .blq-der {
-        width: 1021px;
-    }
-}
+
 
 
 .blq-der .breadcrumb {
@@ -10370,21 +10356,22 @@ hr.sep-2.sep-2 {
     text-decoration: none;
 }
 
-.blq-der .barra {
-    background-color: #f7f7f4;
-    border: 1px solid #eeecec;
-    height: 48px;
-    line-height: 44px;
-    padding: 0;
-    margin-bottom: 33px;
-    display: block;
-    -webkit-box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
-    -o-box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
-}
+    .blq-der .barra {
+        background-color: #f7f7f4;
+        border: 1px solid #eeecec;
+        height: 48px;
+        line-height: 44px;
+        padding: 0;
+        margin: 0 15px;
+        margin-bottom: 33px;
+        display: block;
+        -webkit-box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
+        -o-box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: '' 3px 2px 5px rgba(0, 0, 0, 0.1) 1px 2px rgba(0, 0, 0, 0.1);
+    }
 
 .blq-der .barra form {
     margin-left: 12px;
@@ -10401,7 +10388,7 @@ hr.sep-2.sep-2 {
     border: none;
     background-color: #f7f7f4;
     margin-left: 10px;
-    width: 308px;
+    width: 200px;
     border-left: 1px solid #dededb;
     border-right: 1px solid #dededb;
 }
@@ -10609,7 +10596,7 @@ footer .modulo {
 
 footer .container {
     padding-left: 223px;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 footer .texto-7 {
@@ -10856,11 +10843,6 @@ h3.titular-2b.modulo {
     /*width: 803px;*/
 }
 
-@media screen and (min-width: 1233px) {
-    .main {
-        width: 1022px;
-    }
-}
 
 .main .flexslider {
     border: none;
@@ -11024,11 +11006,7 @@ h3.titular-2b.modulo {
     margin-bottom: 10px;
 }
 
-@media screen and (min-width: 1233px) {
-    .recuadro-blanco form.newsletter .form-control {
-        width: 367px;
-    }
-}
+
 
 .recuadro-blanco form.newsletter .submit-button {
     float: left;
@@ -11060,8 +11038,7 @@ h3.titular-2b.modulo {
 .banner-home .btn {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    margin-left: -76px;
+    left: calc(50% - 64px);
 }
 
 .banner-home p {
@@ -11685,12 +11662,8 @@ h2.titular-3 {
     }
 }
 
-.col-lg-10, col-xs-12 {
-    padding-left: 0px;
-    padding-right: 0px;
-}
 
-@media (max-width: 736px) {
+@media (max-width: 768px) {
     .col-xs-12, .col-md-10 {
         padding-left: 0px;
         padding-right: 0px;
@@ -11736,7 +11709,7 @@ h2.titular-3 {
     footer .col-negro {
         width: 100%;
         text-align: center;
-        height: 380px;
+        height: auto;
     }
     footer .col-negro .petalos{
          margin-top:0px;
@@ -11835,7 +11808,7 @@ body {
 
             .sidebar-nav li a:hover {
                 text-decoration: none;
-                color: #fff;
+                color: #444;
                 background: rgba(255,255,255,0.2);
             }
 
@@ -11887,10 +11860,6 @@ body {
     }
 }
 
-.btn, .btn-defuault {
-    border: none;
-}
-
 .btn-default:focus, .btn-default:hover {
     background-color: white;
     border-color: white;
@@ -11931,6 +11900,9 @@ body {
         overflow-wrap: normal;
         overflow-y: hidden;
         height: 25px;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 15px 0px 5px 0px;
     }
 
     .nav-sidebar li ul {
@@ -11990,23 +11962,97 @@ body {
     #contenido-pagina{
         padding:0px;
     }
-    .newsletter-conatiner {
+    .newsletter-container {
+        margin-top:30px;
         background-color: #eaeae8;
     }
+
 }
 
 
 .topbar .btn {
     padding: 0;
+    border: none;
 }
+
 .topbar .btn-negro {
     height: 24px;
     line-height: 25px;
-    padding: 0 6px;
-    font-size: 12px;
+    padding: 0 8px;
+    font-size: 10px;
 }
 .topbar .glyphicon.glyphicon-menu-hamburger {
-    font-size: 27px;
+    font-size: 20px;
+}
+.topbar {
+    padding: 0 10px 40px 10px;
+}
+.dropdown-mobile {
+    background: #f7f7f7;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.dropdown-mobile h2 {
+    border-top: 2px solid rgba(0, 0, 0, 0.075);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+    padding: 10px 0px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.dropdown-mobile h2 span {
+    display: block;
+    font-size: 9px;
+    color: #cacaca;
+    margin-top: 5px;
+}
+
+.dropdown-mobile p {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+    padding: 10px 0px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.dropdown-mobile .oculto {
+    display: none;
+}
+
+.sidebar-nav input#emailNews {
+    margin: 5px 30px;
+    width: calc(100% - 60px);
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.pre-footer-mobile .row {
+    border-top: 2px solid rgba(0, 0, 0, 0.075);
+    padding: 20px 10px;
+    color: grey;
+}
+.pre-footer-mobile a {
+    color: grey;
 }
 
 
+.redes-sociales {
+    padding-bottom: 10px;
+}
+
+.main .flexslider .carousel-caption {
+    width: auto;
+    max-width: 90%;
+}
+
+@media (max-width: 991px) {
+    .blq-der .btn-negro {
+        margin-left: 10px;
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .blq-der .telefono {
+        font-size: 13px;
+    }
+}
