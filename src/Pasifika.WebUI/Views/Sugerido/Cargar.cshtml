@@ -8,7 +8,7 @@
     @foreach (var s in Model)
     {
         <!-- thumb-->
-        <div class="col-xs-4">
+        <div class="col-sm-4 col-xs-6">
             <a href="@s.Sugerencia.Link" class="thumbnail">
                 <div class="texto-27">@s.Sugerencia.Titulo</div>
                 <img alt="@s.Sugerencia.Alt" src="~/Content/images/sugerencia/@s.Sugerencia.Foto" class="img-responsive">
@@ -17,12 +17,12 @@
         <!-- /.thumb-->
         <!-- thumb-->
 
-        cant++;
+        /*cant++;
         if (cant % 3 == 0)
         {
             @:</div>
             @:<div class="row">
-        }
+        }*/
     }
 
     </div>

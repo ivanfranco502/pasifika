@@ -39,52 +39,65 @@
             <div class="col-xs-12">
                 <div class="caja-drag">
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-sm-4 col-xs-12">
                             <p class="texto-15">PRECIO</p>
                             <div class="slider">
-                                <div id="presupuesto-lower" class="label-slide label-left">{{presupuesto.from}}</div>
-                                <div class="wrapper-slide presupuesto">
-                                    <div id="presupuesto" data-slider data-ng-from="presupuesto.from" data-ng-to="presupuesto.to" data-start="{{presupuesto.min}}" data-end="{{presupuesto.max}}" data-step="1"></div>
+                                <div class="row">
+                                    <div class="col-xs-1">
+                                        <div id="presupuesto-lower" class="label-slide label-left">{{presupuesto.from}}</div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="wrapper-slide presupuesto">
+                                            <div id="presupuesto" data-slider data-ng-from="presupuesto.from" data-ng-to="presupuesto.to" data-start="{{presupuesto.min}}" data-end="{{presupuesto.max}}" data-step="1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div id="presupuesto-upper" class="label-slide label-right">{{presupuesto.to}}</div>
+                                    </div>
                                 </div>
-                                <div id="presupuesto-upper" class="label-slide label-right">{{presupuesto.to}}</div>
                             </div>
                         </div>
-                        <div class="col-xs-4">
-                            <div class="clearfix">
-                                <p class="texto-15 pull-left">NOMBRE</p>
+                        
+                        
+                            <div class="col-sm-4 col-xs-12">
+      
+                                    <div class="clearfix">
+                                        <p class="texto-15 pull-left">NOMBRE</p>
+                                    </div>
+                                    <select id="nombre">
+                                        <option value="">TODOS</option>
+                                        @foreach (var v in Model.Viajes)
+                                        {
+                                            <option value="@v.Url">@v.Nombre</option>
+                                        }
+                                    </select>
+                                    <input type="text" data-ng-model="viaje" id="txtViaje" style="display:none" />
+                                </div>
+                        
+
+                            <div class="col-sm-4 col-xs-12">
+                                <div class=" clearfix">
+                                    <p class="texto-15 pull-left">LOCALIZACIÓN</p>
+                                    <a href="javascript:void(0);" class="btn-borrar texto-9 pull-right">Borrar selección</a>
+                                </div>
+
+                                <select id="destinos">
+                                    <option value="">TODOS</option>
+                                    @{
+                                        var ciudades2 = from v in Model.Viajes
+                                                        group ((Pasifika.Model.ViajeTipo2)v).Ciudad by ((Pasifika.Model.ViajeTipo2)v).Ciudad into ciudades
+                                                        select ciudades;
+                                    }
+
+
+                                    @foreach (var c in ciudades2)
+                                    {
+                                        <option value="@c.Key.Url">@c.Key.Nombre</option>
+                                    }
+                                </select>
+                                <input type="text" data-ng-model="ciudad" id="txtCiudad" style="display:none" />
                             </div>
-                            <select id="nombre">
-                                <option value="">TODOS</option>
-                                @foreach (var v in Model.Viajes)
-                                {
-                                    <option value="@v.Url">@v.Nombre</option>
-                                }
-                            </select>
-                            <input type="text" data-ng-model="viaje" id="txtViaje" style="display:none" />
                         </div>
-                        <div class="col-xs-4">
-                            <div class=" clearfix">
-                                <p class="texto-15 pull-left">LOCALIZACIÓN</p>
-                                <a href="javascript:void(0);" class="btn-borrar texto-9 pull-right">Borrar selección</a>
-                            </div>
-
-                            <select id="destinos">
-                                <option value="">TODOS</option>
-                                @{
-                                    var ciudades2 = from v in Model.Viajes
-                                                    group ((Pasifika.Model.ViajeTipo2)v).Ciudad by ((Pasifika.Model.ViajeTipo2)v).Ciudad into ciudades
-                                                    select ciudades;
-                                }
-
-
-                                @foreach (var c in ciudades2)
-                                {
-                                    <option value="@c.Key.Url">@c.Key.Nombre</option>
-                                }
-                            </select>
-                            <input type="text" data-ng-model="ciudad" id="txtCiudad" style="display:none" />
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -115,7 +128,7 @@
             <!-- row thumbs -->
             <div class="row" data-ng-repeat="item in data | filter:categoryFilterFn" data-ng-if="$index % 2 == 0">
                 <!-- thumb-->
-                <div class="col-xs-6" data-ng-repeat="item in (data | filter: categoryFilterFn).slice($index, $index+2)">
+                <div class="col-sm-6 col-xs-12" data-ng-repeat="item in (data | filter: categoryFilterFn).slice($index, $index+2)">
                     <div class="thumbnail-4">
                         <div class="caption">
                             <p class="texto-22">@ViewBag.palabra4 EN {{item.DestinoNombre | uppercase}}</p>

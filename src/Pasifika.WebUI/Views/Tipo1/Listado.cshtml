@@ -46,129 +46,151 @@
                 <div class="caja-drag">
 
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-sm-4 col-xs-12">
                             <p class="texto-15">PRESUPUESTO</p>
                             <div class="slider">
-                                <div id="presupuesto-lower" class="label-slide label-left">{{presupuesto.from}}</div>
-                                <div class="wrapper-slide presupuesto">
-                                    <div id="presupuesto" data-slider data-ng-from="presupuesto.from" data-ng-to="presupuesto.to" data-start="{{presupuesto.min}}" data-end="{{presupuesto.max}}" data-step="1"></div>
+                                <div class="row">
+                                    <div class="col-xs-1">
+                                        <div id="presupuesto-lower" class="label-slide label-left">{{presupuesto.from}}</div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="wrapper-slide presupuesto">
+                                            <div id="presupuesto" data-slider data-ng-from="presupuesto.from" data-ng-to="presupuesto.to" data-start="{{presupuesto.min}}" data-end="{{presupuesto.max}}" data-step="1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div id="presupuesto-upper" class="label-slide label-right">{{presupuesto.to}}</div>
+                                    </div>
                                 </div>
-                                <div id="presupuesto-upper" class="label-slide label-right">{{presupuesto.to}}</div>
                             </div>
                         </div>
-                        <div class="col-xs-4">
+                        
+                        <div class="col-sm-4 col-xs-12">
                             <p class="texto-15">DURACIÓN</p>
                             <div class="slider">
-                                <div id="estancia-lower" class="label-slide label-left">{{duracion.from}} @ViewBag.palabra5</div>
-                                <div class="wrapper-slide estancia">
-                                    <div id="estancia" data-slider data-ng-from="duracion.from" data-ng-to="duracion.to" data-start="{{duracion.min}}" data-end="{{duracion.max}}" data-step="1"></div>
-                                </div>
-                                <div id="estancia-upper" class="label-slide label-right">{{duracion.to}} @ViewBag.palabra5</div>
+                                <div class="row">
+                                    <div class="col-xs-1">
+                                        <div id="estancia-lower" class="label-slide label-left">{{duracion.from}} @ViewBag.palabra5</div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="wrapper-slide estancia">
+                                            <div id="estancia" data-slider data-ng-from="duracion.from" data-ng-to="duracion.to" data-start="{{duracion.min}}" data-end="{{duracion.max}}" data-step="1"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-1">
+                                        <div id="estancia-upper" class="label-slide label-right">{{duracion.to}} @ViewBag.palabra5</div>
+                                    </div>
+                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-4">
-                            <div class="clearfix">
-                                <p class="texto-15 pull-left">
-                                    @if (ViewBag.seccionId == 15)
-                                    {
-                                        @:TIPO DE VIAJE
+                        
+                            <div class="col-sm-4 col-xs-12">
+                                <div class="clearfix">
+                                    <p class="texto-15 pull-left">
+                                        @if (ViewBag.seccionId == 15)
+                                        {
+                                            @:TIPO DE VIAJE
                                     }
-                                    else
-                                    {
-                                        @:DESTINO
+                                        else
+                                        {
+                                            @:DESTINO
                                     }
-                                </p>
-                                <a href="javascript:void(0);" class="btn-borrar texto-9 pull-right">Borrar selecci&oacute;n</a>
-                            </div>
+                                    </p>
+                                    <a href="javascript:void(0);" class="btn-borrar texto-9 pull-right">Borrar selecci&oacute;n</a>
+                                </div>
 
-                            @{
-                                string nombre = "destinos";
-                                if (ViewBag.seccionId == 15)
-                                {
-                                    nombre = "tipoViaje";
-                                }
-                            }
-                            <select id="@nombre">
-                                <option value="">TODOS</option>
                                 @{
+                                    string nombre = "destinos";
                                     if (ViewBag.seccionId == 15)
                                     {
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-a-medida")).ToList().Count() > 0)
-                                        {
-                                            <option value="viajes-a-medida">VIAJES A MEDIDA</option>
-                                        }
-
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-de-novios")).ToList().Count() > 0)
-                                        {
-                                            <option value="viajes-de-novios">VIAJES DE NOVIOS</option>
-                                        }
-
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-en-familia")).ToList().Count() > 0)
-                                        {
-                                            <option value="viajes-en-familia">VIAJES EN FAMILIA</option>
-                                        }
-
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "vueltas-al-mundo")).ToList().Count() > 0)
-                                        {
-                                            <option value="vueltas-al-mundo">VUELTAS AL MUNDO</option>
-                                        }
-
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-combinados")).ToList().Count() > 0)
-                                        {
-                                            <option value="viajes-combinados">VIAJES COMBINADOS</option>
-                                        }
-
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-de-lujo")).ToList().Count() > 0)
-                                        {
-                                            <option value="viajes-de-lujo">VIAJES DE LUJO</option>
-                                        }
-
-                                        if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "high-end-travel")).ToList().Count() > 0)
-                                        {
-                                            <option value="high-end-travel">HIGH END TRAVEL</option>
-                                        }
-                                    }
-                                    else
-                                    {
-                                        var grupo = from v in Model.Viajes
-                                                    group ((Pasifika.Model.ViajeTipo1)v).Destino.Region by ((Pasifika.Model.ViajeTipo1)v).Destino.Region into Region
-                                                    select new
-                                                    {
-                                                        Region.Key,
-                                                        destino =
-                                                                (
-                                                                    from v1 in Model.Viajes
-                                                                    where
-                                                                        ((Pasifika.Model.ViajeTipo1)v1).Destino.Region == Region.Key
-                                                                    group ((Pasifika.Model.ViajeTipo1)v1).Destino by ((Pasifika.Model.ViajeTipo1)v1).Destino into Destino
-                                                                    select new
-                                                                    {
-                                                                        Destino.Key
-                                                                    }
-                                                                )
-                                                    };
-
-                                        foreach (var r in grupo.ToList())
-                                        {
-                                            <optgroup label="@r.Key.Nombre">
-                                                @foreach (var d in r.destino)
-                                                {
-                                                    <option value="@d.Key.Url">@d.Key.Nombre</option>
-                                                }
-                                            </optgroup>
-                                        }
+                                        nombre = "tipoViaje";
                                     }
                                 }
-                            </select>
-                            <input type="text" data-ng-model="ciudad" id="txtCiudad" style="display:none" />
-                            <input type="text" data-ng-model="tipoViaje" id="txtTipoViaje" style="display:none" />
+                                <select id="@nombre">
+                                    <option value="">TODOS</option>
+                                    @{
+                                        if (ViewBag.seccionId == 15)
+                                        {
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-a-medida")).ToList().Count() > 0)
+                                            {
+                                                <option value="viajes-a-medida">VIAJES A MEDIDA</option>
+                                            }
+
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-de-novios")).ToList().Count() > 0)
+                                            {
+                                                <option value="viajes-de-novios">VIAJES DE NOVIOS</option>
+                                            }
+
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-en-familia")).ToList().Count() > 0)
+                                            {
+                                                <option value="viajes-en-familia">VIAJES EN FAMILIA</option>
+                                            }
+
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "vueltas-al-mundo")).ToList().Count() > 0)
+                                            {
+                                                <option value="vueltas-al-mundo">VUELTAS AL MUNDO</option>
+                                            }
+
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-combinados")).ToList().Count() > 0)
+                                            {
+                                                <option value="viajes-combinados">VIAJES COMBINADOS</option>
+                                            }
+
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "viajes-de-lujo")).ToList().Count() > 0)
+                                            {
+                                                <option value="viajes-de-lujo">VIAJES DE LUJO</option>
+                                            }
+
+                                            if (Model.Viajes.Where(x => x.TagsViaje.Any(y => y.Tag.Url == "high-end-travel")).ToList().Count() > 0)
+                                            {
+                                                <option value="high-end-travel">HIGH END TRAVEL</option>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            var grupo = from v in Model.Viajes
+                                                        group ((Pasifika.Model.ViajeTipo1)v).Destino.Region by ((Pasifika.Model.ViajeTipo1)v).Destino.Region into Region
+                                                        select new
+                                                        {
+                                                            Region.Key,
+                                                            destino =
+                                                                    (
+                                                                        from v1 in Model.Viajes
+                                                                        where
+                                                                            ((Pasifika.Model.ViajeTipo1)v1).Destino.Region == Region.Key
+                                                                        group ((Pasifika.Model.ViajeTipo1)v1).Destino by ((Pasifika.Model.ViajeTipo1)v1).Destino into Destino
+                                                                        select new
+                                                                        {
+                                                                            Destino.Key
+                                                                        }
+                                                                    )
+                                                        };
+
+                                            foreach (var r in grupo.ToList())
+                                            {
+                                                <optgroup label="@r.Key.Nombre">
+                                                    @foreach (var d in r.destino)
+                                                    {
+                                                        <option value="@d.Key.Url">@d.Key.Nombre</option>
+                                                    }
+                                                </optgroup>
+                                            }
+                                        }
+                                    }
+                                </select>
+                                <input type="text" data-ng-model="ciudad" id="txtCiudad" style="display:none" />
+                                <input type="text" data-ng-model="tipoViaje" id="txtTipoViaje" style="display:none" />
+                            </div>
                         </div>
-                    </div>
 
                 </div>
 
             </div>
         </div>
+
+       
+
+
 
         <div class="row modulo">
             <div class="col-xs-12">
@@ -185,7 +207,7 @@
         <div class="row modulo">
             <div class="col-xs-12">
                 <div class="borde-top-gris">
-                    <h2 class="titular-1 f-linea-gris">                      
+                    <h2 class="titular-1 f-linea-gris" id="viajes-encontrados">                      
                             <span>{{ (data | filter: categoryFilterFn | filter: SinBanner).length}} @ViewBag.palabra2 encontrados</span>
                     </h2>
                 </div>
@@ -197,7 +219,7 @@
            
             <div class="row" data-ng-repeat="item in data | filter:categoryFilterFn" data-ng-if="$index % 3 == 0">
 
-                <div class="col-xs-4" data-ng-repeat="item in (data | filter: categoryFilterFn).slice($index, $index+3)">
+                <div class="col-xs-12 col-sm-4" data-ng-repeat="item in (data | filter: categoryFilterFn).slice($index, $index+3)">
                     <a data-ng-href="{{item.Link}}" data-ng-show="item.EsBannerContextual == true"><img src="/Content/images/FFFFFF-0.png" data-ng-src="/Content/images/bannercontextual/{{item.IdContextual}}/{{item.ImagenListado}}" alt="{{item.AltImagenListado}}" class="img-responsive margin-down" title="{{item.Nombre}}" /></a>
 
                     <div class="thumbnail-2" data-ng-hide="item.EsBannerContextual == true">

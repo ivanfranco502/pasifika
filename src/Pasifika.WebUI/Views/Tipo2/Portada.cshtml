@@ -72,7 +72,7 @@
                 @{int cant = 0;}
                 @foreach (var d in r.DestinoGroup)
                 {
-                    <div class="col-xs-4 text-center">
+                    <div class="col-sm-4 col-xs-12 text-center">
                         <a href="@Url.RouteUrl(new { controller = "Tipo2", action = ViewBag.action, url = d.Key.Url })" class="thumbnail no-hover">
                             <div class="texto-4">@ViewBag.palabra3 @d.Key.Nombre.ToUpper()</div>
                             @if (ViewBag.seccionId == 12)
@@ -87,7 +87,7 @@
                         </a>
                     </div>
 
-                    cant++;
+                    /*cant++;
                     if (cant % 3 == 0)
                     {
                         @:</div>
@@ -98,7 +98,7 @@
                             @:<div class="thumbnails modulo hide">
                         }
                         @:<div class="row">
-                    }
+                    }*/
                 }
             </div>
         </div>
