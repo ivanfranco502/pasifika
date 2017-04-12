@@ -41,50 +41,50 @@
             <div class="col-xs-12">
                 <div class="f-gris datos-caption">
                     <div class="row">
-                        <div class="col-xs-5 borde-der">
+                        <div class="col-md-5 col-xs-7 borde-der">
                             <h2 class="texto-23">@Model.Viaje.Nombre</h2>
                             <p class="texto-28 ">
                                 @(((Pasifika.Model.ViajeTipo2)Model.Viaje).Ciudad.Destino.Nombre.ToUpper()), @(((Pasifika.Model.ViajeTipo2)Model.Viaje).Ciudad.Nombre.ToUpper())
                             </p>
                         </div>
-                        <div class="col-xs-7">
-                            <div class="row">
-                                <div class="col-xs-7">
-                                    <div class="precio">
-                                        <p class="texto-14">DESDE:</p>
-                                        <div class="clearfix">
-                                            <span class="texto-18">
-                                                <strong>
-                                                    @Model.Viaje.Precio <span class="texto-4">Euros</span>
-                                                </strong>
-                                            </span>
-                                            @if (Model.Viaje.InfoPrecio != "")
-                                            { 
-                                                <span class="badge-info" title="@Model.Viaje.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
-                                            }
-                                        </div>
-                                        <p class="texto-14">
-                                            @if (Model.Viaje is Pasifika.Model.Hotel)
-                                            {
-                                                @:POR NOCHE
-                                            }
-                                            else
-                                            {
-                                                @:POR PERSONA
-                                            }
-                                        </p>
-                                    </div>
+                       
+                        <div class="col-md-3 col-xs-5">
+                            <div class="precio">
+                                <p class="texto-14">DESDE:</p>
+                                <div class="clearfix">
+                                    <span class="texto-18">
+                                        <strong>
+                                            @Model.Viaje.Precio <span class="texto-4">Euros</span>
+                                        </strong>
+                                    </span>
+                                    @if (Model.Viaje.InfoPrecio != "")
+                                    {
+                                        <span class="badge-info" title="@Model.Viaje.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
+                                    }
                                 </div>
-                                <div class="col-xs-5">
+                                <p class="texto-14">
+                                    @if (Model.Viaje is Pasifika.Model.Hotel)
+                                    {
+                                        @:POR NOCHE
+                                            }
+                                    else
+                                    {
+                                        @:POR PERSONA
+                                            }
+                                </p>
+                            </div>
+                        </div>
+
+                              
+                                <div class="col-xs-12 col-sm-4">
                                     <a href="@Url.RouteUrl(new
                                         {
                                             controller = "Formulario",
                                             action = "Index",
                                             tipo = 1
-                                        })" class="btn btn-negro-2 pull-right presupuesto">SOLICITAR PRESUPUESTO</a>
+                                        })" class="btn btn-negro-2 presupuesto">SOLICITAR PRESUPUESTO</a>
                                 </div>
-                            </div>
-                        </div>
+                            
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
     </div>
 </div>
 <div class="row modulo">
-    <div class="col-xs-9">
+    <div class="col-sm-9 col-xs-12">
         <div class="row">
             <div class="col-xs-12">
                 <p class="texto-19">
@@ -149,7 +149,7 @@
         </div>
     </div>
     <!-- / Col izquierda -->
-    <div class="col-xs-3">
+    <div class="col-sm-3 hidden-xs">
         <div class="row">
             <div class="col-xs-12">
                 <div class="bloque-negro text-center">

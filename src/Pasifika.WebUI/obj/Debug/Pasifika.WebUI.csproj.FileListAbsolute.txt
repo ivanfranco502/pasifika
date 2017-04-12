@@ -209,3 +209,15 @@ C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\EPPlus.xml
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.csprojResolveAssemblyReference.cache
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.dll
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\obj\Debug\Pasifika.WebUI.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.Unity.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.Unity.Interception.dll
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.Unity.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.WebUI\bin\Microsoft.Practices.Unity.Interception.pdb

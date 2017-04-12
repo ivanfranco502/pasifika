@@ -25,3 +25,4 @@ C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Micr
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.dll
 C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.pdb
+C:\Users\owner\Documents\Repositorios\pasifika\src\Pasifika.Model\obj\Debug\Pasifika.Model.csprojResolveAssemblyReference.cache

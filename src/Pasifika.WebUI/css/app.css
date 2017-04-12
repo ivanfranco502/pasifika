@@ -11064,18 +11064,21 @@ h3.titular-2b.modulo {
     padding-top: 12px;
 }
 
-.slider .wrapper-slide {
-    width: 139px;
-    margin-left: 34px;
-    margin-top: 7px;
-}
+    .slider .wrapper-slide {
+        /*width: 139px;*/
+        margin-left: 12%;
+        margin-right:30%;
+        margin-top: 7px;
+    }
 
-.slider .wrapper-slide.estancia {
-    width: 139px;
-    margin-left: 37px;
-}
+        .slider .wrapper-slide.estancia {
+            /*width: 139px;*/
+            margin-left: 12%;
+            margin-right: 30%;
+        }
 
 @media screen and (min-width: 1233px) {
+    /*
     .slider .wrapper-slide {
         width: 207px;
     }
@@ -11083,6 +11086,7 @@ h3.titular-2b.modulo {
         width: 201px;
         margin-left: 40px;
     }
+        */
 }
 
 .slider .label-slide {
@@ -11095,8 +11099,8 @@ h3.titular-2b.modulo {
 }
 
 .slider .label-slide.label-right {
+    margin-right:10%;
     float: right;
-    margin-top: -8px;
 }
 
 .caja-tags {
@@ -11210,7 +11214,7 @@ h3.titular-2b.modulo {
 
 .lat-izq-detail {
     float: left;
-    width: 301px;
+    /*width: 301px;*/
     padding: 32px 18px 10px 28px;
 }
 
@@ -11253,7 +11257,7 @@ h3.titular-2b.modulo {
 
 .wrapper-slide-detail {
     float: right;
-    width: 496px;
+    /*width: 496px;*/
 }
 
 @media screen and (min-width: 1233px) {
@@ -11654,7 +11658,7 @@ h2.titular-3 {
 
 
 @media (max-width: 768px) {
-    .col-xs-12, .col-md-10 {
+    .col-xs-12{
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -11961,7 +11965,36 @@ body {
     footer .newsletter-container {
         margin-top: 0;
     }
+    .caja-drag p{
+        margin:0px;
+    }
+    .caja-drag .slider{
+        margin-bottom:20px;
+    }
+    .caja-drag .btn-borrar{
+        position:relative;
+        top:-150px;
+    }
 
+    #viajes-encontrados.titular-1 {
+        font-size: 12px;
+    }
+    #viajes-encontrados.f-linea-gris, #viajes-encontrados.f-linea-gris-b {
+        text-align: initial;
+    }
+
+    thumbnail-2 img{
+        margin:0 auto;
+    }
+
+    .select2-container {
+        margin-bottom: 20px;
+    }
+    .datos-caption .presupuesto{
+        display:block;
+        max-width:70%;
+        margin: 10px auto;
+    }
 }
 
 
@@ -12055,3 +12088,13 @@ body {
     padding-left: 2px;
     padding-right: 2px;
 }
+.caja-drag .col-xs-12, .caja-drag .col-xs-1, .caja-drag .col-md-4 {
+    padding-left: 0px;
+}
+
+ @media (max-width: 1200px) {
+    .caja-drag .col-xs-1{
+        padding-right: 0px;
+    }
+ }
+    
