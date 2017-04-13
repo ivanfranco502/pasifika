@@ -11215,13 +11215,14 @@ h3.titular-2b.modulo {
 .lat-izq-detail {
     float: left;
     /*width: 301px;*/
-    padding: 32px 18px 10px 28px;
+    padding: 32px 18px 0px 28px;
 }
 
 @media screen and (min-width: 1233px) {
     .lat-izq-detail {
-        width: 421px;
+        /*width: 421px;
         padding: 42px 28px 20px 28px;
+            */
     }
 }
 
@@ -11258,11 +11259,11 @@ h3.titular-2b.modulo {
 .wrapper-slide-detail {
     float: right;
     /*width: 496px;*/
-}
+    }
 
 @media screen and (min-width: 1233px) {
     .wrapper-slide-detail {
-        width: 600px;
+        /*width: 600px;*/
     }
 }
 
@@ -11362,8 +11363,8 @@ h3.titular-2b.modulo {
 .form-horizontal.baja .custom-select.mes,
 .form-horizontal.contacto .custom-select-2.mes,
 .form-horizontal.baja .custom-select-2.mes {
-    width: 70px;
-    margin-right: 21px;
+    width: 60px;
+    /*margin-right: 21px;*/
 }
 
 .form-horizontal.contacto .custom-select.anio,
@@ -11374,12 +11375,12 @@ h3.titular-2b.modulo {
     margin: 0;
 }
 
-.form-horizontal.contacto .custom-select.destino,
-.form-horizontal.baja .custom-select.destino,
-.form-horizontal.contacto .custom-select-2.destino,
-.form-horizontal.baja .custom-select-2.destino {
-    width: 190px;
-}
+    .form-horizontal.contacto .custom-select.destino,
+    .form-horizontal.baja .custom-select.destino,
+    .form-horizontal.contacto .custom-select-2.destino,
+    .form-horizontal.baja .custom-select-2.destino {
+        /*width: 190px;*/
+    }
 
 .form-horizontal.contacto .form-control-wrapper-izq.fecha-salida-mes,
 .form-horizontal.baja .form-control-wrapper-izq.fecha-salida-mes {
@@ -11393,11 +11394,11 @@ h3.titular-2b.modulo {
     width: 100px;
 }
 
-.form-horizontal.contacto .form-control-wrapper-izq.presupuesto-estimado,
-.form-horizontal.baja .form-control-wrapper-izq.presupuesto-estimado {
-    width: 363px;
-    float: right;
-}
+    .form-horizontal.contacto .form-control-wrapper-izq.presupuesto-estimado,
+    .form-horizontal.baja .form-control-wrapper-izq.presupuesto-estimado {
+        /*width: 363px;*/
+        float: right;
+    }
 
 .form-horizontal.contacto .form-control-wrapper-izq.sesion,
 .form-horizontal.baja .form-control-wrapper-izq.sesion {
@@ -11405,22 +11406,22 @@ h3.titular-2b.modulo {
     float: right;
 }
 
-.form-horizontal.contacto .form-control-wrapper-izq.conocido,
-.form-horizontal.baja .form-control-wrapper-izq.conocido {
-    width: 400px;
-    float: left;
-}
+    .form-horizontal.contacto .form-control-wrapper-izq.conocido,
+    .form-horizontal.baja .form-control-wrapper-izq.conocido {
+        /*width: 400px;*/
+        float: left;
+    }
 
-.form-horizontal.contacto .form-control-wrapper-der.fc-2,
-.form-horizontal.baja .form-control-wrapper-der.fc-2 {
-    width: 207px;
-}
+    .form-horizontal.contacto .form-control-wrapper-der.fc-2,
+    .form-horizontal.baja .form-control-wrapper-der.fc-2 {
+        width: 207px;
+    }
 
-.form-horizontal.contacto .nacimiento .form-control-wrapper-der,
-.form-horizontal.baja .nacimiento .form-control-wrapper-der {
-    width: 289px;
-    float: left;
-}
+    .form-horizontal.contacto .nacimiento .form-control-wrapper-der,
+    .form-horizontal.baja .nacimiento .form-control-wrapper-der {
+        /*width: 289px;*/
+        float: left;
+    }
 
 .form-horizontal.contacto .mensaje,
 .form-horizontal.baja .mensaje {
@@ -11474,7 +11475,7 @@ h3.titular-2b.modulo {
     .form-horizontal.contacto .form-control-wrapper-izq,
     .form-horizontal.baja .form-control-wrapper-izq {
         float: left;
-        width: 224px;
+        /*width: 224px;*/
     }
     .form-horizontal.contacto .form-control-wrapper-izq.presupuesto-estimado,
     .form-horizontal.baja .form-control-wrapper-izq.presupuesto-estimado {
@@ -11491,7 +11492,7 @@ h3.titular-2b.modulo {
     .form-horizontal.contacto .form-control-wrapper-der,
     .form-horizontal.baja .form-control-wrapper-der {
         float: left;
-        width: 346px;
+        /*width: 346px;*/
     }
     .form-horizontal.contacto .form-control-wrapper-der.fc-2,
     .form-horizontal.baja .form-control-wrapper-der.fc-2 {
@@ -11711,6 +11712,11 @@ h2.titular-3 {
 
     .newsletter-footer.newsletter-form{
         margin-top:10%;
+    }
+
+    .form-group .btn-negro{
+        display:block;
+        margin: 0 auto;
     }
 }
 
@@ -11995,6 +12001,16 @@ body {
         max-width:70%;
         margin: 10px auto;
     }
+    .form-horizontal .radio-inline{
+        padding-top:0px;
+    }
+    .form-horizontal.contacto .custom-select-2.anio{
+        margin-bottom:20px;
+    }
+    .form-control{
+        font-size:12px;
+    }
+    
 }
 
 
@@ -12097,4 +12113,24 @@ body {
         padding-right: 0px;
     }
  }
-    
+
+ .izquierda{
+     float:left;
+     padding-left:0px;
+ }
+
+ .derecha{
+     float:right;
+     padding-right:0px;
+ }
+.form-control-wrapper-der {
+    width: 100%;
+}
+
+.form-group .col-sm-3{
+    padding-left:0px;
+}
+
+.form-horizontal.contacto .control-label.label-2 {
+    margin-left: 0px;
+}

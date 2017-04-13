@@ -35,68 +35,68 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <div class="flexslider visible-xs">
-            <ul class="slides">
-                @foreach (var f in Model.Viaje.Fotos.OrderBy(x => x.Orden))
-                {
-                    <li class="item">
-                        <img src="~/Content/images/foto/@f.Archivo" class="" alt="@f.Alt">
-                    </li>
-                }
-            </ul>
-        </div>
+        
 
         <div class="wrapper-detail">
-            <div class="lat-izq-detail">
-                <h2 class="titular-3">@Model.Viaje.Nombre </h2>
 
-                <div class="dias">
-                    <p class="texto-16b">DURACIÓN:</p>
-                    <span class="texto-18"><strong>@(((Pasifika.Model.ViajeTipo1)Model.Viaje).Duracion) @ViewBag.palabra5</strong></span>
-                </div>
-                <div class="precio">
-                    <p class="texto-16b">A PARTIR DE:</p>
-                    <span class="texto-18"><strong>@Model.Viaje.Precio Euros</strong></span>
-                    @if (Model.Viaje.InfoPrecio != "")
-                    { 
-                        <span class="badge-info" title="@Model.Viaje.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
-                    }
-                </div>
+            <div class="row">
 
-                <hr class="sep-1-total">
+               
+                    <div class="col-xs-12 col-sm-7 derecha">
+                        <div class="wrapper-slide-detail">
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    @foreach (var f in Model.Viaje.Fotos.OrderBy(x => x.Orden))
+                                    {
+                                        <li class="item">
+                                            <img src="~/Content/images/foto/@f.Archivo" class="" alt="@f.Alt">
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+               
 
-                <p class="texto-16b">
-                    <strong>País:</strong> @(((Pasifika.Model.ViajeTipo1)Model.Viaje).Paises.ToUpper())
-                    <br><br>
-                    <strong>Ciudades:</strong> @(((Pasifika.Model.ViajeTipo1)Model.Viaje).Ciudades.ToUpper())
-                </p>
+  
+                    <div class="col-xs-12 col-sm-5 izquierda" >
+                        <div class="lat-izq-detail">
+                            <h2 class="titular-3">@Model.Viaje.Nombre </h2>
 
-                <a href="@Url.RouteUrl(new
+                            <div class="dias">
+                                <p class="texto-16b">DURACIÓN:</p>
+                                <span class="texto-18"><strong>@(((Pasifika.Model.ViajeTipo1)Model.Viaje).Duracion) @ViewBag.palabra5</strong></span>
+                            </div>
+                            <div class="precio">
+                                <p class="texto-16b">A PARTIR DE:</p>
+                                <span class="texto-18"><strong>@Model.Viaje.Precio Euros</strong></span>
+                                @if (Model.Viaje.InfoPrecio != "")
+                                {
+                                    <span class="badge-info" title="@Model.Viaje.InfoPrecio" data-toggle="tooltip" data-placement="top">i</span>
+                                }
+                            </div>
+
+                            <hr class="sep-1-total">
+
+                            <p class="texto-16b">
+                                <strong>País:</strong> @(((Pasifika.Model.ViajeTipo1)Model.Viaje).Paises.ToUpper())
+                                <br><br>
+                                <strong>Ciudades:</strong> @(((Pasifika.Model.ViajeTipo1)Model.Viaje).Ciudades.ToUpper())
+                            </p>
+
+                            <a href="@Url.RouteUrl(new
                                         {
                                             controller = "Formulario",
                                             action = "Index",
                                             tipo = 1
                                         })" class="btn btn-negro-2 center-block">SOLICITAR PRESUPUESTO</a>
 
-            </div>
-
-            <div class="wrapper-slide-detail hidden-xs">
-                <div class="flexslider">
-                    <ul class="slides">
-                        @foreach(var f in Model.Viaje.Fotos.OrderBy(x => x.Orden))
-                        { 
-                            <li class="item">
-                                <img src="~/Content/images/foto/@f.Archivo" class="" alt="@f.Alt">
-                            </li>
-                        }
-                    </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
+             </div>
         </div>
-
     </div>
-</div>
 
 <div class="row modulo">
     <div class="col-xs-12">

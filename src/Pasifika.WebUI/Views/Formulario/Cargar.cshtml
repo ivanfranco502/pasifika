@@ -13,115 +13,147 @@
         <div class="col-xs-12">
 
             <div class="row">
-                <div class="col-xs-5">
+                <div class="col-sm-5 col-xs-12">
                     <div class="form-group">
-                        <label for="Nombre" class="control-label label-izq">Nombre*</label>
-                        <div class="form-control-wrapper-izq">
-                            <input type="text" class="form-control" id="Nombre" name="Nombre">
+                        <div class="col-sm-3 col-xs-12">
+                            <label for="Nombre" class="control-label label-izq">Nombre*</label>
+                        </div>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="form-control-wrapper-izq">
+                                <input type="text" class="form-control" id="Nombre" name="Nombre">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-7">
+                <div class="col-sm-7 col-xs-12">
                     <div class="form-group">
-                        <label for="Apellido" class="control-label label-der">Apellidos*</label>
-                        <div class="form-control-wrapper-der">
-                            <input type="text" class="form-control" id="Apellido" name="Apellido">
+                        <div class="col-sm-3 col-xs-12">
+                            <label for="Apellido" class="control-label label-der">Apellidos*</label>
                         </div>
-                    </div>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="form-control-wrapper-der">
+                                <input type="text" class="form-control" id="Apellido" name="Apellido">
+                            </div>
+                        </div>
+                  </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-5">
+                <div class="col-sm-5 col-xs-12">
                     <div class="form-group">
-                        <label for="Email" class="control-label label-izq">Email*</label>
-                        <div class="form-control-wrapper-izq">
-                            <input type="text" class="form-control" id="Email" name="Email">
+                        <div class="col-sm-3 col-xs-12">
+                            <label for="Email" class="control-label label-izq">Email*</label>
+                        </div>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="form-control-wrapper-izq">
+                                <input type="text" class="form-control" id="Email" name="Email">
+                            </div>
                         </div>
                     </div>
                 </div>
                 @if (Model.Tipo == 1 || Model.Tipo == 3)
                 { 
-                    <div class="col-xs-7">
+                    <div class="col-sm-7 col-xs-12">
                         <div class="form-group">
-                            <label for="Telefono" class="control-label label-der">Teléfono*</label>
-                            <div class="form-control-wrapper-der">
-                                <input type="text" class="form-control" id="Telefono" name="Telefono">
+                            <div class="col-sm-3 col-xs-12">
+                                <label for="Telefono" class="control-label label-der">Teléfono*</label>
                             </div>
-                        </div>
+                            <div class="col-sm-9 col-xs-12">
+                                <div class="form-control-wrapper-der">
+                                    <input type="text" class="form-control" id="Telefono" name="Telefono">
+                                </div>
+                            </div>
+                         </div>
                     </div>
                 }
             </div>
             <div class="row">
-                <div class="col-xs-5">
+                <div class="col-sm-5 col-xs-12">
                     <div class="form-group">
-                        <label for="Pais" class="control-label label-izq">País*</label>
-                        <div class="form-control-wrapper-izq">
-                            <select id="Pais" name="Pais" class="custom-select">
-                                <option value="es">España</option>
-                                <option value="otro">Otro</option>
-                            </select>
+                        <div class="col-sm-3 col-xs-12">
+                            <label for="Pais" class="control-label label-izq">País*</label>
                         </div>
-                    </div>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="form-control-wrapper-izq">
+                                <select id="Pais" name="Pais" class="custom-select">
+                                    <option value="es">España</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
                 </div>
-                <div class="col-xs-7">
+                <div class="col-sm-7 col-xs-12">
                     <div class="form-group">
-                        <label for="idProvincia" class="control-label label-der">Provincia*</label>
-                        <div class="form-control-wrapper-der">
-                            <input type="hidden" id="Provincia" name="Provincia" />
-                            <select id="idProvincia" name="idProvincia" class="custom-select">
-                                <option value="">&nbsp;</option>
-                                @foreach(var p in Model.Provincias.Provincia)
-                                {
-                                    <option value="@p.idProvincia">@p.provincia</option>
-                                }
-                            </select>
+                        <div class="col-sm-3 col-xs-12">
+                            <label for="idProvincia" class="control-label label-der">Provincia*</label>
                         </div>
-                    </div>
+                        <div class="col-sm-9 col-xs-12">
+                            <div class="form-control-wrapper-der">
+                                <input type="hidden" id="Provincia" name="Provincia" />
+                                <select id="idProvincia" name="idProvincia" class="custom-select">
+                                    <option value="">&nbsp;</option>
+                                    @foreach (var p in Model.Provincias.Provincia)
+                                    {
+                                        <option value="@p.idProvincia">@p.provincia</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        </div>
                 </div>
             </div>
             @if (Model.Tipo == 1 || Model.Tipo == 3)
             { 
                 <div class="row">
-                    <div class="col-xs-5">
+                    <div class="col-sm-5 col-xs-12">
                         <div class="form-group">
-                            <label class="control-label label-izq">Sexo*</label>
-                            <div class="form-control-wrapper-izq">
-                                <label class="radio-inline">
-                                    <input type="radio" name="Sexo" id="genero-h" value="H"> Hombre
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="Sexo" id="genero-m" value="M"> Mujer
-                                </label>
+                            <div class="col-sm-3 col-xs-12">
+                                <label class="control-label label-izq">Sexo*</label>
                             </div>
-                        </div>
+                            <div class="col-sm-9 col-xs-12">
+                                <div class="form-control-wrapper-izq">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="Sexo" id="genero-h" value="H"> Hombre
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="Sexo" id="genero-m" value="M"> Mujer
+                                    </label>
+                                </div>
+                            </div>
+                            </div>
                     </div>
-                    <div class="col-xs-7">
+                    <div class="col-sm-7 col-xs-12">
                         <div class="form-group nacimiento">
-                            <label class="control-label label-der">Fecha de nacimiento</label>
-                            <div class="form-control-wrapper-der">
-                                <select id="dia" name="dia" class="custom-select-2 dia">
-                                    <option value="">&nbsp;</option>
-                                    @for (int j = 1; j <= 31; j++)
-                                    { 
-                                        <option value="@j.ToString().PadLeft(2, '0')">@j.ToString().PadLeft(2, '0')</option>
-                                    }
-                                </select>
-                                <select id="mes" name="mes" class="custom-select-2 mes">
-                                    <option value="">&nbsp;</option>
-                                    @for (int j = 1; j <= 12; j++)
-                                    { 
-                                        <option value="@j.ToString().PadLeft(2, '0')">@j.ToString().PadLeft(2, '0')</option>
-                                    }
-                                </select>
-                                <select id="anio" name="anio" class="custom-select-2 anio">
-                                    <option value="">&nbsp;</option>
-                                    @for (int j = DateTime.Now.Year - 15; j >= 1920; j--)
-                                    { 
-                                        <option value="@j.ToString()">@j.ToString()</option>
-                                    }
-                                </select>
+                            <div class="col-sm-3 col-xs-12">
+                                <label class="control-label label-der">Fecha de nacimiento</label>
                             </div>
-                        </div>
+                            <div class="col-sm-9 col-xs-12">
+                                <div class="form-control-wrapper-der">
+                                    <select id="dia" name="dia" class="custom-select-2 dia">
+                                        <option value="">&nbsp;</option>
+                                        @for (int j = 1; j <= 31; j++)
+                                        {
+                                            <option value="@j.ToString().PadLeft(2, '0')">@j.ToString().PadLeft(2, '0')</option>
+                                        }
+                                    </select>
+                                    <select id="mes" name="mes" class="custom-select-2 mes">
+                                        <option value="">&nbsp;</option>
+                                        @for (int j = 1; j <= 12; j++)
+                                        {
+                                            <option value="@j.ToString().PadLeft(2, '0')">@j.ToString().PadLeft(2, '0')</option>
+                                        }
+                                    </select>
+                                    <select id="anio" name="anio" class="custom-select-2 anio">
+                                        <option value="">&nbsp;</option>
+                                        @for (int j = DateTime.Now.Year - 15; j >= 1920; j--)
+                                        {
+                                            <option value="@j.ToString()">@j.ToString()</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
                     </div>
                 </div>
             }
@@ -173,28 +205,30 @@
             @if (Model.Tipo == 1)
             { 
                 <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-group pull-left">
+                    <div class="col-sm-5 col-xs-12">
+                        <div class="form-group">
                             <label for="destino" class="control-label label-izq">Destino*</label>
-                            <div class="form-control-wrapper-izq pull-left">
+                            <div class="form-control-wrapper-izq">
                                 <input type="hidden" id="destinoText" name="destinoText" />
                                 <select id="destino" name="destino" class="custom-select-2 destino">
                                     <option value="">&nbsp;</option>
-                                    @foreach(var d in Model.Destinos.Destino)
-                                    { 
+                                    @foreach (var d in Model.Destinos.Destino)
+                                    {
                                         <option value="@d.idDestino">@d.destino</option>
                                     }
-                                    
+
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group pull-left">
-                            <label for="tipoViaje" class="control-label label-der label-2">Tipo de viaje*</label>
-                            <div class="form-control-wrapper-der fc-2  pull-left">
+                    </div>
+                    <div class="col-sm-7 col-xs-12">
+                        <div class="form-group">
+                            <label for="tipoViaje" class="control-label label-2">Tipo de viaje*</label>
+                            <div class="form-control-wrapper-der fc-2">
                                 <input type="hidden" id="tipoViajeText" name="tipoViajeText" />
                                 <select id="tipoViaje" name="tipoViaje" class="custom-select-2 tipo">
                                     <option value="">&nbsp;</option>
-                                    @foreach(var v in Model.TiposViajes.TipoViaje)
+                                    @foreach (var v in Model.TiposViajes.TipoViaje)
                                     {
                                         <option value="@v.idTipoViaje">@v.tipoViaje</option>
                                     }
@@ -310,18 +344,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-3">
+                <div class="col-sm-3 col-xs-12">
                     <p class="modulo">* datos obligatorios</p>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-sm-8 hidden-xs">
                     <p class="modulo texto-7 error-text hide">Por favor revise los campos.</p>
                 </div>
-                <div class="col-xs-1">
-                    <div class="form-group pull-right">
+                <div class="col-sm-1 col-xs-12">
+                    <div class="form-group">
                         <input type="hidden" name="Tipo" value="@Model.Tipo" />
                         <input type="hidden" name="Url" value="@Request.UrlReferrer" />
                         <input type="hidden" name="id" value="@ViewBag.id" />
-                        <button type="submit" class="btn btn-negro pull-right">ENVIAR</button>
+                        <button type="submit" class="btn btn-negro">ENVIAR</button>
                     </div>
                 </div>
             </div>
