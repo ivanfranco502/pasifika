@@ -57,19 +57,23 @@
                             </li>
                             @Html.Action("IzquierdaDestinos", "Menu", new { url = ViewBag.menusseleccionado })
                             <li>
-                                <a href="#" class="tipo-1">Selección de Hoteles</a>
+                                <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
+                                          action = "HotelPortada"})" class="tipo-1">Selección de Hoteles</a>
                             </li>
                             <li>
                                 <a href="#experiencias" id="experiencias" class="tipo-1">Experiencias</a>
                             </li>
                             <li>
-                                <a href="#">Guías de Viaje</a>
+                                <a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                          action = "Index"})">Guías de Viaje</a>
                             </li>
                             <li>
-                                <a href="#">Novedades</a>
+                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                          action = "Index"})">Novedades</a>
                             </li>
                             <li>
-                                <a href="#">Promociones</a>
+                                <a href="@Url.RouteUrl(new { controller = "Promociones" ,
+                                          action = "Index"})">Promociones</a>
                             </li>
                         </div>
                     </div>
@@ -119,32 +123,31 @@
                                     <ul class="list-inline list-unstyled iconos">
                                         <li>
                                             <a href="https://plus.google.com/u/0/116815403460620717793/posts" target="_blank" class="ico gplus">
-                                                }
+                                              
                                             </a>
                                         </li>
                                         <li>
                                             <a href="https://www.facebook.com/pasifika.es/" target="_blank" class="ico facebook">
-                                                }
+
                                             </a>
                                         </li>
                                         <li>
                                             <a href="https://twitter.com/PasifikaViajes" target="_blank" class="ico twitter">
-                                               }
+                                              
                                             </a>
                                         </li>
                                         <li>
                                             <a href="https://www.youtube.com/user/PasifikaViajes" target="_blank" class="ico youtube">
-                                                }
+                                               
                                             </a>
                                         </li>
                                         <li>
                                             <a href="https://www.pinterest.com/pasifikaviajes/" target="_blank" class="ico pinterest">
-                                                }
+                                              
                                             </a>
                                         </li>
                                         <li>
                                             <a href="https://www.instagram.com/pasifikaviajes/" target="_blank" class="ico instagram">
-                                                }
                                             </a>
                                         </li>
                                         <!--<li>
@@ -179,25 +182,46 @@
 
                                 <span> Tipo de Viaje</span>
                                 <li>
-                                    <a href="#">Viajes a Medida</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "viajes-a-medida"
+                                })">Viajes a Medida</a>
                                 </li>
                                 <li>
-                                    <a href="#">Viajes de Novios</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "viajes-de-novios"
+                                })">Viajes de Novios</a>
                                 </li>
                                 <li>
-                                    <a href="#">Viajes en Familia</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "viajes-en-familia"
+                                })">Viajes en Familia</a>
                                 </li>
                                 <li>
-                                    <a href="#">Vueltas al mundo</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "vueltas-al-mundo"
+                                })">Vueltas al mundo</a>
                                 </li>
                                 <li>
-                                    <a href="#">Viajes combinados</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "viajes-combinados"
+                                })">Viajes combinados</a>
                                 </li>
                                 <li>
-                                    <a href="#">Viajes de lujo</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "viajes-de-lujo"
+                                })">Viajes de lujo</a>
                                 </li>
                                 <li>
-                                    <a href="#">High End Travel</a>
+                                    <a href="<a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "InteresListado",
+                                                         url = "high-end-travel"
+                                })">High End Travel</a>
                                 </li>
                             </div>
                         </div>
@@ -224,16 +248,22 @@
                             <div class="col-xs-10">
                                 <span> Experiencias</span>
                                 <li>
-                                    <a href="#">Wellness & Spa</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "wellnesListado"
+                                })">Wellness & Spa</a>
                                 </li>
                                 <li>
-                                    <a href="#">Excursiones</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
+                                          action = "ExcursionPortada"})">Excursiones</a>
                                 </li>
                                 <li>
-                                    <a href="#">Cruceros</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                     action = "CruceroListado"})">Cruceros</a>
                                 </li>
                                 <li>
-                                    <a href="#">Trenes</a>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo1" ,
+                                                         action = "TrenListado"
+                                })">Trenes</a>
                                 </li>
 
                             </div>
@@ -518,8 +548,8 @@
                         <div class="main">
                             @RenderBody()
 
-                            <div class="row borde-top-gris no-margin modulo hidden-xs">
-                                <div class="col-xs-4 col-xs-offset-8">
+                            <div class="row borde-top-gris no-margin modulo">
+                                <div class="col-xs-5 col-xs-offset-7 col-sm-3 col-sm-offset-9">
                                     <a href="#up" class="up texto-4">TOP <i class="ico flecha-up"></i></a>
                                 </div>
                             </div>
@@ -1020,7 +1050,7 @@
                             </div>
                         </div>
                     </div>
-</footer>
+      </footer>
 
             <div class="modal fade confirmNewsletter">
                 <div class="modal-dialog">

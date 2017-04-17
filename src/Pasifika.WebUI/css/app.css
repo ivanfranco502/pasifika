@@ -10239,8 +10239,9 @@ a.thumbnail-2:hover .texto-6 {
 
 
 .container {
-    /*width: 1016px;*/
+    /*width: 1016px;
     padding: 0;
+    */
 }
 
 
@@ -11355,25 +11356,25 @@ h3.titular-2b.modulo {
     border: 1px solid #ccc;
 }
 
-.form-horizontal.contacto .custom-select.dia,
-.form-horizontal.baja .custom-select.dia,
-.form-horizontal.contacto .custom-select-2.dia,
-.form-horizontal.baja .custom-select-2.dia,
-.form-horizontal.contacto .custom-select.mes,
-.form-horizontal.baja .custom-select.mes,
-.form-horizontal.contacto .custom-select-2.mes,
-.form-horizontal.baja .custom-select-2.mes {
-    width: 60px;
-    /*margin-right: 21px;*/
-}
+    .form-horizontal.contacto .custom-select.dia,
+    .form-horizontal.baja .custom-select.dia,
+    .form-horizontal.contacto .custom-select-2.dia,
+    .form-horizontal.baja .custom-select-2.dia,
+    .form-horizontal.contacto .custom-select.mes,
+    .form-horizontal.baja .custom-select.mes,
+    .form-horizontal.contacto .custom-select-2.mes,
+    .form-horizontal.baja .custom-select-2.mes {
+        /*width: 60px;
+    margin-right: 21px;*/
+    }
 
-.form-horizontal.contacto .custom-select.anio,
-.form-horizontal.baja .custom-select.anio,
-.form-horizontal.contacto .custom-select-2.anio,
-.form-horizontal.baja .custom-select-2.anio {
-    width: 100px;
-    margin: 0;
-}
+    .form-horizontal.contacto .custom-select.anio,
+    .form-horizontal.baja .custom-select.anio,
+    .form-horizontal.contacto .custom-select-2.anio,
+    .form-horizontal.baja .custom-select-2.anio {
+        /*width: 100px;
+    margin: 0;*/
+    }
 
     .form-horizontal.contacto .custom-select.destino,
     .form-horizontal.baja .custom-select.destino,
@@ -11382,12 +11383,12 @@ h3.titular-2b.modulo {
         /*width: 190px;*/
     }
 
-.form-horizontal.contacto .form-control-wrapper-izq.fecha-salida-mes,
-.form-horizontal.baja .form-control-wrapper-izq.fecha-salida-mes {
-    width: 140px;
-    margin-left: 20px;
-    margin-right: 10px;
-}
+    .form-horizontal.contacto .form-control-wrapper-izq.fecha-salida-mes,
+    .form-horizontal.baja .form-control-wrapper-izq.fecha-salida-mes {
+        width: 140px;
+        /*margin-left: 20px;*/
+        margin-right: 10px;
+    }
 
 .form-horizontal.contacto .form-control-wrapper-izq.fecha-salida-anio,
 .form-horizontal.baja .form-control-wrapper-izq.fecha-salida-anio {
@@ -11396,8 +11397,9 @@ h3.titular-2b.modulo {
 
     .form-horizontal.contacto .form-control-wrapper-izq.presupuesto-estimado,
     .form-horizontal.baja .form-control-wrapper-izq.presupuesto-estimado {
-        /*width: 363px;*/
+        /*width: 363px;
         float: right;
+            */
     }
 
 .form-horizontal.contacto .form-control-wrapper-izq.sesion,
@@ -11414,7 +11416,7 @@ h3.titular-2b.modulo {
 
     .form-horizontal.contacto .form-control-wrapper-der.fc-2,
     .form-horizontal.baja .form-control-wrapper-der.fc-2 {
-        width: 207px;
+        /*width: 207px;*/
     }
 
     .form-horizontal.contacto .nacimiento .form-control-wrapper-der,
@@ -11477,10 +11479,10 @@ h3.titular-2b.modulo {
         float: left;
         /*width: 224px;*/
     }
-    .form-horizontal.contacto .form-control-wrapper-izq.presupuesto-estimado,
-    .form-horizontal.baja .form-control-wrapper-izq.presupuesto-estimado {
-        width: 515px;
-    }
+        .form-horizontal.contacto .form-control-wrapper-izq.presupuesto-estimado,
+        .form-horizontal.baja .form-control-wrapper-izq.presupuesto-estimado {
+            /*width: 515px;*/
+        }
     .form-horizontal.contacto .form-control-wrapper-izq.sesion,
     .form-horizontal.baja .form-control-wrapper-izq.sesion {
         width: 635px;
@@ -11494,10 +11496,10 @@ h3.titular-2b.modulo {
         float: left;
         /*width: 346px;*/
     }
-    .form-horizontal.contacto .form-control-wrapper-der.fc-2,
-    .form-horizontal.baja .form-control-wrapper-der.fc-2 {
-        width: 336px;
-    }
+        .form-horizontal.contacto .form-control-wrapper-der.fc-2,
+        .form-horizontal.baja .form-control-wrapper-der.fc-2 {
+            /*width: 336px;*/
+        }
     .form-horizontal.contacto .nacimiento .label-der,
     .form-horizontal.baja .nacimiento .label-der {
         width: 135px;
@@ -11510,7 +11512,7 @@ h3.titular-2b.modulo {
     .form-horizontal.baja .custom-select.destino,
     .form-horizontal.contacto .custom-select-2.destino,
     .form-horizontal.baja .custom-select-2.destino {
-        width: 226px;
+        /*width: 226px;*/
     }
 }
 
@@ -11656,7 +11658,6 @@ h2.titular-3 {
         max-width: 80%;
     }
 }
-
 
 @media (max-width: 768px) {
     .col-xs-12{
@@ -11886,7 +11887,6 @@ body {
     zoom: 0.7;
 }
 
-
 @media(max-width:768px) {
     body {
         padding-top: 0;
@@ -11922,14 +11922,14 @@ body {
 
             .nav-sidebar li a {
                 padding: 0px;
-                line-height:0px;
+                line-height: 0px;
             }
 
             .sidebar-nav li, .nav-sidebar li {
                 line-height: 30px;
             }
 
-                .sidebar-nav li a.tipo-1, .sidebar-nav span:not(.tipo-1){
+                .sidebar-nav li a.tipo-1, .sidebar-nav span:not(.tipo-1) {
                     line-height: 30px;
                     display: inline-block;
                     width: 100%;
@@ -11940,78 +11940,115 @@ body {
                     font-weight: bold;
                     padding: 0px;
                 }
-                .sidebar-nav li a{
-                    color:black;
+
+                .sidebar-nav li a {
+                    color: black;
                 }
 
     #links {
         border-bottom: 1px solid grey;
     }
 
-    .telefono{
-        text-align:center;
-        font-weight:bold;
-        margin-top:10px;
-        height:10px;
-        font-size:15px;
+    .telefono {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+        height: 10px;
+        font-size: 15px;
     }
-    .texto-2{
-        font-size:12px;
+
+    .texto-2 {
+        font-size: 12px;
     }
-    .carousel-caption .texto-3{
-        font-size:20px;
+
+    .carousel-caption .texto-3 {
+        font-size: 20px;
     }
-    #contenido-pagina{
-        padding:0px;
+
+    #contenido-pagina {
+        padding: 0px;
     }
+
     .newsletter-container {
-        margin-top:30px;
+        margin-top: 30px;
         background-color: #eaeae8;
     }
+
     footer .newsletter-container {
         margin-top: 0;
     }
-    .caja-drag p{
-        margin:0px;
+
+    .caja-drag p {
+        margin: 0px;
     }
-    .caja-drag .slider{
-        margin-bottom:20px;
+
+    .caja-drag .slider {
+        margin-bottom: 20px;
     }
-    .caja-drag .btn-borrar{
-        position:relative;
-        top:-150px;
+
+    .caja-drag .btn-borrar {
+        position: relative;
+        top: -150px;
     }
 
     #viajes-encontrados.titular-1 {
         font-size: 12px;
     }
+
     #viajes-encontrados.f-linea-gris, #viajes-encontrados.f-linea-gris-b {
         text-align: initial;
     }
 
-    thumbnail-2 img{
-        margin:0 auto;
+    thumbnail-2 img {
+        margin: 0 auto;
     }
 
     .select2-container {
         margin-bottom: 20px;
     }
-    .datos-caption .presupuesto{
-        display:block;
-        max-width:70%;
+
+    .datos-caption .presupuesto {
+        display: block;
+        max-width: 70%;
         margin: 10px auto;
     }
-    .form-horizontal .radio-inline{
+
+    .form-horizontal .radio-inline {
+        padding-top: 0px;
+    }
+
+    .form-horizontal.contacto .custom-select-2.anio {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        font-size: 12px;
+    }
+
+    .caja-tags.texto-12, .caja-tags .texto-9 {
+        font-size: 10px;
+    }
+
+    .main .flexslider .flex-control-nav{
+        bottom:10px;
+    }
+
+    .form-horizontal.contacto .privacidad, .form-horizontal.baja .privacidad{
+        margin-left:0px;
+    }
+
+    footer{
+        margin-top:40px;
+    }
+
+    .form-horizontal.contacto .checkbox-inline input{
+        margin-left:-20px;
+    }
+    .form-horizontal .checkbox-inline{
         padding-top:0px;
+        padding-bottom:8px;
     }
-    .form-horizontal.contacto .custom-select-2.anio{
-        margin-bottom:20px;
-    }
-    .form-control{
-        font-size:12px;
-    }
-    
-}
+} /*Media queries responsive*/
 
 
 .topbar .btn {
@@ -12133,4 +12170,27 @@ body {
 
 .form-horizontal.contacto .control-label.label-2 {
     margin-left: 0px;
+}
+
+.form-horizontal.contacto .form-control-wrapper-izq {
+    float: none;
+}
+
+.form-control-wrapper-der .col-xs-3, .form-control-wrapper-der .col-xs-6 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.quienes-foto {
+    height:100%;
+    display:inline-block;
+    background-size:cover;
+}
+
+#viaje-excepcional-foto {
+    background-image: url('/img/quienes-1.jpg');
+}
+
+#preocupacion-foto {
+    background-image: url('/img/quienes-2.jpg');
 }
