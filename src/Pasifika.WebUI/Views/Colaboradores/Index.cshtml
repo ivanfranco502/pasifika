@@ -42,9 +42,9 @@
         @foreach (var p in Model.Partners)
         {
         <!-- thumb-->
-            <div class="col-xs-4 text-center">
+            <div class="col-sm-4 col-xs-6 text-center">
                 @if (p.Link != null && p.Link != "")
-                { 
+                {
                     <a href="@p.Link" class="thumbnail no-hover no-border">
                         <img alt="" src="~/Content/images/partner/@p.Foto" class="img-responsive">
                         <div class="caption">
@@ -64,13 +64,13 @@
                     </div>
                 }
             </div>
-            
-            cant++;
+
+            /*cant++;
             if (cant % 3 == 0)
             {
                 @:</div>
                 @:<div class="row">
-            }
+            }*/
         }
     </div>
 </div>

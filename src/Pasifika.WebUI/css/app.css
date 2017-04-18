@@ -10127,10 +10127,10 @@ a.thumbnail-2:hover .texto-6 {
     background-color: #000;
 }
 
-.thumbnail-5 p,
-.thumbnail-5 h2 {
-    margin: 0 20px;
-}
+    .thumbnail-5 p,
+    .thumbnail-5 h2 {
+        margin: 0 10px;
+    }
 
 .thumbnail-5 .texto-2b {
     margin-top: 20px;
@@ -10141,7 +10141,7 @@ a.thumbnail-2:hover .texto-6 {
     position: absolute;
     bottom: 45px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -35px;
     z-index: 2;
 }
 
@@ -10834,8 +10834,9 @@ h3.titular-2b.modulo {
 
 
 .main {
-    float: left;
-    /*width: 803px;*/
+    /* float: left;
+    width: 803px;
+    */
 }
 
 
@@ -11786,7 +11787,6 @@ body {
 
 #contenedor-principal.toggled #contenido-pagina {
     position: absolute;
-    margin-right: -250px;
 }
 
 .sidebar-nav {
@@ -12009,7 +12009,7 @@ body {
 
     .datos-caption .presupuesto {
         display: block;
-        max-width: 70%;
+        /*max-width: 70%;*/
         margin: 10px auto;
     }
 
@@ -12048,6 +12048,40 @@ body {
         padding-top:0px;
         padding-bottom:8px;
     }
+
+    .btn-negro-2{
+        height: 34px;
+        padding: 6px 12px;
+        line-height: 20px;
+    
+    }
+
+    
+    .texto-5, .texto-6, .texto-25 {
+        font-size: 7px;
+    }
+
+    .texto-10, .texto-21, .texto-26{
+        font-size: 14px;
+    }
+
+    .texto-2b.texto-2b{
+        font-size:10px;
+    }
+
+    .bloque-gris p{
+        margin: 0px;
+    }
+
+    .bloque-gris ul{
+        margin: 0px;
+    }
+
+    .sin-padding .col-xs-6{
+        padding: 5px;
+    }
+       
+        
 } /*Media queries responsive*/
 
 
@@ -12181,16 +12215,42 @@ body {
     padding-right: 2px;
 }
 
-.quienes-foto {
-    height:100%;
-    display:inline-block;
-    background-size:cover;
+.quienes-foto img {
+    max-width: 100%;
+    height: auto;
 }
 
-#viaje-excepcional-foto {
-    background-image: url('/img/quienes-1.jpg');
+
+.sin-padding .texto-5, .sin-padding .texto-6, .sin-padding .texto-25, .texto-26,.sin-padding .texto-27 {
+    vertical-align: text-bottom;
+    overflow-wrap: normal;
+    height: 25px;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-#preocupacion-foto {
-    background-image: url('/img/quienes-2.jpg');
+.texto-26{
+    font-size:20px;
+    height:100px;
 }
+
+.texto-10{
+    font-size:14px;
+}
+
+.texto-2b{
+    height:20px;
+}
+
+.texto-2b.texto-2b{
+    font-size:12px;
+}
+
+.bloque-negro .texto-10{
+    font-size: 14px;
+}
+
+.bloque-negro .texto-12{
+    font-size: 11px;
+}
+ 

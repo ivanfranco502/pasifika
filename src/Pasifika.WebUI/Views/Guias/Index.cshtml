@@ -55,7 +55,7 @@
         @foreach (var d in r.Destinos.Where(x => x.Eliminado == false).OrderBy(x => x.Orden))
         {
             <!-- thumb-->
-            <div class="col-xs-3 text-center">
+            <div class="col-sm-3 col-xs-6 text-center">
                 <div class="thumbnail thumbnail-hover">
                     <a href="@Url.RouteUrl(new { controller = "Guias" ,
                                           action = "Detalle",
@@ -90,7 +90,7 @@
             <!-- /.thumb-->
             <!-- thumb-->
 
-            cant++;
+           /* cant++;
             if (cant % 4 == 0)
             {
                 @:</div>
@@ -100,7 +100,7 @@
                             @:<div class="thumbnails modulo hide">
                         }
                 @:<div class="row">
-            }
+            }*/
         }
     </div>
     <!-- /.row thumbs -->

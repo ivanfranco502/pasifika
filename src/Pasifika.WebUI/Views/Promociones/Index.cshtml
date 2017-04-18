@@ -44,28 +44,31 @@
         @foreach (var p in Model.Promociones)
         {
             <!-- thumb-->
-            <div class="col-xs-4 text-center">
-                <div class="thumbnail-5">
-                    <p class="texto-26"><strong>@p.Promo</strong></p>
+            <div class="sin-padding">
+                <div class="col-sm-4 col-xs-6 text-center">
+                    <div class="thumbnail-5">
+                        <p class="texto-26"><strong>@p.Promo</strong></p>
 
-                    <hr class="sep-2">
+                        <hr class="sep-2">
 
-                    <h2 class="texto-10">@p.Titulo</h2>
+                        <h2 class="texto-10">@p.Titulo</h2>
 
-                    <p class="texto-2b">@p.SubTitulo</p>
+                        <p class="texto-2b">@p.SubTitulo</p>
 
-                    <img src="~/Content/images/promocion/@p.Foto" class="img-responsive" alt="@p.Alt">
+                        <img src="~/Content/images/promocion/@p.Foto" class="img-responsive" alt="@p.Alt">
 
-                    <a href="@p.Link" class="btn btn-negro-2">+ INFO</a>
+                        <a href="@p.Link" class="btn btn-negro-2">+ INFO</a>
+                    </div>
                 </div>
             </div>
 
-            cant++;
+            /*cant++;
             if (cant % 3 == 0)
             {
-                @:</div>
-                @:<div class="row">
-            }
+            @:
+        </div>
+            @:<div class="row">
+        }*/
         }
 
     </div>
@@ -83,4 +86,13 @@
             });
         });
     </script>
+
+    <script>
+
+        var texto = document.getElementsByClassName("texto-2b");
+        $clamp(texto, { clamp: 'auto'});
+
+    </script>
+
+
 }
