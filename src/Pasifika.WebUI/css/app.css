@@ -12080,8 +12080,27 @@ body {
     .sin-padding .col-xs-6{
         padding: 5px;
     }
-       
-        
+     
+    .titular-2, .titular-2b{
+        font-size: 16px;
+    }
+
+    .btn.btn-blanco.ver-mas {
+        padding: 0px;
+        font-size: 12px;
+    }
+
+    .bloque-gris{
+        overflow-wrap:break-word;
+    }
+
+    .texto-19{
+        font-size: 12px;
+    }
+
+    .titular-1{
+        font-size: 16px;
+    }
 } /*Media queries responsive*/
 
 
@@ -12221,25 +12240,32 @@ body {
 }
 
 
-.sin-padding .texto-5, .sin-padding .texto-6, .sin-padding .texto-25, .texto-26,.sin-padding .texto-27 {
+.texto-altura-fija .texto-5, .texto-altura-fija .texto-6, .texto-altura-fija .texto-25, 
+.texto-altura-fija .texto-26, .texto-altura-fija .texto-27, .texto-altura-fija .texto-2b,
+ .texto-altura-fija .texto-24{
     vertical-align: text-bottom;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     height: 25px;
     display: flex;
     flex-direction: column-reverse;
+    overflow:hidden;
 }
 
-.texto-26{
-    font-size:20px;
-    height:100px;
+.texto-altura-fija .texto-26 {
+    font-size: 20px;
+    height: 105px;
 }
 
-.texto-10{
-    font-size:14px;
+.texto-altura-fija .texto-2b {
+    height: 120px;
 }
 
-.texto-2b{
-    height:20px;
+.texto-altura-fija .texto-24{
+    height: 420px;
+    display:block
+}
+.texto-10 {
+    font-size: 14px;
 }
 
 .texto-2b.texto-2b{

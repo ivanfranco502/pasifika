@@ -55,7 +55,7 @@
         @foreach (var d in r.Destinos.Where(x => x.Eliminado == false).OrderBy(x => x.Orden))
         {
             <!-- thumb-->
-            <div class="col-sm-3 col-xs-6 text-center">
+            <div class="col-sm-3 col-xs-6 text-center texto-altura-fija">
                 <div class="thumbnail thumbnail-hover">
                     <a href="@Url.RouteUrl(new { controller = "Guias" ,
                                           action = "Detalle",
@@ -65,6 +65,7 @@
                                           action = "Detalle",
                                           destino = d.Url })"><h3 class="texto-6">GU&Iacute;A DE VIAJE DE @d.Nombre.ToUpper()</h3></a>
                         <p class="texto-24">
+                         
                             @{
                                 string resumen = d.Resumen == null ? "" : d.Resumen;
                                 
