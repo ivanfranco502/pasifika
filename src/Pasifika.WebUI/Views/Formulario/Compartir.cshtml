@@ -28,7 +28,7 @@
 @Html.Action("Cargar", "Banner", new { seccionId = 26, tipo = 2 })
 
 <div class="row modulo">
-    <div class="col-xs-9">
+    <div class="col-sm-9 col-xs-12">
 
         @using (Html.BeginForm("SaveCompartir", "Formulario", FormMethod.Post, new { @class = "form-horizontal modulo contacto", @role = "form" }))
         {
@@ -41,65 +41,77 @@
             </div>
 
             <div class="row modulo">
-                <div class="col-xs-12">
-                    <div class="row">
-                        <div class="col-xs-5">
+                        <div class="col-sm-5 col-xs-12">
                             <div class="form-group">
-                                <label for="nombre" class="control-label label-izq">Su nombre*</label>
-                                <div class="form-control-wrapper-izq">
-                                    <input type="text" class="form-control" id="Nombre" name="Nombre">
+                                <div class="col-sm-3 col-xs-12">
+                                    <label for="nombre" class="control-label label-izq">Su nombre*</label>
+                                </div>
+                                <div class="col-sm-9 col-xs-12">
+                                    <div class="form-control-wrapper-izq">
+                                        <input type="text" class="form-control" id="Nombre" name="Nombre">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-xs-7">
+                        <div class="col-sm-7 col-xs-12">
                             <div class="form-group">
-                                <label for="nombre-amigo" class="control-label label-der">Nombre de su amigo*</label>
-                                <div class="form-control-wrapper-der">
-                                    <input type="text" class="form-control" id="NombreAmigo" name="NombreAmigo">
+                                <div class="col-sm-3 col-xs-12">
+                                    <label for="nombre-amigo" class="control-label label-der">Nombre de su amigo*</label>
+                                </div>
+                                <div class="col-sm-9 col-xs-12">
+                                    <div class="form-control-wrapper-der">
+                                        <input type="text" class="form-control" id="NombreAmigo" name="NombreAmigo">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-5">
+                 
+                        <div class="col-sm-5 col-xs-12">
                             <div class="form-group">
-                                <label for="email" class="control-label label-izq">Su email*</label>
-                                <div class="form-control-wrapper-izq">
-                                    <input type="text" class="form-control" id="Email" name="Email">
+                                <div class="col-sm-3 col-xs-12">
+                                    <label for="email" class="control-label label-izq">Su email*</label>
+                                </div>
+                                <div class="col-sm-9 col-xs-12">
+                                    <div class="form-control-wrapper-izq">
+                                        <input type="text" class="form-control" id="Email" name="Email">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-xs-7">
+                        <div class="col-sm-7 col-xs-12">
                             <div class="form-group">
-                                <label for="email-amigo" class="control-label label-der">Email de su amigo*</label>
-                                <div class="form-control-wrapper-der">
-                                    <input type="text" class="form-control" id="EmailAmigo" name="EmailAmigo">
+                                <div class="col-sm-3 col-xs-12">
+                                    <label for="email-amigo" class="control-label label-der">Email de su amigo*</label>
+                                </div>
+                                <div class="col-sm-9 col-xs-12">
+                                    <div class="form-control-wrapper-der">
+                                        <input type="text" class="form-control" id="EmailAmigo" name="EmailAmigo">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12">
+      
+                        <div class="col-sm-5 col-xs-12">
                             <div class="form-group">
-                                <label for="asunto" class="control-label label-izq">Asunto*</label>
-                                <div class="form-control-wrapper-izq">
-                                    <input type="text" class="form-control" id="Asunto" name="Asunto">
+                                <div class="col-sm-3 col-xs-12">
+                                    <label for="asunto" class="control-label label-izq">Asunto*</label>
+                                </div>
+                                <div class="col-sm-9 col-xs-12">
+                                    <div class="form-control-wrapper-izq">
+                                        <input type="text" class="form-control" id="Asunto" name="Asunto">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
+      
             </div>
 
             <div class="row modulo">
-                <div class="col-xs-12">
+           
 
-                    <div class="row">
+            
                         <div class="col-xs-12">
                             <div class="form-group">
                                 <label for="mensaje" class="control-label">
@@ -108,48 +120,50 @@
                                 <textarea class="form-control mensaje" id="Mensaje" name="Mensaje"></textarea>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="form-group pull-left">
-                                <div class="pull-left">
-                                    <label for="recibir" class="control-label">Recibir éste mensaje también en su email</label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" name="Recibir" id="Recibir" value="true">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group pull-left">
-                                <div class="pull-left privacidad">
-                                    <label for="privacidad" class="control-label">
-                                        He leido y acepto la <a href="#" target="_blank">política de privacidad</a>
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" name="Privacidad" id="Privacidad" value="true">
-                                    </label>
-                                </div>
-                            </div>
+                  
+            
+                <div class="col-sm-6 col-xs-12">
+                    <div class="form-group pull-left">
+                        <div class="pull-left">
+                            <label for="recibir" class="control-label">Recibir éste mensaje también en su email</label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="Recibir" id="Recibir" value="true">
+                            </label>
                         </div>
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-xs-3">
+                            <div class="col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <div class="privacidad">
+                                        <label for="privacidad" class="control-label">
+                                            He leido y acepto la <a href="#" target="_blank">política de privacidad</a>
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" name="Privacidad" id="Privacidad" value="true">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+          
+
+           
+                        <div class="col-sm-3 col-xs-12">
                             <p class="modulo">* datos obligatorios</p>
                         </div>
 
-                        <div class="col-xs-8">
+                        <div class="col-sm-8 hidden-xs">
                             <p class="modulo texto-7 error-text hide">Por favor revise los campos.</p>
                         </div>
 
-                        <div class="col-xs-1">
-                            <div class="form-group pull-right">
+                        <div class="col-sm-1 col-xs-12">
+                            <div class="form-group">
                                 <input type="hidden" name="Url" value="@Request.UrlReferrer" />
-                                <button type="submit" class="btn btn-negro pull-right">ENVIAR</button>
+                                <button type="submit" class="btn btn-negro">ENVIAR</button>
                             </div>
                         </div>
-                    </div>
 
-                </div>
+         
             </div>
 
         }
@@ -157,7 +171,7 @@
     </div>
     <!-- / Col izquierda -->
 
-    <div class="col-xs-3">
+    <div class="col-sm-3 hidden-xs">
         <div class="row">
             <div class="col-xs-12">
                 <div class="bloque-negro">

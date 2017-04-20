@@ -37,9 +37,11 @@
                                 <a href="#cerrar" id="cerrar"><img src="/img/close.png"></a>
                             </div>
                             <div class="col-xs-10">
-                                <form>
-                                    <input type="search" name="buscar" id="buscar" placeholder="BUSCAR...">
-                                </form>
+                            @using (Html.BeginForm("Index", "Busqueda", FormMethod.Post, new { @class = "buscar" }))
+                            {
+                                <input type="search" name="texto" id="buscar" placeholder="BUSCAR..." >
+                            }
+
                             </div>
                         </div>
                     </li>
@@ -48,9 +50,10 @@
                         <div class="col-xs-10 text-uppercase">
                             <li>
                                 <a href="@Url.RouteUrl(new
-                                {
-                                    controller = "QuienesSomos",
-                                    action = "Index"})" class="tipo-1">Quienes Somos</a>
+                                    {
+                                        controller = "QuienesSomos",
+                                        action = "Index"
+                                    })" class="tipo-1">Quienes Somos</a>
                             </li>
                             <li>
                                 <a href="#tipodeviaje" id="tipodeviaje" class="tipo-1">Tipo de Viaje</a>
@@ -654,10 +657,14 @@
                                 <div class="col text-center">
                                     <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                     action = "Detalle",
-                                url = "contratacion-reserva" })">PREGUNTAS FRECUENTES</a> |
-                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
-                                    action = "Detalle",
-                                url = "contratacion-reserva" })">SESIONES INFORMATIVAS</a> |
+                                url = "preguntas-frecuentes" })">PREGUNTAS FRECUENTES</a> |
+                                    <a href="@Url.RouteUrl(new
+                                        {
+                                            controller = "Formulario",
+                                            action = "Index",
+                                            tipo = 3
+                                        })">SESIONES INFORMATIVAS</a> |
+
                                     <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                     action = "Detalle",
                                 url = "contratacion-reserva" })">CONTRATACI&Oacute;N &amp; RESERVA</a> |

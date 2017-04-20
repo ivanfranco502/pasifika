@@ -154,7 +154,7 @@
                                     <a href="javascript:void(0);" data-ng-repeat="tag in item.Tags" data-ng-click="addTag(tag.Url, tag.Nombre)" data-value="{{tag.Nombre}}">{{tag.Nombre | uppercase }}{{$last ? '' : ', '}}</a>
                                 </p>
                             </div>
-                            <div class="row">
+                            <div class="row sin-padding">
                                 <div class="col-xs-7">
                                     <div class="precio">
                                         <p class="texto-14">DESDE:</p>
@@ -180,7 +180,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-5">
-                                    <a data-ng-href="{{item.Link}}" class="btn btn-negro-2 pull-right">VER @ViewBag.palabra2</a>
+                                    <a data-ng-href="{{item.Link}}" class="btn btn-negro-2">VER @ViewBag.palabra2</a>
                                 </div>
                             </div>
                         </div>

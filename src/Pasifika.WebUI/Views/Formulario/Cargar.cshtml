@@ -10,9 +10,6 @@
         </div>
     </div>
     <div class="row modulo">
-        <div class="col-xs-12">
-
-            <div class="row">
                 <div class="col-sm-5 col-xs-12">
                     <div class="form-group">
                         <div class="col-sm-3 col-xs-12">
@@ -37,8 +34,8 @@
                         </div>
                   </div>
                 </div>
-            </div>
-            <div class="row">
+        
+           
                 <div class="col-sm-5 col-xs-12">
                     <div class="form-group">
                         <div class="col-sm-3 col-xs-12">
@@ -66,8 +63,8 @@
                          </div>
                     </div>
                 }
-            </div>
-            <div class="row">
+      
+    
                 <div class="col-sm-5 col-xs-12">
                     <div class="form-group">
                         <div class="col-sm-3 col-xs-12">
@@ -102,10 +99,10 @@
                         </div>
                         </div>
                 </div>
-            </div>
+     
             @if (Model.Tipo == 1 || Model.Tipo == 3)
             { 
-                <div class="row">
+            
                     <div class="col-sm-5 col-xs-12">
                         <div class="form-group">
                             <div class="col-sm-3 col-xs-12">
@@ -161,40 +158,44 @@
                             </div>
                             </div>
                     </div>
-                </div>
+              
             }
             
             @if (Model.Tipo == 3)
             { 
-                <div class="row modulo">
+                
                     <div class="col-xs-12">
                         <div class="form-group">
-                            <label for="sesion" class="control-label sesion">Sesión formativa*</label>
-                            <div class="form-control-wrapper-izq sesion">
-                                <select id="Sesion" name="Sesion" class="custom-select-2 sesion">
-                                    <option value="">&nbsp;</option>
-                                    @foreach (var s in Model.Sesiones)
-                                    {
-                                        <option value="@s.Nombre">@s.Nombre</option>
-                                    }
-                                </select>
+                            <div class="col-sm-3 col-xs-12">
+                                <label for="sesion" class="control-label sesion">Sesión formativa*</label>
+                            </div>
+                            <div class="col-sm-9 col-xs-12">
+                                <div class="form-control-wrapper-izq sesion">
+                                    <select id="Sesion" name="Sesion" class="custom-select-2 sesion">
+                                        <option value="">&nbsp;</option>
+                                        @foreach (var s in Model.Sesiones)
+                                        {
+                                            <option value="@s.Nombre">@s.Nombre</option>
+                                        }
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+ 
             }
             
             @if (Model.Tipo == 1)
             { 
-                <div class="row">
+                
                     <div class="col-xs-12">
                         <div class="form-group">
                             <input type="text" class="form-control" id="HoraContacto" name="HoraContacto" placeholder="Escriba aquí en que horario prefiere que lo llamemos">
                         </div>
                     </div>
-                </div>
+              
             }
-        </div>
+  
     </div>
     if (Model.Tipo == 1)
     {
@@ -207,10 +208,9 @@
         </div>
     }
     <div class="row modulo">
-        <div class="col-xs-12">
             @if (Model.Tipo == 1)
             { 
-                <div class="row">
+             
                     <div class="col-sm-5 col-xs-12">
                         <div class="form-group">
                             <div class="col-sm-3 col-xs-12">
@@ -250,8 +250,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
+                
+     
                         <div class="form-group">
                             <div class="col-sm-4 col-xs-12">
                                 <label for="fechaSalidaMes" class="control-label">Fecha aproximada de salida*</label>
@@ -280,8 +280,8 @@
                                 </div>
                             </div>
                     </div>
-                </div>
-                <div class="row">
+               
+            
                     
                             <div class="col-sm-6 col-xs-12">
                                 <label for="presupuestoEstimado" class="control-label label-presu">Presupuesto estimado por persona*</label>
@@ -298,12 +298,12 @@
                                     </select>
                                 </div>
                     </div>
-                </div>
+  
             }
             
             @if (Model.Tipo == 1 || Model.Tipo == 3)
             {
-                <div class="row">
+             
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="Mensaje" class="control-label">
@@ -312,56 +312,60 @@
                             <textarea class="form-control mensaje" id="Mensaje" name="Mensaje"></textarea>
                         </div>
                     </div>
-                </div>
+               
             }
-            <div class="row">
-                <div class="col-xs-12">
+       
+                
                     <div class="form-group">
-                        <label for="Conocio" class="control-label conocido">¿Cómo nos ha conocido?</label>
-                        <div class="form-control-wrapper-izq conocido">
-                            <select id="Conocio" name="Conocio" class="custom-select-2 conocido">
-                                <option value="">&nbsp;</option>
-                                <option value="Buscador en internet">Buscador en internet</option>
-                                <option value="Prensa">Prensa</option>
-                                <option value="Revista">Revista</option>
-                                <option value="Redes Sociales">Redes Sociales</option>
-                                <option value="Foro">Foro</option>
-                                <option value="Oficina de Turismo">Oficina de Turismo</option>
-                                <option value="Recomendación">Recomendación</option>
-                                <option value="Ya he viajado con vosotros">Ya he viajado con vosotros</option>
-                                <option value="Newsletter">newsletter</option>
-                                <option value="Feria">Feria</option>
-                                <option value="Otro">Otro</option>
-                            </select>
+                        <div class="col-sm-5 col-xs-12">
+                            <label for="Conocio" class="control-label conocido">¿Cómo nos ha conocido?</label>
                         </div>
+                        <div class="col-sm-7 col-xs-12">
+                            <div class="form-control-wrapper-izq conocido">
+                                <select id="Conocio" name="Conocio" class="custom-select-2 conocido">
+                                    <option value="">&nbsp;</option>
+                                    <option value="Buscador en internet">Buscador en internet</option>
+                                    <option value="Prensa">Prensa</option>
+                                    <option value="Revista">Revista</option>
+                                    <option value="Redes Sociales">Redes Sociales</option>
+                                    <option value="Foro">Foro</option>
+                                    <option value="Oficina de Turismo">Oficina de Turismo</option>
+                                    <option value="Recomendación">Recomendación</option>
+                                    <option value="Ya he viajado con vosotros">Ya he viajado con vosotros</option>
+                                    <option value="Newsletter">newsletter</option>
+                                    <option value="Feria">Feria</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+      
+  
+            <div class="col-sm-5 col-xs-12">
+                <div class="form-group pull-left">
+                    <div class="pull-left">
+                        <label for="Newsletter" class="control-label">Deseo recibir la newsletter</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="Newsletter" id="Newsletter" value="true">
+                        </label>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="form-group pull-left">
-                        <div class="pull-left">
-                            <label for="Newsletter" class="control-label">Deseo recibir la newsletter</label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="Newsletter" id="Newsletter" value="true">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group pull-left">
-                        <div class="pull-left privacidad">
-                            <label for="privacidad" class="control-label">
-                                He leido y acepto la <a href="@Url.RouteUrl(new { controller = "Notas" ,
+            <div class="col-sm-7 col-xs-12">
+                <div class="form-group">
+                    <div class="privacidad">
+                        <label for="privacidad" class="control-label">
+                            He leido y acepto la <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                         url = "politica-privacidad" })" target="_blank">política de privacidad</a>
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="privacidad" id="privacidad" value="true">
-                            </label>
-                        </div>
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="privacidad" id="privacidad" value="true">
+                        </label>
                     </div>
                 </div>
             </div>
-            <div class="row">
+
                 <div class="col-sm-3 col-xs-12">
                     <p class="modulo">* datos obligatorios</p>
                 </div>
@@ -376,8 +380,6 @@
                         <button type="submit" class="btn btn-negro">ENVIAR</button>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
 }
 
