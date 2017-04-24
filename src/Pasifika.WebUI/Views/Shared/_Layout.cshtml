@@ -26,15 +26,16 @@
 </head>
 
 <body>
-    <div id="contenedor-principal">
         <!-- Sidebar -->
-        <div class="container-fluid">
-            <div id="menu-lateral">
+            <div id="menu" class="menu slideout-menu slideout-menu-left">
                 <ul class="sidebar-nav">
                     <li class="controladores">
                         <div class="row">
                             <div class="col-xs-2">
-                                <a href="#cerrar" id="cerrar"><img src="/img/close.png"></a>
+                                <button class="close-button pull-left">
+                                    <img src="/img/close.png">
+                                </button>
+                                <!-- <a href="#cerrar" id="cerrar"><img src="/img/close.png"></a> -->
                             </div>
                             <div class="col-xs-10">
                             @using (Html.BeginForm("Index", "Busqueda", FormMethod.Post, new { @class = "buscar" }))
@@ -275,19 +276,23 @@
                 </div>
 
             </div>
-        </div>
         <!-- /#menu-lateral -->
-        <!-- Page Content -->
-        <div id="contenido-pagina">
+        
+        <div id="panel" class="panel slideout-panel slideout-panel-left">
             <div class="topbar visible-xs">
                 <div class="text-center logo-mobile-container">
                     <a class="logo" href="/" title="Pasifika Viajes">
                         <span class="hide">Pasifika Viajes</span>
                     </a>
                 </div>
-                <a href="#menu-toggle" class="btn btn-default pull-left" id="menu-toggle">
+              <!--  <a href="#menu-toggle" class="btn btn-default pull-left" id="menu-toggle">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </a>
+                </a> -->
+
+                <button class="toggle-button pull-left">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </button>
+
                 <a class="btn btn-negro pull-right" href="@Url.RouteUrl(new
                                 {
                                     controller = "Formulario",
@@ -1120,13 +1125,15 @@
             </div>
             <!-- /.modal -->
         </div>
-    </div>
 
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/flexslider")
     @Scripts.Render("~/bundles/scripts")
 
     <script src="~/js/libs/clamp.js"></script>
+    <script src="~/js/libs/slideout.min.js"></script>
+
+
     <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-17586272-1']);
@@ -1150,46 +1157,44 @@
         })();
     </script>
     <!-- End of Woopra Code -->
+   
+        <script>
+            var slideout = new Slideout({
+                'panel': document.getElementById('panel'),
+                'menu': document.getElementById('menu'),
+                'padding': 256,
+                'tolerance': 70
+            });
+
+            // Toggle button
+            document.querySelector('.toggle-button').addEventListener('click', function () {
+                slideout.toggle();
+            });
+            document.querySelector('.close-button').addEventListener('click', function () {
+                slideout.toggle();
+            });
+
+    </script>
 
     <script type="text/javascript">
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("toggled");
-            $("#contenedor-principal").toggleClass("tipodeviaje", false);
-            $("#contenedor-principal").toggleClass("viajes-asia", false);
-            $("#contenedor-principal").toggleClass("viajes-pacifico", false);
-            $("#contenedor-principal").toggleClass("viajes-america", false);
-            $("#contenedor-principal").toggleClass("experiencias", false);
-        });
-
-        $("#cerrar").click(function (e) {
-            e.preventDefault();
-            $("#contenedor-principal").toggleClass("toggled", false);
-            $("#contenedor-principal").toggleClass("tipodeviaje", false);
-            $("#contenedor-principal").toggleClass("viajes-asia", false);
-            $("#contenedor-principal").toggleClass("viajes-pacifico", false);
-            $("#contenedor-principal").toggleClass("viajes-america", false);
-            $("#contenedor-principal").toggleClass("experiencias", false);
-        });
-
         $("#cerrartipo").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("tipodeviaje", false);
+            $("#menu").toggleClass("tipodeviaje", false);
         });
 
         $("#cerrarexperiencias").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("experiencias", false);
+            $("#menu").toggleClass("experiencias", false);
         });
 
         $("#tipodeviaje").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("tipodeviaje", true);
+            $("#menu").toggleClass("tipodeviaje", true);
         });
 
         $("#experiencias").click(function (e) {
             e.preventDefault();
-            $("#contenedor-principal").toggleClass("experiencias", true);
+            $("#menu").toggleClass("experiencias", true);
         });
     </script>
 
