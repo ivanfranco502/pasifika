@@ -9,7 +9,7 @@
             <a href="javascript:void(0);" 
                @if (ViewBag.menusseleccionado != null && r.Destinos.Where(a => a.Url == ViewBag.menusseleccionado).FirstOrDefault() != null)
                 {
-                    @:class="tipo-1 selected active"
+                    @:class="tipo-1 selected active hidden-xs"
                     menuRegion = "#submenu-" + r.Url;
                 } 
                 else
@@ -28,11 +28,11 @@
                                 })" 
                              @if (ViewBag.menusseleccionado == d.Url)
                                {
-                                    @:class="tipo-2 selected"
+                                    @:class="tipo-2 selected hidden-xs"
                                } 
                                else
                                {
-                                   @:class="tipo-2"
+                                   @:class="tipo-2 hidden-xs"
                                } title="Viajes a @d.Nombre"><span>@d.Nombre</span><i class="ico flecha-der"></i></a>
                     </li>
                 }

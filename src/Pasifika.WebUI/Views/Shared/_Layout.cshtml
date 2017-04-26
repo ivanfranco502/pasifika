@@ -46,128 +46,68 @@
                             </div>
                         </div>
                     </li>
-                    <div class="row" id="links">
-                        <div class="col-xs-2"></div>
-                        <div class="col-xs-10 text-uppercase">
-                            <li>
-                                <a href="@Url.RouteUrl(new
+                    <div id="contenido-principal">
+                        <div class="row" id="links">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-10 text-uppercase">
+                                <li>
+                                    <a href="@Url.RouteUrl(new
                                     {
                                         controller = "QuienesSomos",
                                         action = "Index"
-                                    })" class="tipo-1">Quienes Somos</a>
-                            </li>
-                            <li>
-                                <a href="#tipodeviaje" id="tipodeviaje" class="tipo-1">Tipo de Viaje</a>
-                            </li>
-                            @Html.Action("IzquierdaDestinos", "Menu", new { url = ViewBag.menusseleccionado })
-                            <li>
-                                <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
+                                    })" class="tipo-1">Qui&eacute;nes Somos</a>
+                                </li>
+                                <li>
+                                    <a href="#tipodeviaje" id="tipodeviaje" class="tipo-1">Tipo de Viaje</a>
+                                </li>
+                                @Html.Action("IzquierdaDestinos", "Menu", new { url = ViewBag.menusseleccionado })
+                                <li>
+                                    <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
                                           action = "HotelPortada"})" class="tipo-1">Selección de Hoteles</a>
-                            </li>
-                            <li>
-                                <a href="#experiencias" id="experiencias" class="tipo-1">Experiencias</a>
-                            </li>
-                            <li>
-                                <a href="@Url.RouteUrl(new { controller = "Guias" ,
+                                </li>
+                                <li>
+                                    <a href="#experiencias" id="experiencias" class="tipo-1">Experiencias</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.RouteUrl(new { controller = "Guias" ,
                                           action = "Index"})">Guías de Viaje</a>
-                            </li>
-                            <li>
-                                <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                                </li>
+                                <li>
+                                    <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Index"})">Novedades</a>
-                            </li>
-                            <li>
-                                <a href="@Url.RouteUrl(new { controller = "Promociones" ,
+                                </li>
+                                <li>
+                                    <a href="@Url.RouteUrl(new { controller = "Promociones" ,
                                           action = "Index"})">Promociones</a>
-                            </li>
+                                </li>
+                            </div>
                         </div>
-                    </div>
 
-                    <br>
+                        <br>
 
-                    <div class="row">
-                        <div class="col-xs-12 text-center">
-                            <a class="btn btn-negro-3" href="@Url.RouteUrl(new
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <a class="btn btn-negro-3" href="@Url.RouteUrl(new
                             {
                                 controller = "Formulario",
                                 action = "Index",
                                 tipo = 1
                             })" title="Ir a contacto">
-                                CONTACTO
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        
-                        <div class="col-xs-12">
-                            <div class="telefono">T +34 91 715 5422</div>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="newsletter-container">
-                        <div class="row">
-                            
-
-                            <div class="col-xs-12 text-center">
-                                <form class="newsletter-footer newsletter-form">
-
-                                    <div class="form-group">
-                                        <label class="control-label texto-6 text-uppercase">
-                                            Nuestra Newsletter
-                                        </label>
-                                        <input class="form-control input-text" id="emailNews" type="text" placeholder="">
-                                        <button type="submit" class="btn btn-negro-3 submit-button">Suscribirse</button>
-                                    </div>
-
-                                </form>
-
-                                <div class="redes-sociales">
-
-                                    <ul class="list-inline list-unstyled iconos">
-                                        <li>
-                                            <a href="https://plus.google.com/u/0/116815403460620717793/posts" target="_blank" class="ico gplus">
-                                              
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.facebook.com/pasifika.es/" target="_blank" class="ico facebook">
-
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://twitter.com/PasifikaViajes" target="_blank" class="ico twitter">
-                                              
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.youtube.com/user/PasifikaViajes" target="_blank" class="ico youtube">
-                                               
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.pinterest.com/pasifikaviajes/" target="_blank" class="ico pinterest">
-                                              
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.instagram.com/pasifikaviajes/" target="_blank" class="ico instagram">
-                                            </a>
-                                        </li>
-                                        <!--<li>
-                            <a href="http://pasifikaviajes.tumblr.com/" target="_blank" class="ico tumblr">
-                                <span>Tumblr</span>
-                            </a>
-                        </li>-->
-                                    </ul>
-
-                                </div>
+                                    CONTACTO
+                                </a>
                             </div>
                         </div>
-                       
+
+                        <div class="row">
+
+                            <div class="col-xs-12">
+                                <div class="telefono">T +34 91 715 5422</div>
+                            </div>
+
+                        </div>
                     </div>
-                </ul>
-                <div id="tipo-de-viaje">
+
+                                    <div id="tipo-de-viaje">
                     <ul class="sidebar-nav">
                         <div class="row">
                             <div class="col-xs-2">
@@ -275,32 +215,100 @@
                     </ul>
                 </div>
 
+                    <div class="newsletter-container">
+                        <div class="row">
+                            
+
+                            <div class="col-xs-12 text-center">
+                                <form class="newsletter-footer newsletter-form">
+
+                                    <div class="form-group">
+                                        <label class="control-label texto-6 text-uppercase">
+                                            Nuestra Newsletter
+                                        </label>
+                                        <input class="form-control input-text" id="emailNews" type="text" placeholder="">
+                                        <button type="submit" class="btn btn-negro-3 submit-button">Suscribirse</button>
+                                    </div>
+
+                                </form>
+
+                                <div class="redes-sociales">
+
+                                    <ul class="list-inline list-unstyled iconos">
+                                        <li>
+                                            <a href="https://plus.google.com/u/0/116815403460620717793/posts" target="_blank" class="ico gplus">
+                                              
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/pasifika.es/" target="_blank" class="ico facebook">
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/PasifikaViajes" target="_blank" class="ico twitter">
+                                              
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.youtube.com/user/PasifikaViajes" target="_blank" class="ico youtube">
+                                               
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pinterest.com/pasifikaviajes/" target="_blank" class="ico pinterest">
+                                              
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/pasifikaviajes/" target="_blank" class="ico instagram">
+                                            </a>
+                                        </li>
+                                        <!--<li>
+                            <a href="http://pasifikaviajes.tumblr.com/" target="_blank" class="ico tumblr">
+                                <span>Tumblr</span>
+                            </a>
+                        </li>-->
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </ul>
             </div>
         <!-- /#menu-lateral -->
         
         <div id="panel" class="panel slideout-panel slideout-panel-left">
             <div class="topbar visible-xs">
-                <div class="text-center logo-mobile-container">
-                    <a class="logo" href="/" title="Pasifika Viajes">
-                        <span class="hide">Pasifika Viajes</span>
-                    </a>
-                </div>
-              <!--  <a href="#menu-toggle" class="btn btn-default pull-left" id="menu-toggle">
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </a> -->
+                <div class="row">
 
-                <button class="toggle-button pull-left">
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </button>
-
-                <a class="btn btn-negro pull-right" href="@Url.RouteUrl(new
+                    <div class="col-xs-2">
+                        <button class="toggle-button">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                        
+                    <div class="col-xs-5">                        
+                            <a class="logo" href="/" title="Pasifika Viajes">
+                                <span class="hide">Pasifika Viajes</span>
+                            </a>
+                    </div>
+                        <!--  <a href="#menu-toggle" class="btn btn-default pull-left" id="menu-toggle">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        </a> -->
+                    <div class="col-xs-5">
+                        <a class="btn btn-negro pull-right" href="@Url.RouteUrl(new
                                 {
                                     controller = "Formulario",
                                     action = "Index",
                                     tipo = 1
                                 })" title="Ir a contacto">
-                    CONTACTO
-                </a>
+                            CONTACTO
+                        </a>
+                    </div>
+                </div>
             </div>
             <!-- /#contenido-pagina -->
             <nav class="navbar navbar-fixed-top hidden-xs">

@@ -1199,6 +1199,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
 .img-rounded {
@@ -10308,8 +10309,7 @@ hr.sep-2.sep-2 {
     display: inline-block;
     background-position: 0px 0px;
     width: 164px;
-    height: 78px;
-    margin-top: 27px;
+    height: 78px;    
 }
 
 .wrapper-logo {
@@ -10634,7 +10634,7 @@ footer .col ul li {
     line-height: 1.8em;
 }
 
-footer .col ul li.doble {
+footer ul li.doble {
     margin-top: 1.75em;
 }
 
@@ -11661,6 +11661,49 @@ h2.titular-3 {
     }
 }
 
+
+
+.texto-altura-fija .texto-5, .texto-altura-fija .texto-6, .texto-altura-fija .texto-25,
+.texto-altura-fija .texto-26, .texto-altura-fija .texto-27, .texto-altura-fija .texto-2b,
+.texto-altura-fija .texto-24, .texto-altura-fija .texto-23 {
+    vertical-align: text-top;
+    overflow-wrap: break-word;
+    height: 65px;
+    display: flex;
+    /*flex-direction: column-reverse;
+        overflow: hidden;*/
+}
+
+.texto-altura-fija .texto-26 {
+    font-size: 20px;
+    height: 105px;
+}
+
+.texto-altura-fija .texto-2b {
+    height: 120px;
+}
+
+.texto-altura-fija .texto-24 {
+    height: 300px;
+    display: block;
+}
+
+.texto-10 {
+    font-size: 14px;
+}
+
+.texto-2b.texto-2b {
+    font-size: 12px;
+}
+
+.bloque-negro .texto-10 {
+    font-size: 14px;
+}
+
+.bloque-negro .texto-12 {
+    font-size: 11px;
+}
+
 @media (max-width: 768px) {
     .col-xs-12{
         padding-left: 0px;
@@ -11721,6 +11764,10 @@ h2.titular-3 {
         display:block;
         margin: 0 auto;
     }
+
+    .texto-altura-fija .texto-24 {
+        height: 450px;
+    }
 }
 
 body {
@@ -11731,20 +11778,16 @@ body {
 
 #tipo-de-viaje, #viajes-a-asia, #viajes-a-pacifico, #viajes-a-america, #-experiencias {
     z-index: 1000;
-    position: absolute;
-    left: 250px;
-    width: 250px;
-    height: 100%;
-    margin-left: -250px;
+    width: 250px;  
     overflow-y: auto;
     background: white;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    margin-top: 70px;
+    transition: all 0.5s ease;    
     visibility: hidden;
     opacity: 0;
+    display:none;
 }
 
 #menu.tipodeviaje #tipo-de-viaje,
@@ -11754,11 +11797,20 @@ body {
 #menu.experiencias #-experiencias {
     visibility: visible;
     opacity: 1;
+    display:block;
 }
 
-.sidebar-nav {
-    position: absolute;
-    top: 0;
+#menu.tipodeviaje #contenido-principal,
+#menu.viajes-asia #contenido-principal,
+#menu.viajes-pacifico #contenido-principal,
+#menu.viajes-america #contenido-principal,
+#menu.experiencias #contenido-principal {
+    visibility:hidden;
+    opacity:0;
+    display:none;
+}
+
+.sidebar-nav {   
     width: 250px;
     margin: 0;
     padding: 0;
@@ -11874,8 +11926,10 @@ body {
         padding-top: 0;
     }
 
-    .logo {
-        margin-top: 0;
+    .logo {              
+        zoom: 0.55;
+        -moz-transform: scale(0.55);
+        -moz-transform-origin: 0 0;
     }
 
     .thumbnail .texto-27 {
@@ -11961,11 +12015,6 @@ body {
         margin-bottom: 20px;
     }
 
-    .caja-drag .btn-borrar {
-        position: relative;
-        top: -150px;
-    }
-
     #viajes-encontrados.titular-1 {
         font-size: 12px;
     }
@@ -12033,7 +12082,7 @@ body {
 
 
     .texto-5, .texto-6, .texto-25 {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .texto-10, .texto-21, .texto-26 {
@@ -12146,8 +12195,9 @@ body {
     }
 
         .slideout-open .slideout-menu {
-            display: block;
+            display: block;            
         }        .toggle-button, .close-button{
+            margin-top: 12px;
             background-color:white;
             border:none;
         }
@@ -12177,10 +12227,7 @@ body {
     }
 
     .topbar .btn-negro {
-        height: 24px;
-        line-height: 25px;
-        padding: 0 8px;
-        font-size: 10px;
+        width:100%;      
     }
 
     .topbar .glyphicon.glyphicon-menu-hamburger {
@@ -12188,7 +12235,8 @@ body {
     }
 
     .topbar {
-        padding: 0 10px 40px 10px;
+        /*padding: 0 10px 40px 10px;*/
+        padding: 15px 0;
     }
 
     .dropdown-mobile {
@@ -12315,47 +12363,13 @@ body {
     }
 
 
-    .texto-altura-fija .texto-5, .texto-altura-fija .texto-6, .texto-altura-fija .texto-25,
-    .texto-altura-fija .texto-26, .texto-altura-fija .texto-27, .texto-altura-fija .texto-2b,
-    .texto-altura-fija .texto-24, .texto-altura-fija .texto-23 {
-        vertical-align: text-bottom;
-        overflow-wrap: break-word;
-        height: 25px;
-        display: flex;
-        flex-direction: column-reverse;
-        overflow: hidden;
-    }
-
-    .texto-altura-fija .texto-26 {
-        font-size: 20px;
-        height: 105px;
-    }
-
-    .texto-altura-fija .texto-2b {
-        height: 120px;
-    }
-
-    .texto-altura-fija .texto-24 {
-        height: 420px;
-        display: block
-    }
-
-    .texto-10 {
-        font-size: 14px;
-    }
-
-    .texto-2b.texto-2b {
-        font-size: 12px;
-    }
-
-    .bloque-negro .texto-10 {
-        font-size: 14px;
-    }
-
-    .bloque-negro .texto-12 {
-        font-size: 11px;
-    }
-
 .menu {
     display:none
+}
+
+.slideout-open .panel {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    position:fixed;
 }
