@@ -1731,12 +1731,14 @@ pre {
 }
 
 .container {
+    width:100%;
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
 }
 
+/*
 @media (min-width: 768px) {
     .container {
         width: 750px;
@@ -1754,7 +1756,7 @@ pre {
         width: 1170px;
     }
 }
-
+*/
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
@@ -4939,7 +4941,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-fixed-top,
 .navbar-fixed-bottom {
-    position: fixed;
     right: 0;
     left: 0;
     z-index: 1030;
@@ -9513,8 +9514,7 @@ h3.texto-25 {
  */
 
 body {
-    padding-top: 145px;
-    position: relative;
+   position: relative;
 }
 
 a {
@@ -10118,6 +10118,7 @@ a.thumbnail-2:hover .texto-6 {
 }
 
 .thumbnail-5 {
+    max-width:327px;
     display: block;
     padding: 30px 0 0 0;
     margin-bottom: 20px;
@@ -10141,7 +10142,7 @@ a.thumbnail-2:hover .texto-6 {
     position: absolute;
     bottom: 45px;
     left: 50%;
-    margin-left: -35px;
+    margin-left: -45px;
     z-index: 2;
 }
 
@@ -10482,10 +10483,6 @@ hr.sep-2.sep-2 {
 /*
  * Sidebar
  */
-
-.sidebar-module {
-    float: left;
-}
 
 .nav-sidebar {
     display: block;
@@ -11061,6 +11058,8 @@ h3.titular-2b.modulo {
 
 .caja-drag .btn-borrar {
     text-decoration: underline;
+    width:100%;
+    text-align:right;
 }
 
 .slider {
@@ -11216,8 +11215,8 @@ h3.titular-2b.modulo {
 }
 
 .lat-izq-detail {
-    float: left;
-    /*width: 301px;*/
+    /*float: left;
+    width: 301px;*/
     padding: 32px 18px 0px 28px;
 }
 
@@ -11436,7 +11435,7 @@ h3.titular-2b.modulo {
 
 .form-horizontal.contacto .privacidad,
 .form-horizontal.baja .privacidad {
-    margin-left: 20px;
+    
     margin-top: 2px;
 }
 
@@ -11675,12 +11674,7 @@ h2.titular-3 {
 }
 
 .texto-altura-fija .texto-26 {
-    font-size: 20px;
     height: 105px;
-}
-
-.texto-altura-fija .texto-2b {
-    height: 120px;
 }
 
 .texto-altura-fija .texto-24 {
@@ -11704,12 +11698,42 @@ h2.titular-3 {
     font-size: 11px;
 }
 
+@media (max-width: 1024px){
+    .texto-altura-fija .texto-6 {
+        height: 80px;
+    }
+
+    .texto-altura-fija .texto-26 {
+        font-size: 20px;
+        height: 65px;
+    }
+
+    .texto-altura-fija .texto-10 {
+        height: 30px;
+    }
+
+    .thumbnail-5 .btn {
+        margin-left: -48px;
+    }
+}
+
 @media (max-width: 768px) {
-    .col-xs-12{
+    .texto-altura-fija .texto-6{
+        height:95px;
+    }
+
+    .texto-altura-fija .texto-26 {
+        height: 105px;
+    }
+
+    .texto-altura-fija .texto-2b {
+        height: 120px;
+    }
+
+    .caja-drag .col-xs-12 {
         padding-left: 0px;
         padding-right: 0px;
     }
-
     .main .flexslider .flex-control-nav {
         width: 100%;
         right: auto;
@@ -11727,6 +11751,7 @@ h2.titular-3 {
     }
     .f-linea-gris, .f-linea-gris-b {
         text-align: center;
+        overflow-wrap:break-word;
     }
 
     .texto-27 {
@@ -11922,18 +11947,23 @@ body {
 }
 
 @media(max-width:767px) {
+    .col-xs-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     body {
         padding-top: 0;
     }
 
-    .logo {              
+    .logo {
         zoom: 0.55;
         -moz-transform: scale(0.55);
         -moz-transform-origin: 0 0;
     }
 
     .thumbnail .texto-27 {
-        font-size: 10px;        
+        font-size: 10px;
     }
 
     .nav-sidebar li ul {
@@ -12130,39 +12160,38 @@ body {
         font-size: 16px;
     }
 
-    .texto-23{
+    .texto-23 {
         font-size: 20px;
     }
 
-    .texto-18{
+    .texto-18 {
         font-size: 16px;
     }
 
-    .thumbnail-4 .badge-info{
+    .thumbnail-4 .badge-info {
         margin-left: 0px;
     }
 
-    .thumbnail-4 .btn{
+    .thumbnail-4 .btn {
         margin-top: 0px;
     }
 
-    .sin-padding .btn-negro-2{
+    .sin-padding .btn-negro-2 {
         font-size: 10px;
     }
 
-    .thumbnail-4 h3{
-        margin-bottom:0px;
+    .thumbnail-4 h3 {
+        margin-bottom: 0px;
     }
-    .confirmNewsletter .modal-dialog{
-        width:auto;
+
+    .confirmNewsletter .modal-dialog {
+        width: auto;
     }
 
     .form-horizontal.contacto .privacidad {
-        font-size:10px;
+        font-size: 10px;
     }
-    .form-horizontal.contacto .privacidad {
-        margin-left: 0px;
-    }
+}
 
     body {
         width: 100%;
@@ -12200,7 +12229,19 @@ body {
             margin-top: 12px;
             background-color:white;
             border:none;
-        }
+        }
+
+    .texto-altura-fija .texto-6 {
+        height: 65px;
+    }
+
+    .texto-altura-fija .texto-2b {
+        height: 80px;
+    }
+
+    .thumbnail-5 .btn {
+        margin-left: -30px;
+    }
 }
 
 @media(max-width:320px) {
@@ -12372,4 +12413,8 @@ body {
     height: 100%;
     overflow: hidden;
     position:fixed;
+}
+
+#cerrartipo{
+    padding:20px;
 }
