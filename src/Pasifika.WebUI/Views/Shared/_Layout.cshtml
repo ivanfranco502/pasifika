@@ -107,7 +107,7 @@
                         </div>
                     </div>
 
-                                    <div id="tipo-de-viaje">
+                    <div id="tipo-de-viaje">
                     <ul class="sidebar-nav">
                         <div class="row">
                             <div class="col-xs-2">
@@ -214,19 +214,19 @@
                         </div>
                     </ul>
                 </div>
-
+                   
                     <div class="newsletter-container">
                         <div class="row">
                             
 
                             <div class="col-xs-12 text-center">
-                                <form class="newsletter-footer newsletter-form">
+                                <form class="newsletter-footer newsletter-menu-form">
 
                                     <div class="form-group">
                                         <label class="control-label texto-6 text-uppercase">
                                             Nuestra Newsletter
                                         </label>
-                                        <input class="form-control input-text" id="emailNews" type="text" placeholder="">
+                                        <input class="form-control input-text" id="emailNewsMenu" type="text" placeholder="">
                                         <button type="submit" class="btn btn-negro-3 submit-button">Suscribirse</button>
                                     </div>
 
@@ -607,13 +607,13 @@
                             <div class="row">
 
                                 <div class="col-xs-8 col-xs-offset-2 text-center">
-                                    <form class="newsletter-footer newsletter-form">
+                                    <form class="newsletter-footer newsletter-mobile-form">
 
                                         <div class="form-group">
                                             <label class="control-label texto-6">
                                                 Nuestra Newsletter:
                                             </label>
-                                            <input class="form-control input-text" id="emailNews" type="text" placeholder="">
+                                            <input class="form-control input-text" id="emailNewsMobile" type="text" placeholder="">
                                             <button type="submit" class="btn btn-negro-3 submit-button">Suscribirse</button>
                                         </div>
 
@@ -1070,69 +1070,69 @@
                             </div>
                         </div>
                     </div>
-      </footer>
+            </footer>          
+        </div>
 
-            <div class="modal fade confirmNewsletter">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header texto-9">
-                            <button type="button" class="close" data-dismiss="modal">
-                                <span aria-hidden="true"><i class="ico borrar-inv"></i></span><span class="sr-only">Cerrar</span>
-                            </button>
-                            @*<h4 class="modal-title  texto-9"><strong>GRACIAS POR INSCRIBIRSE A NUESTRA NEWSLETTER</strong></h4>*@
-                        </div>
+    <div class="modal fade confirmNewsletter">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header texto-9">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true"><i class="ico borrar-inv"></i></span><span class="sr-only">Cerrar</span>
+                    </button>
+                    @*<h4 class="modal-title  texto-9"><strong>GRACIAS POR INSCRIBIRSE A NUESTRA NEWSLETTER</strong></h4>*@
+                </div>
 
-                        <div class="modal-body">
-                            <form class="form-horizontal newsletter newsletter-form-confirm">
-                                <div class="confirm">
-                                    @*<p class="texto-9">
-                                            Por favor verifique nuevamente su dirección de email. Puede optar por darse de baja de nuestra base de datos en cualquier momento en el siguiente enlace <a href="@Url.RouteUrl(new { controller = "Formulario", action = "Baja", url = "Condiciones-generales" })">Solicitud de baja</a>
+                <div class="modal-body">
+                    <form class="form-horizontal newsletter newsletter-form-confirm">
+                        <div class="confirm">
+                            @*<p class="texto-9">
+                                    Por favor verifique nuevamente su dirección de email. Puede optar por darse de baja de nuestra base de datos en cualquier momento en el siguiente enlace <a href="@Url.RouteUrl(new { controller = "Formulario", action = "Baja", url = "Condiciones-generales" })">Solicitud de baja</a>
 
-                                            <br>
-                                        </p>*@
+                                    <br>
+                                </p>*@
 
-                                    <div class="form-group">
-                                        @*<label class="control-label texto-4">Email:</label>*@
-                                        <input style="display:none;" class="form-control input-text " name="emailNewsConfirm" id="emailNewsConfirm" type="text" placeholder="">
-                                    </div>
+                            <div class="form-group">
+                                @*<label class="control-label texto-4">Email:</label>*@
+                                <input style="display:none;" class="form-control input-text " name="emailNewsConfirm" id="emailNewsConfirm" type="text" placeholder="">
+                            </div>
 
-                                    <div class="form-group">
-                                        <label class="checkbox-inline privacidadNews">
-                                            <input type="checkbox" name="privacidadNews" id="privacidadNews" value="true" /> He leido y acepto la <a href="@Url.RouteUrl(new { controller = "Notas" ,
+                            <div class="form-group">
+                                <label class="checkbox-inline privacidadNews">
+                                    <input type="checkbox" name="privacidadNews" id="privacidadNews" value="true" /> He leido y acepto la <a href="@Url.RouteUrl(new { controller = "Notas" ,
                                                                                                                                                                         action = "Detalle",
                                                                                                                                                                         url = "politica-privacidad" })" target="_blank">política de privacidad</a>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="">
-                                        <p class="texto-7 error-text hide">Por favor revise los campos.</p>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="">
-                                        <button type="submit" class="btn btn-blanco submit-button">Confirmar</button>
-                                        <br>
-                                        <i class="ico petalos-inv"></i>
-                                        <br>
-                                    </div>
-                                </div>
-                            </form>
+                                </label>
+                            </div>
                         </div>
-                        <div class="feedback-text">
-                            <p class="texto-9">
-                                GRACIAS POR INSCRIBIRSE A NUESTRA NEWSLETTER
-                                <br><br>
+                        <div class="">
+                            <div class="">
+                                <p class="texto-7 error-text hide">Por favor revise los campos.</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="">
+                                <button type="submit" class="btn btn-blanco submit-button">Confirmar</button>
+                                <br>
                                 <i class="ico petalos-inv"></i>
-                            </p>
+                                <br>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.modal-content -->
+                    </form>
                 </div>
-                <!-- /.modal-dialog -->
+                <div class="feedback-text">
+                    <p class="texto-9">
+                        GRACIAS POR INSCRIBIRSE A NUESTRA NEWSLETTER
+                        <br><br>
+                        <i class="ico petalos-inv"></i>
+                    </p>
+                </div>
             </div>
-            <!-- /.modal -->
+            <!-- /.modal-content -->
         </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/flexslider")

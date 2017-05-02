@@ -55,6 +55,26 @@ $(function() {
         return false;
     });
 
+    // Newsletter Menu form
+    $('.newsletter-menu-form').on('submit', function (e) {
+        e.preventDefault();
+        $('.confirmNewsletter').modal();
+        $('.confirm').parent().show();
+        $('.feedback-text').hide();
+        $('#emailNewsConfirm').val($('#emailNewsMenu').val())
+        return false;
+    });
+
+    // Newsletter Menu form
+    $('.newsletter-mobile-form').on('submit', function (e) {
+        e.preventDefault();
+        $('.confirmNewsletter').modal();
+        $('.confirm').parent().show();
+        $('.feedback-text').hide();
+        $('#emailNewsConfirm').val($('#emailNewsMobile').val())
+        return false;
+    });
+
 // Contacto form
     $('.confirmNewsletter').on('submit', function (e) {
         e.preventDefault();

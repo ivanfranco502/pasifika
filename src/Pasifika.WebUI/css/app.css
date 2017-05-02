@@ -1199,7 +1199,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .img-rounded {
@@ -1413,7 +1413,7 @@ mark,
 }
 
 .text-left {
-    text-align: center;
+    text-align: left;
 }
 
 .text-right {
@@ -5857,8 +5857,8 @@ a.badge:focus {
 
     .thumbnail > img,
     .thumbnail a > img {
-        margin-left: auto;
-        margin-right: auto;
+        /*margin-left: auto;
+        margin-right: auto;*/
     }
 
 a.thumbnail:hover,
@@ -10050,11 +10050,11 @@ a.thumbnail-2:hover .texto-6 {
     margin-top: 15px;
 }
 
-.thumbnail-4 h3 {
-    height: 2.8em;
-    line-height: 1.3em;
-    margin-bottom: 10px;
-}
+    .thumbnail-4 h3 {
+        /*height: 2.8em;*/
+        line-height: 1.3em;
+        margin-bottom: 10px;
+    }
 
 .thumbnail-4 .texto-14 {
     margin: 0;
@@ -12002,6 +12002,7 @@ body {
 
                 .sidebar-nav li a {
                     color: black;
+                    font-size:14px;
                 }
 
     #links {
@@ -12111,7 +12112,7 @@ body {
     }
 
 
-    .texto-5, .texto-6, .texto-25 {
+    .texto-5 a, .caption .texto-6 , .texto-25 {
         font-size: 12px;
     }
 
@@ -12140,7 +12141,7 @@ body {
     }
 
     .titular-2, .titular-2b {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .btn.btn-blanco.ver-mas {
@@ -12183,7 +12184,6 @@ body {
     .thumbnail-4 h3 {
         margin-bottom: 0px;
     }
-
     .confirmNewsletter .modal-dialog {
         width: auto;
     }
@@ -12191,7 +12191,6 @@ body {
     .form-horizontal.contacto .privacidad {
         font-size: 10px;
     }
-}
 
     body {
         width: 100%;
@@ -12232,7 +12231,7 @@ body {
         }
 
     .texto-altura-fija .texto-6 {
-        height: 65px;
+        height: 70px;
     }
 
     .texto-altura-fija .texto-2b {
@@ -12241,6 +12240,11 @@ body {
 
     .thumbnail-5 .btn {
         margin-left: -30px;
+    }
+
+    .wrapper-detail {
+        margin-bottom: 0px;
+        padding-bottom:15px;
     }
 }
 
@@ -12284,11 +12288,11 @@ body {
         background: #f7f7f7;
         margin-top: 0;
         padding-top: 20px;
+        padding-left:15px;
     }
 
         .dropdown-mobile h2 {
-            border-top: 2px solid rgba(0, 0, 0, 0.075);
-            border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+            border-top: 2px solid rgba(0, 0, 0, 0.075);            
             padding: 10px 0px;
             font-size: 16px;
             font-weight: bold;
@@ -12301,8 +12305,8 @@ body {
                 margin-top: 5px;
             }
 
-        .dropdown-mobile p {
-            border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+        .dropdown-mobile p:not(.texto-9) {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.075);            
             padding: 10px 0px;
             font-size: 14px;
             margin: 0;
@@ -12417,4 +12421,8 @@ body {
 
 #cerrartipo{
     padding:20px;
+}
+
+.links-dropdown {
+    border-top: 2px solid rgba(0, 0, 0, 0.075);
 }
