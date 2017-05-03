@@ -1108,6 +1108,7 @@
     <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
     <Content Include="Views\Busqueda\List.cshtml" />
     <Content Include="Views\Menu\Destinos.cshtml" />
+    <Content Include="Views\Menu\MDestinos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

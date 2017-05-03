@@ -1199,7 +1199,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
 }
 
 .img-rounded {
@@ -9756,7 +9756,7 @@ input[type=text]::-ms-reveal {
 .btn-blanco {
     background-color: #fff;
     height: 46px;
-    line-height: 45px;
+    /*line-height: 45px;*/
     border-radius: 0;
     border: 1px solid #000;
     padding: 0 25px;
@@ -10048,6 +10048,9 @@ a.thumbnail-2:hover .texto-6 {
 
 .thumbnail-4 .btn {
     margin-top: 15px;
+    width:100%;
+    overflow-wrap:break-word;
+    white-space:normal;
 }
 
     .thumbnail-4 h3 {
@@ -10316,6 +10319,7 @@ hr.sep-2.sep-2 {
 .wrapper-logo {
     display: inline-block;
     height: 146px;
+    padding-top:30px;
 }
 
 .blq-der {
@@ -11002,10 +11006,14 @@ h3.titular-2b.modulo {
 
 
 
-.recuadro-blanco form.newsletter .submit-button {
-    float: left;
-    margin-left: 14px;
-}
+    .recuadro-blanco form.newsletter .submit-button {
+        /*float: left;
+        margin-left: 14px;*/
+        width: 100%;
+        overflow-wrap: break-word;
+        white-space: normal;
+        padding: 0px;
+    }
 
     .recuadro-blanco form.newsletter .control-label {
         font-weight: normal;
@@ -11781,8 +11789,8 @@ h2.titular-3 {
          margin-top:0px;
     }
 
-    .newsletter-footer.newsletter-form{
-        margin-top:10%;
+    .newsletter-footer.newsletter-form, .newsletter-footer.newsletter-mobile-form, .newsletter-footer.newsletter-menu-form {
+        margin-top: 10%;
     }
 
     .form-group .btn-negro{
@@ -11877,14 +11885,14 @@ body {
                 background: none;
             }
 
-.thumbnail .texto-27 {   
+.thumbnail .texto-27 {
     vertical-align: text-bottom;
     overflow-wrap: normal;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     height: 25px;
     display: flex;
     flex-direction: column-reverse;
-    margin: 15px 0px 5px 0px;
+    /*margin: 15px 0px 5px 0px;*/
 }
 
 @media(min-width:768px) {
@@ -12002,7 +12010,7 @@ body {
 
                 .sidebar-nav li a {
                     color: black;
-                    font-size:14px;
+                    font-size: 12px;
                 }
 
     #links {
@@ -12112,7 +12120,7 @@ body {
     }
 
 
-    .texto-5 a, .caption .texto-6 , .texto-25 {
+    .texto-5 a, .caption .texto-6, .texto-25 {
         font-size: 12px;
     }
 
@@ -12184,6 +12192,7 @@ body {
     .thumbnail-4 h3 {
         margin-bottom: 0px;
     }
+
     .confirmNewsletter .modal-dialog {
         width: auto;
     }
@@ -12223,12 +12232,14 @@ body {
     }
 
         .slideout-open .slideout-menu {
-            display: block;            
-        }        .toggle-button, .close-button{
-            margin-top: 12px;
-            background-color:white;
-            border:none;
+            display: block;
         }
+
+    .toggle-button, .close-button {
+        margin-top: 12px;
+        background-color: white;
+        border: none;
+    }
 
     .texto-altura-fija .texto-6 {
         height: 70px;
@@ -12244,7 +12255,10 @@ body {
 
     .wrapper-detail {
         margin-bottom: 0px;
-        padding-bottom:15px;
+        padding-bottom: 15px;
+    }
+    .texto-5{
+        font-size:13px;
     }
 }
 
@@ -12262,6 +12276,50 @@ body {
         .control-label {
             font-size: 12px;
         }
+
+        .btn-gris{
+            padding:0;
+            overflow-wrap:break-word;
+            white-space:normal;
+        }
+
+        .btn-blanco{
+            height:100%;
+        }
+        .thumbnail .caption{
+            padding: 10px 0;
+        }
+
+        .btn-negro-2{            
+            font-size:12px;
+        }
+
+        .col-xs-5 a.btn.btn-negro-2 {
+            padding:0;
+        }
+
+        .bloque-negro a.btn{
+            overflow-wrap:break-word;
+            white-space:normal;              
+        }
+        .thumbnail .texto-27{
+            height:50px;
+        }
+        .bloque-negro a.btn {
+            line-height: inherit;
+            height: 100%;
+        }
+    }
+@media(max-width:950px) {
+    .select2-results, .select2-results .select2-result-label {
+        padding: 0;
+        margin: 0;
+    }
+}
+    @media(max-width:1200px) {
+        .bloque-negro a.btn {
+            margin: 20px 5px;
+        }
     }
     /*Media queries responsive*/
 
@@ -12272,7 +12330,7 @@ body {
     }
 
     .topbar .btn-negro {
-        width:100%;      
+        width: 100%;
     }
 
     .topbar .glyphicon.glyphicon-menu-hamburger {
@@ -12288,25 +12346,29 @@ body {
         background: #f7f7f7;
         margin-top: 0;
         padding-top: 20px;
-        padding-left:15px;
+        padding-left: 15px;
     }
 
         .dropdown-mobile h2 {
-            border-top: 2px solid rgba(0, 0, 0, 0.075);            
+            border-top: 2px solid rgba(0, 0, 0, 0.075);
             padding: 10px 0px;
             font-size: 16px;
             font-weight: bold;
         }
 
-            .dropdown-mobile h2 span {
-                display: block;
-                font-size: 9px;
-                color: #cacaca;
-                margin-top: 5px;
-            }
+        .dropdown-mobile .row.text-left {
+            padding: 0 8%;
+        }
+
+        .dropdown-mobile h2 span {
+            display: block;
+            font-size: 9px;
+            color: #cacaca;
+            margin-top: 5px;
+        }
 
         .dropdown-mobile p:not(.texto-9) {
-            border-bottom: 2px solid rgba(0, 0, 0, 0.075);            
+            border-bottom: 2px solid rgba(0, 0, 0, 0.075);
             padding: 10px 0px;
             font-size: 14px;
             margin: 0;
@@ -12316,7 +12378,7 @@ body {
             display: none;
         }
 
-    .sidebar-nav input#emailNews {
+    .sidebar-nav input#emailNews, .sidebar-nav input#emailNewsMenu {
         margin: 5px 30px;
         width: calc(100% - 60px);
         border: 1px solid black;
@@ -12408,21 +12470,25 @@ body {
     }
 
 
-.menu {
-    display:none
-}
+    .menu {
+        display: none
+    }
 
-.slideout-open .panel {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-    position:fixed;
-}
+    .slideout-open .panel {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        position: fixed;
+    }
 
-#cerrartipo{
-    padding:20px;
-}
+    #cerrartipo {
+        padding: 20px;
+    }
 
-.links-dropdown {
-    border-top: 2px solid rgba(0, 0, 0, 0.075);
-}
+    .links-dropdown {
+        border-top: 2px solid rgba(0, 0, 0, 0.075);
+    }
+
+    .bloque-gris {
+        overflow-wrap: break-word;
+    }

@@ -60,7 +60,7 @@
                                 <li>
                                     <a href="#tipodeviaje" id="tipodeviaje" class="tipo-1">Tipo de Viaje</a>
                                 </li>
-                                @Html.Action("IzquierdaDestinos", "Menu", new { url = ViewBag.menusseleccionado })
+                                @Html.Action("MDestinos", "Menu", new { url = ViewBag.menusseleccionado })
                                 <li>
                                     <a href="@Url.RouteUrl(new { controller = "Tipo2" ,
                                           action = "HotelPortada"})" class="tipo-1">Selección de Hoteles</a>
@@ -1205,8 +1205,6 @@
             $("#menu").toggleClass("experiencias", true);
         });
     </script>
-
-
 
     @RenderSection("scripts", required: false)
 </body>

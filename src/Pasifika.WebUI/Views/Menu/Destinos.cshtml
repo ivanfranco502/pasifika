@@ -39,14 +39,6 @@
     }
 
 <script type="text/javascript">
-
-    $(document).ready(function () {
-        @if(menuRegion != string.Empty){
-            @:$('@menuRegion').collapse('show')
-        }
-    });
-
-
     $("#viajes-asia").click(function (e) {
         e.preventDefault();
         $("#menu").toggleClass("viajes-asia", true);
