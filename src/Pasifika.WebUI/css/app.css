@@ -1738,7 +1738,7 @@ pre {
     padding-right: 15px;
 }
 
-/*
+
 @media (min-width: 768px) {
     .container {
         width: 750px;
@@ -1756,7 +1756,7 @@ pre {
         width: 1170px;
     }
 }
-*/
+
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
@@ -9327,6 +9327,7 @@ a.texto-9.texto-9b,
 }
 
 .texto-14 {
+    overflow-wrap:break-word;
     font-size: 12px;
     color: #000;
 }
@@ -9431,6 +9432,7 @@ a.texto-9.texto-9b,
 .texto-25 {
     font-size: 21px;
     color: #000;
+    overflow-wrap:break-word;
 }
 
 h3.texto-25 {
@@ -9874,7 +9876,7 @@ label a {
 }
 
 .thumbnail img {
-    max-height: 416px;
+    width:100%;
 }
 
 .thumbnail .texto-4,
@@ -9884,7 +9886,7 @@ label a {
 }
 
 .thumbnail .texto-27 {
-    margin: 20px 15px;
+    margin: 20px 0;
     text-transform: uppercase;
 }
 
@@ -10292,6 +10294,7 @@ hr.sep-2.sep-2 {
 
 .navbar-header {
     width: 100%;
+    max-width:1140px;
     height: 145px;
 }
 
@@ -10876,8 +10879,7 @@ h3.titular-2b.modulo {
 
 .main .flexslider .flex-control-nav {
     width: auto;
-    bottom: 48px;
-    right: 50px;
+    bottom: 0px;    
     left: auto;
     margin: 0;
     z-index: 999;
@@ -11725,7 +11727,19 @@ h2.titular-3 {
     }
 }
 
+.foto_slide {
+    background-size: cover;
+    height: 600px;
+    max-width: 100%
+}
+
 @media (max-width: 768px) {
+
+    .foto_slide {
+        height: 400px;        
+    }
+
+    
     .texto-altura-fija .texto-6{
         height:95px;
     }
@@ -12222,7 +12236,7 @@ body {
     .slideout-panel {
         position: relative;
         z-index: 1;
-        will-change: transform;
+        /*will-change: transform;*/
     }
 
     .slideout-open,
@@ -12259,6 +12273,14 @@ body {
     }
     .texto-5{
         font-size:13px;
+    }
+
+    .media.quienes {
+        margin-top: 0;
+    }
+
+    .resumen-nota img {
+       width:100%;
     }
 }
 
@@ -12492,3 +12514,24 @@ body {
     .bloque-gris {
         overflow-wrap: break-word;
     }
+
+    .topbar, .navbar-header{
+        position:fixed;
+        top:-1px;
+    }
+   
+    .navbar-header{
+        height:145px;
+        background-color:white;
+    }
+
+    .topbar{
+        width:100%;
+        z-index:1000;
+        background-color:white;
+    }
+
+    #up{
+        margin-top:78px;
+    }
+
