@@ -11735,6 +11735,11 @@ h2.titular-3 {
 }
 
 @media (max-width: 768px) {
+
+    .main .flexslider .flex-control-nav {
+        bottom: 0px;
+    }
+
     .foto_slide {
         height: 400px;        
     }
@@ -12281,10 +12286,7 @@ body {
 
     .resumen-nota img {
        width:100%;
-    }
-    .main .flexslider .flex-control-nav {
-        bottom: 0px;
-    }
+    }   
 }
 
 @media(max-width:320px) {
