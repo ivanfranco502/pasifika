@@ -10879,7 +10879,8 @@ h3.titular-2b.modulo {
 
 .main .flexslider .flex-control-nav {
     width: auto;
-    bottom: 0px;    
+    bottom: 48px;
+    right:50px;
     left: auto;
     margin: 0;
     z-index: 999;
@@ -11734,7 +11735,6 @@ h2.titular-3 {
 }
 
 @media (max-width: 768px) {
-
     .foto_slide {
         height: 400px;        
     }
@@ -12281,6 +12281,9 @@ body {
 
     .resumen-nota img {
        width:100%;
+    }
+    .main .flexslider .flex-control-nav {
+        bottom: 0px;
     }
 }
 
