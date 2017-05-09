@@ -312,72 +312,71 @@
             </div>
             <!-- /#contenido-pagina -->
             <nav class="navbar navbar-fixed-top hidden-xs">
-                <div class="container">
-
                     <div class="navbar-header">
+                        <div class="container">
+                            <div class="wrapper-logo col-sm-3 col-lg-2">
+                                <a class="logo" href="/" title="Pasifika Viajes">
+                                    <span class="hide">Pasifika Viajes</span>
+                                </a>
+                            </div>
 
-                        <div class="wrapper-logo col-sm-3 col-lg-2">
-                            <a class="logo" href="/" title="Pasifika Viajes">
-                                <span class="hide">Pasifika Viajes</span>
-                            </a>
-                        </div>
+                            <div class="blq-der col-sm-9 col-lg-10">
+                                <div class="barra">
 
-                        <div class="blq-der col-sm-9 col-lg-10">
-                                    <div class="barra">
-
-                                        @using (Html.BeginForm("Index", "Busqueda", FormMethod.Post, new { @class = "form-inline buscador" }))
-                                        {
+                                    @using (Html.BeginForm("Index", "Busqueda", FormMethod.Post, new { @class = "form-inline buscador" }))
+                                    {
 
 
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-addon ico lupa"></div>
-                                                    <input class="form-control input-text typeahead clearable" name="texto" data-provide="typeahead" autocomplete="off" type="text" placeholder="Introduce destino, hotel...">
-                                                </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon ico lupa"></div>
+                                                <input class="form-control input-text typeahead clearable" name="texto" data-provide="typeahead" autocomplete="off" type="text" placeholder="Introduce destino, hotel...">
                                             </div>
+                                        </div>
 
 
                                             <button type="submit" class="btn btn-default submit-button hidden-sm">Buscar</button>
 
 
-                                        }
+                                    }
 
 
-                                        <div class="pull-right">
-                                            <div class="telefono">T +34 91 715 5422</div>
-                                            <a href="@Url.RouteUrl(new
+                                    <div class="pull-right">
+                                        <div class="telefono">T +34 91 715 5422</div>
+                                        <a href="@Url.RouteUrl(new
                                         {
                                             controller = "Formulario",
                                             action = "Index",
                                             tipo = 1
                                         })" class="btn btn-negro">Contacto</a>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <ol class="breadcrumb">
-                                        @Html.MvcSiteMap().SiteMapPath()
-                                    </ol>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <ol class="breadcrumb">
+                                            @Html.MvcSiteMap().SiteMapPath()
+                                        </ol>
 
-                                    <ul class="nav-sec">
-                                        <li>
-                                            <a @if (ViewBag.menusseleccionado == "QuienesSomos") { @: class="li-selected"
-                                                                                                                                                                                                                                                                                                                      } href="@Url.RouteUrl(new { controller = "QuienesSomos" ,
+                                        <ul class="nav-sec">
+                                            <li>
+                                                <a @if (ViewBag.menusseleccionado == "QuienesSomos") { @: class="li-selected"
+                                                                                                                                                                                                                                                                                                                                                                         } href="@Url.RouteUrl(new { controller = "QuienesSomos" ,
                                           action = "Index"})">Qui&eacute;nes Somos</a>
-                                        </li>
-                                        <li>
-                                            <a @if (ViewBag.menusseleccionado == "preguntas-frecuentes") { @: class="li-selected"
-                                                                                                                                                                                                                                                                                                                      }
-                                               href="@Url.RouteUrl(new { controller = "Notas" ,
+                                            </li>
+                                            <li>
+                                                <a @if (ViewBag.menusseleccionado == "preguntas-frecuentes") { @: class="li-selected"
+                                                                                                                                                                                                                                                                                                                                                                         }
+                                                   href="@Url.RouteUrl(new { controller = "Notas" ,
                                           action = "Detalle",
                                           url = "preguntas-frecuentes" })">FAQ's</a>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                 </div>
             </nav>
             <!-- /.navbar -->

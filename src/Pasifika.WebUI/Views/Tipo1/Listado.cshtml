@@ -36,9 +36,11 @@
             </div>
         </div>
 
-        @*@Html.Action("Cargar", "Destacado", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })*@
+        <div class="hidden-xs">
+            @Html.Action("Cargar", "Destacado", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
 
-        @*@Html.Action("Cargar", "InfoRelacion", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })*@
+            @Html.Action("Cargar", "InfoRelacion", new { seccionId = ViewBag.seccionId, tagId = ViewBag.TagId, destinoId = ViewBag.destinoId })
+        </div>
 
             <div class="row modulo">
                 <div class="col-xs-12">
