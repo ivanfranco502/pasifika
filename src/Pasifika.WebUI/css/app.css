@@ -1757,6 +1757,12 @@ pre {
     }
 }
 
+@media (min-width: 1264px) {
+    .container {
+        width: 1263px;
+    }
+}
+
 .container-fluid {
     margin-right: auto;
     margin-left: auto;
@@ -11678,7 +11684,7 @@ h2.titular-3 {
     vertical-align: text-top;
     overflow-wrap: break-word;
     height: 65px;
-    display: flex;
+    /*display: flex;
     /*flex-direction: column-reverse;
         overflow: hidden;*/
 }
@@ -12537,7 +12543,7 @@ body {
     }
 
     #up{
-        margin-top:78px;
+        margin-top:98px;
     }
 
 @media(max-width: 1199px){
@@ -12547,6 +12553,10 @@ body {
     }
     .texto-altura-fija .texto-10 {
         height: 30px;
+    }
+
+    .titular-1.f-linea-gris {
+        overflow-wrap: break-word;
     }
 }
 
@@ -12563,6 +12573,5 @@ body {
     }
     .texto-altura-fija .texto-2b {
         height: 120px;
-    }
-
+    }  
 }
