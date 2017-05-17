@@ -10659,7 +10659,7 @@ footer .newsletter-footer .submit-button {
 }
 
 footer .redes-sociales {
-    margin-top: 35px;
+    /*margin-top: 35px;*/
 }
 
 footer .redes-sociales ul.iconos li {
@@ -12343,12 +12343,6 @@ body {
         }
     }
 
-@media(max-width:950px) {
-    .select2-results, .select2-results .select2-result-label {
-        padding: 0;
-        margin: 0;
-    }
-}
     @media(max-width:1200px) {
         .bloque-negro a.btn {
             margin: 20px 5px;
@@ -12480,8 +12474,8 @@ body {
         width: 100%;
     }
 
-    .form-group .col-sm-3 {
-        padding-left: 0px;
+    .form-group .col-sm-3, .form-group .col-md-3 {
+         padding-left: 0px;
     }
 
     .form-horizontal.contacto .control-label.label-2 {
@@ -12515,7 +12509,8 @@ body {
     }
 
     #cerrartipo {
-        padding: 20px;
+        padding: 0 10px;
+        display:block;
     }
 
     .links-dropdown {
@@ -12558,6 +12553,10 @@ body {
     .titular-1.f-linea-gris {
         overflow-wrap: break-word;
     }
+    .select2-results, .select2-results .select2-result-label {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 
@@ -12573,5 +12572,18 @@ body {
     }
     .texto-altura-fija .texto-2b {
         height: 120px;
-    }  
+    }
+    .form-group .col-sm-12 {
+        padding-left: 0px;
+    }
+}
+
+@media(min-width:768px){
+    #panel{
+        transform:none;
+    }
+}
+
+.caption h3.texto-10.black{
+    overflow-wrap:break-word;
 }
