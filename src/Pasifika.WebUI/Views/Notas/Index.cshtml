@@ -28,8 +28,8 @@
 @Html.Action("Cargar", "Banner", new { seccionId = 20, tipo = 2 })
 
 <div class="row modulo">
-    <div class="col-xs-9">
-
+    <div class="col-md-9 col-sm-12">
+        
         @foreach(var n in Model.Notas)
         { 
             <div class="row">
@@ -71,7 +71,7 @@
     </div>
     <!-- / Col izquierda -->
 
-    <div class="col-xs-3">
+    <div class="col-md-3 hidden-sm">
         <div class="row modulo">
             <div class="col-xs-12">
                 <div class="bloque-gris text-center">
